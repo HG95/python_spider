@@ -1,0 +1,1142 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>selenium控制浏览器滚动条 · python 学习记录</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="HHG">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-vs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-local-video/video-js.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="等待页面加载完成(Waits.html" />
+    
+    
+    <link rel="prev" href="操作被定位的元素.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Chapter1/">
+            
+                <a href="../Chapter1/">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../Chapter1/HTTP基本原理.html">
+            
+                <a href="../Chapter1/HTTP基本原理.html">
+            
+                    
+                    HTTP基本原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../Chapter1/requests库.html">
+            
+                <a href="../Chapter1/requests库.html">
+            
+                    
+                    requests库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../Chapter1/requests库：代理proxies.html">
+            
+                <a href="../Chapter1/requests库：代理proxies.html">
+            
+                    
+                    requests库：代理proxies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../Chapter1/requestsSession应用.html">
+            
+                <a href="../Chapter1/requestsSession应用.html">
+            
+                    
+                    requests.Session应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../Chapter1/XPath语法和lxml模块.html">
+            
+                <a href="../Chapter1/XPath语法和lxml模块.html">
+            
+                    
+                    XPath语法和lxml模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../Chapter1/正则表达式匹配.html">
+            
+                <a href="../Chapter1/正则表达式匹配.html">
+            
+                    
+                    正则表达式匹配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="../Chapter1/chardet识别文件的编码格式.html">
+            
+                <a href="../Chapter1/chardet识别文件的编码格式.html">
+            
+                    
+                    chardet识别文件的编码格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../Chapter1/fake-useragent.html">
+            
+                <a href="../Chapter1/fake-useragent.html">
+            
+                    
+                    fake-useragent
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Selenium
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="基本使用.html">
+            
+                <a href="基本使用.html">
+            
+                    
+                    基本使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="查找元素.html">
+            
+                <a href="查找元素.html">
+            
+                    
+                    查找元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="操作被定位的元素.html">
+            
+                <a href="操作被定位的元素.html">
+            
+                    
+                    操作被定位的元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2.4" data-path="selenium控制浏览器滚动条.html">
+            
+                <a href="selenium控制浏览器滚动条.html">
+            
+                    
+                    selenium控制浏览器滚动条
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5" data-path="等待页面加载完成(Waits.html">
+            
+                <a href="等待页面加载完成(Waits.html">
+            
+                    
+                    等待页面加载完成(Waits)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.6" data-path="切换窗口.html">
+            
+                <a href="切换窗口.html">
+            
+                    
+                    切换窗口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.7" data-path="Chrome无头模式与操作窗口.html">
+            
+                <a href="Chrome无头模式与操作窗口.html">
+            
+                    
+                    Chrome无头模式与操作窗口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.8" data-path="selenium时间日期控件处理.html">
+            
+                <a href="selenium时间日期控件处理.html">
+            
+                    
+                    selenium时间日期控件处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.9" data-path="selenium表格提交.html">
+            
+                <a href="selenium表格提交.html">
+            
+                    
+                    selenium表格提交
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.10" data-path="selenium处理select标签下拉框的选项.html">
+            
+                <a href="selenium处理select标签下拉框的选项.html">
+            
+                    
+                    selenium处理select标签下拉框的选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.11" data-path="单选框和复选框radiobox、checkbox.html">
+            
+                <a href="单选框和复选框radiobox、checkbox.html">
+            
+                    
+                    单选框和复选框(radiobox、checkbox)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.12" data-path="selenium给元素的属性赋值.html">
+            
+                <a href="selenium给元素的属性赋值.html">
+            
+                    
+                    selenium给元素的属性赋值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.13" data-path="ActionChains行为连.html">
+            
+                <a href="ActionChains行为连.html">
+            
+                    
+                    ActionChains行为连
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../Scrapy/">
+            
+                <a href="../Scrapy/">
+            
+                    
+                    Scrapy
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../Scrapy/Scrapy介绍.html">
+            
+                <a href="../Scrapy/Scrapy介绍.html">
+            
+                    
+                    Scrapy介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../Scrapy/Items.html">
+            
+                <a href="../Scrapy/Items.html">
+            
+                    
+                    Items
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="../Scrapy/Spiders.html">
+            
+                <a href="../Scrapy/Spiders.html">
+            
+                    
+                    Spiders
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4" data-path="../Scrapy/Item Pipeline.html">
+            
+                <a href="../Scrapy/Item Pipeline.html">
+            
+                    
+                    Item Pipeline
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.5" data-path="../Scrapy/下载项目图片.html">
+            
+                <a href="../Scrapy/下载项目图片.html">
+            
+                    
+                    下载项目图片
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.6" data-path="../Scrapy/Scrapy的Request和Response.html">
+            
+                <a href="../Scrapy/Scrapy的Request和Response.html">
+            
+                    
+                    Scrapy的Request和Response
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.7" data-path="../Scrapy/Scrapy模拟人人网登录.html">
+            
+                <a href="../Scrapy/Scrapy模拟人人网登录.html">
+            
+                    
+                    Scrapy模拟人人网登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.8" data-path="../Scrapy/Scrapy模拟登录豆瓣网.html">
+            
+                <a href="../Scrapy/Scrapy模拟登录豆瓣网.html">
+            
+                    
+                    Scrapy模拟登录豆瓣网
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.9" data-path="../Scrapy/Settings.html">
+            
+                <a href="../Scrapy/Settings.html">
+            
+                    
+                    Settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.10" data-path="../Scrapy/使用Scrapy框架爬取糗事百科段子.html">
+            
+                <a href="../Scrapy/使用Scrapy框架爬取糗事百科段子.html">
+            
+                    
+                    使用Scrapy框架爬取糗事百科段子
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.11" data-path="../Scrapy/糗事百科之抓取多个页面.html">
+            
+                <a href="../Scrapy/糗事百科之抓取多个页面.html">
+            
+                    
+                    糗事百科之抓取多个页面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.12" data-path="../Scrapy/CrawlSpider爬虫.html">
+            
+                <a href="../Scrapy/CrawlSpider爬虫.html">
+            
+                    
+                    CrawlSpider爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../案例/">
+            
+                <a href="../案例/">
+            
+                    
+                    案例
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../案例/爬取地理坐标.html">
+            
+                <a href="../案例/爬取地理坐标.html">
+            
+                    
+                    爬取地理坐标
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../案例/批量查询地址经纬度信息.html">
+            
+                <a href="../案例/批量查询地址经纬度信息.html">
+            
+                    
+                    批量查询地址经纬度信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="../案例/拉钩网数据爬取.html">
+            
+                <a href="../案例/拉钩网数据爬取.html">
+            
+                    
+                    拉钩网数据爬取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.4" data-path="../案例/selenium静态数据爬取.html">
+            
+                <a href="../案例/selenium静态数据爬取.html">
+            
+                    
+                    selenium静态数据爬取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.5" data-path="../案例/爬取淘宝商品评论.html">
+            
+                <a href="../案例/爬取淘宝商品评论.html">
+            
+                    
+                    爬取淘宝商品评论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.6" data-path="../案例/爬取京东商品评论.html">
+            
+                <a href="../案例/爬取京东商品评论.html">
+            
+                    
+                    爬取京东商品评论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.7" data-path="../案例/爬取网易云音乐.html">
+            
+                <a href="../案例/爬取网易云音乐.html">
+            
+                    
+                    爬取网易云音乐
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.8" data-path="../案例/网易云音乐API集合_测试抓取评论.html">
+            
+                <a href="../案例/网易云音乐API集合_测试抓取评论.html">
+            
+                    
+                    网易云音乐API集合_测试抓取评论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.9" data-path="../案例/B站弹幕爬取.html">
+            
+                <a href="../案例/B站弹幕爬取.html">
+            
+                    
+                    B站弹幕爬取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.10" data-path="../案例/Pandas爬取表格数据.html">
+            
+                <a href="../案例/Pandas爬取表格数据.html">
+            
+                    
+                    Pandas爬取表格数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.11" data-path="../案例/有道翻译案例.html">
+            
+                <a href="../案例/有道翻译案例.html">
+            
+                    
+                    有道翻译案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.12" data-path="../案例/移动端微博评论抓取.html">
+            
+                <a href="../案例/移动端微博评论抓取.html">
+            
+                    
+                    移动端微博评论抓取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.13" data-path="../案例/豆果网数据爬取.html">
+            
+                <a href="../案例/豆果网数据爬取.html">
+            
+                    
+                    豆果网数据爬取
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >selenium控制浏览器滚动条</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#selenium&#x63A7;&#x5236;&#x6D4F;&#x89C8;&#x5668;&#x6EDA;&#x52A8;&#x6761;">selenium&#x63A7;&#x5236;&#x6D4F;&#x89C8;&#x5668;&#x6EDA;&#x52A8;&#x6761;</a></li><li><a href="#&#x52A0;&#x8F7D;xpath&#x63D2;&#x4EF6;">&#x52A0;&#x8F7D;xpath&#x63D2;&#x4EF6;</a></li><li><a href="#&#x627E;&#x5230;-next-page-&#x6309;&#x94AE;&#xFF0C;-&#x5C5E;&#x4E8E;&#x53EF;&#x89C1;&#x5143;&#x7D20;">&#x627E;&#x5230; Next Page &#x6309;&#x94AE;&#xFF0C; &#x5C5E;&#x4E8E;&#x53EF;&#x89C1;&#x5143;&#x7D20;</a></li><li><a href="#&#x6307;&#x5B9A;&#x5143;&#x7D20;&#x662F;-&#x8D85;&#x94FE;&#x63A5;-&#x2014;&#x2014;&#x2014;&#x2014;-&#x53EF;&#x4EE5;&#x7528;tab&#x952E;&#x5207;&#x6362;&#x5230;">&#x6307;&#x5B9A;&#x5143;&#x7D20;&#x662F; &#x8D85;&#x94FE;&#x63A5; &#x2014;&#x2014;&#x2014;&#x2014; &#x53EF;&#x4EE5;&#x7528;Tab&#x952E;&#x5207;&#x6362;&#x5230;</a></li><li><a href="#&#x8FD9;&#x4E2A;&#x5143;&#x7D20;&#x4E0D;&#x662F;&#x8D85;&#x94FE;&#x63A5;&#xFF0C;&#x6240;&#x4EE5;&#x65E0;&#x6CD5;&#x63A5;&#x6536;tab&#x952E;">&#x8FD9;&#x4E2A;&#x5143;&#x7D20;&#x4E0D;&#x662F;&#x8D85;&#x94FE;&#x63A5;&#xFF0C;&#x6240;&#x4EE5;&#x65E0;&#x6CD5;&#x63A5;&#x6536;Tab&#x952E;</a></li><li><a href="#targetelem--browserfindelementbyxpathaidpagnnextlinkspanidpagnnextstring">targetElem = browser.find_element_by_xpath(&quot;//a[@id=&apos;pagnNextLink&apos;]/span[@id=&apos;pagnNextString&apos;]&quot;)</a></li></ul></div><a href="#selenium&#x63A7;&#x5236;&#x6D4F;&#x89C8;&#x5668;&#x6EDA;&#x52A8;&#x6761;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="selenium&#x63A7;&#x5236;&#x6D4F;&#x89C8;&#x5668;&#x6EDA;&#x52A8;&#x6761;"><a name="selenium&#x63A7;&#x5236;&#x6D4F;&#x89C8;&#x5668;&#x6EDA;&#x52A8;&#x6761;" class="anchor-navigation-ex-anchor" href="#selenium&#x63A7;&#x5236;&#x6D4F;&#x89C8;&#x5668;&#x6EDA;&#x52A8;&#x6761;"><i class="fa fa-link" aria-hidden="true"></i></a>selenium&#x63A7;&#x5236;&#x6D4F;&#x89C8;&#x5668;&#x6EDA;&#x52A8;&#x6761;</h1>
+<h3 id="&#x6307;&#x5B9A;&#x4E0B;&#x62C9;&#x8DDD;&#x79BB;"><a name="&#x6307;&#x5B9A;&#x4E0B;&#x62C9;&#x8DDD;&#x79BB;" class="anchor-navigation-ex-anchor" href="#&#x6307;&#x5B9A;&#x4E0B;&#x62C9;&#x8DDD;&#x79BB;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6307;&#x5B9A;&#x4E0B;&#x62C9;&#x8DDD;&#x79BB;</h3>
+<p>&#x9700;&#x6C42;&#xFF1A;&#x90E8;&#x5206;&#x7F51;&#x7AD9;&#x7684;&#x6570;&#x636E;&#x662F;&#x968F;&#x7740;&#x6EDA;&#x52A8;&#x6761;&#x5411;&#x4E0B;&#x6325;&#x52A8;&#x52A0;&#x8F7D;&#x7684;&#xFF0C;&#x722C;&#x53D6;&#x6570;&#x636E;&#x7684;&#x9700;&#x8981;&#x5C06;&#x672C;&#x9875;&#x6570;&#x636E;&#x5168;&#x90E8;&#x52A0;&#x8F7D;&#x624D;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x7FFB;&#x9875;&#x722C;&#x53D6;&#x3002;</p>
+<p>&#x76EE;&#x7684;&#xFF1A;&#x901A;&#x8FC7;selenium&#x63A7;&#x5236;&#x6D4F;&#x89C8;&#x5668;&#x6EDA;&#x52A8;&#x6761;
+&#x539F;&#x7406;&#xFF1A;&#x901A;&#x8FC7; <code>driver.execute_script()</code>&#x6267;&#x884C; js &#x4EE3;&#x7801;&#xFF0C;&#x8FBE;&#x5230;&#x76EE;&#x7684;</p>
+<pre class="language-"><code class="lang-javascript"> driver<span class="token punctuation">.</span><span class="token function">execute_script</span><span class="token punctuation">(</span><span class="token string">&quot;window.scrollBy(0,1000)&quot;</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8BED;&#x6CD5;&#xFF1A;<code>scrollBy(x,y)</code></p>
+<p>&#x53C2;&#x6570;</p>
+<ul>
+<li>x        &#x5FC5;&#x9700;&#x3002;&#x5411;&#x53F3;&#x6EDA;&#x52A8;&#x7684;&#x50CF;&#x7D20;&#x503C;&#x3002;</li>
+<li>y        &#x5FC5;&#x9700;&#x3002;&#x5411;&#x4E0B;&#x6EDA;&#x52A8;&#x7684;&#x50CF;&#x7D20;&#x503C;&#x3002;</li>
+</ul>
+<p>&#x6216;&#x8005;&#x4F7F;&#x7528;</p>
+<pre class="language-"><code class="lang-python">js<span class="token operator">=</span><span class="token string">&quot;var q=document.documentElement.scrollTop=10000&quot;</span>
+driver<span class="token punctuation">.</span>execute_script<span class="token punctuation">(</span>js<span class="token punctuation">)</span>
+</code></pre>
+<p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> selenium <span class="token keyword">import</span> webdriver
+<span class="token keyword">from</span> lxml <span class="token keyword">import</span> etree
+<span class="token keyword">from</span> time <span class="token keyword">import</span> sleep
+
+url <span class="token operator">=</span> <span class="token string">&apos;https://search.jd.com/Search?keyword=mac&amp;enc=utf-8&amp;wq=mac&amp;pvid=9862d03c24e741c6a58079d004f5aabf&apos;</span>
+
+chrome <span class="token operator">=</span> webdriver<span class="token punctuation">.</span>Chrome<span class="token punctuation">(</span><span class="token punctuation">)</span>
+chrome<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+
+js <span class="token operator">=</span> <span class="token string">&apos;document.documentElement.scrollTop=100000&apos;</span>
+chrome<span class="token punctuation">.</span>execute_script<span class="token punctuation">(</span>js<span class="token punctuation">)</span>
+sleep<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+html <span class="token operator">=</span> chrome<span class="token punctuation">.</span>page_source
+e <span class="token operator">=</span> etree<span class="token punctuation">.</span>HTML<span class="token punctuation">(</span>html<span class="token punctuation">)</span>
+prices <span class="token operator">=</span> e<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&apos;//div[@class=&quot;gl-i-wrap&quot;]/div[@class=&quot;p-price&quot;]/strong/i/text()&apos;</span><span class="token punctuation">)</span>
+names <span class="token operator">=</span> e<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&apos;//div[@class=&quot;gl-i-wrap&quot;]/div[@class=&quot;p-name p-name-type-2&quot;]/a/em&apos;</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>names<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> name<span class="token punctuation">,</span> price <span class="token keyword">in</span> <span class="token builtin">zip</span><span class="token punctuation">(</span>names<span class="token punctuation">,</span> prices<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>name<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&apos;string(.)&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&quot;:&quot;</span><span class="token punctuation">,</span> price<span class="token punctuation">)</span>
+chrome<span class="token punctuation">.</span>quit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="&#x53D1;&#x9001;tab&#x952E;&#xFF0C;&#x79FB;&#x52A8;&#x5230;&#x76EE;&#x6807;&#x5143;&#x7D20;"><a name="&#x53D1;&#x9001;tab&#x952E;&#xFF0C;&#x79FB;&#x52A8;&#x5230;&#x76EE;&#x6807;&#x5143;&#x7D20;" class="anchor-navigation-ex-anchor" href="#&#x53D1;&#x9001;tab&#x952E;&#xFF0C;&#x79FB;&#x52A8;&#x5230;&#x76EE;&#x6807;&#x5143;&#x7D20;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53D1;&#x9001;tab&#x952E;&#xFF0C;&#x79FB;&#x52A8;&#x5230;&#x76EE;&#x6807;&#x5143;&#x7D20;</h3>
+<p>&#x6839;&#x636E;&#x9875;&#x9762;&#x663E;&#x793A;&#x8FDB;&#x884C;&#x53D8;&#x901A;&#xFF0C;&#x53D1;&#x9001;tab&#x952E;</p>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;tab&#x952E;&#x4F1A;&#x5207;&#x6362;&#x5230;&#x5BC6;&#x7801;&#x6846;&#x4E2D;&#xFF0C;&#x6240;&#x4EE5;&#x6839;&#x636E;&#x6B64;&#x601D;&#x8DEF;&#xFF0C;&#x5728;python&#x4E2D;&#x4E5F;&#x53EF;&#x4EE5;&#x53D1;&#x9001;tab&#x952E;&#x6765;&#x5207;&#x6362;&#xFF0C;&#x4F7F;&#x5143;&#x7D20;&#x663E;&#x793A;.</p>
+<p>&#x7528;TAB&#x952E;&#xFF08;&#x6216;&#x8005;&#x5411;&#x4E0B;&#x952E;&#xFF09;</p>
+<p>&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x6D4B;&#x8BD5;&#x4E00;&#x4E0B;&#x5411;&#x4E0B;&#x952E;&#xFF08;&#x627E;&#x5230;&#x6700;&#x5E95;&#x4E0B;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x79BB;&#x63D0;&#x4EA4;&#x6700;&#x8FD1;&#x7684;&#xFF0C;&#x518D;&#x6765;&#x4E00;&#x6B21;TAB&#xFF09;&#xFF0C;&#x6700;&#x540E;&#x518D;&#x70B9;&#x51FB;&#xFF1A;</p>
+<pre class="language-"><code>from selenium.webdriver.common.keys import Keys
+driver.find_element_by_id(&quot;id_login_method_0&quot;).send_keys(Keys.TAB)
+</code></pre><ul>
+<li><p>&#x53EF;&#x4EE5;&#x53D1;&#x9001;tab&#x952E;&#x6765;&#x5207;&#x6362;&#x9875;&#x9762;&#x6309;&#x94AE;&#xFF0C;&#x8FBE;&#x5230;&#x4E0B;&#x62C9;&#x6EDA;&#x52A8;&#x6761;&#x7684;&#x76EE;&#x7684;&#x3002;&#x4F46;&#x662F;&#x4E00;&#x5B9A;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;<strong>&#x6307;&#x5B9A;&#x7684;&#x5143;&#x7D20;&#x4E00;&#x5B9A;&#x8981;&#x80FD;&#x88AB;TAB&#x952E;&#x9009;&#x4E2D;&#xFF0C;&#x50CF;&#x8F93;&#x5165;&#x6846;&#xFF0C;&#x8D85;&#x94FE;&#x63A5;&#xFF0C;Button&#x7B49;</strong>&#x3002;</p>
+<p>```python</p>
+<p>from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import Select</p>
+<p>import time
+import random</p>
+<h1 id="&#x52A0;&#x8F7D;xpath&#x63D2;&#x4EF6;"><a name="&#x52A0;&#x8F7D;xpath&#x63D2;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x52A0;&#x8F7D;xpath&#x63D2;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x52A0;&#x8F7D;xpath&#x63D2;&#x4EF6;</h1>
+<p>chrome_options = webdriver.ChromeOptions()
+extension_path = &apos;D:/extension/XPath-Helper_v2.0.2.crx&apos;
+chrome_options.add_extension(extension_path)</p>
+<p>browser = webdriver.Chrome(chrome_options=chrome_options)
+browser.maximize_window()
+wait = WebDriverWait(browser, 25)
+waitPopWindow = WebDriverWait(browser, 25)</p>
+<p>browser.get(&quot;<a href="https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&amp;field-keywords=phone" target="_blank">https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&amp;field-keywords=phone</a>&quot;)</p>
+<p>time.sleep(random.randrange(5, 10, 1))</p>
+<h1 id="&#x627E;&#x5230;-next-page-&#x6309;&#x94AE;&#xFF0C;-&#x5C5E;&#x4E8E;&#x53EF;&#x89C1;&#x5143;&#x7D20;"><a name="&#x627E;&#x5230;-next-page-&#x6309;&#x94AE;&#xFF0C;-&#x5C5E;&#x4E8E;&#x53EF;&#x89C1;&#x5143;&#x7D20;" class="anchor-navigation-ex-anchor" href="#&#x627E;&#x5230;-next-page-&#x6309;&#x94AE;&#xFF0C;-&#x5C5E;&#x4E8E;&#x53EF;&#x89C1;&#x5143;&#x7D20;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x627E;&#x5230; Next Page &#x6309;&#x94AE;&#xFF0C; &#x5C5E;&#x4E8E;&#x53EF;&#x89C1;&#x5143;&#x7D20;</h1>
+<h1 id="&#x6307;&#x5B9A;&#x5143;&#x7D20;&#x662F;-&#x8D85;&#x94FE;&#x63A5;-&#x2014;&#x2014;&#x2014;&#x2014;-&#x53EF;&#x4EE5;&#x7528;tab&#x952E;&#x5207;&#x6362;&#x5230;"><a name="&#x6307;&#x5B9A;&#x5143;&#x7D20;&#x662F;-&#x8D85;&#x94FE;&#x63A5;-&#x2014;&#x2014;&#x2014;&#x2014;-&#x53EF;&#x4EE5;&#x7528;tab&#x952E;&#x5207;&#x6362;&#x5230;" class="anchor-navigation-ex-anchor" href="#&#x6307;&#x5B9A;&#x5143;&#x7D20;&#x662F;-&#x8D85;&#x94FE;&#x63A5;-&#x2014;&#x2014;&#x2014;&#x2014;-&#x53EF;&#x4EE5;&#x7528;tab&#x952E;&#x5207;&#x6362;&#x5230;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6307;&#x5B9A;&#x5143;&#x7D20;&#x662F; &#x8D85;&#x94FE;&#x63A5; &#x2014;&#x2014;&#x2014;&#x2014; &#x53EF;&#x4EE5;&#x7528;Tab&#x952E;&#x5207;&#x6362;&#x5230;</h1>
+<p>targetElem = browser.find_element_by_xpath(&quot;//a[@id=&apos;pagnNextLink&apos;]&quot;)</p>
+<h1 id="&#x8FD9;&#x4E2A;&#x5143;&#x7D20;&#x4E0D;&#x662F;&#x8D85;&#x94FE;&#x63A5;&#xFF0C;&#x6240;&#x4EE5;&#x65E0;&#x6CD5;&#x63A5;&#x6536;tab&#x952E;"><a name="&#x8FD9;&#x4E2A;&#x5143;&#x7D20;&#x4E0D;&#x662F;&#x8D85;&#x94FE;&#x63A5;&#xFF0C;&#x6240;&#x4EE5;&#x65E0;&#x6CD5;&#x63A5;&#x6536;tab&#x952E;" class="anchor-navigation-ex-anchor" href="#&#x8FD9;&#x4E2A;&#x5143;&#x7D20;&#x4E0D;&#x662F;&#x8D85;&#x94FE;&#x63A5;&#xFF0C;&#x6240;&#x4EE5;&#x65E0;&#x6CD5;&#x63A5;&#x6536;tab&#x952E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD9;&#x4E2A;&#x5143;&#x7D20;&#x4E0D;&#x662F;&#x8D85;&#x94FE;&#x63A5;&#xFF0C;&#x6240;&#x4EE5;&#x65E0;&#x6CD5;&#x63A5;&#x6536;Tab&#x952E;</h1>
+<h1 id="targetelem--browserfindelementbyxpathaidpagnnextlinkspanidpagnnextstring"><a name="targetelem--browserfindelementbyxpathaidpagnnextlinkspanidpagnnextstring" class="anchor-navigation-ex-anchor" href="#targetelem--browserfindelementbyxpathaidpagnnextlinkspanidpagnnextstring"><i class="fa fa-link" aria-hidden="true"></i></a>targetElem = browser.find_element_by_xpath(&quot;//a[@id=&apos;pagnNextLink&apos;]/span[@id=&apos;pagnNextString&apos;]&quot;)</h1>
+<p>targetElem.send_keys(Keys.TAB)</p>
+<p>print(f&quot;&#x7ED3;&#x675F;&#x62D6;&#x52A8;&#x6EDA;&#x52A8;&#x6761;....&quot;)
+time.sleep(random.randrange(5, 10, 1))
+browser.quit()</p>
+</li>
+</ul>
+<pre class="language-"><code>
+
+
+### &#x62D6;&#x52A8;&#x5230;&#x6307;&#x5B9A;&#x5143;&#x7D20;&#x4F4D;&#x7F6E;&#x3002;
+
+```python
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import Select
+
+import time
+import random
+
+#&#x52A0;&#x8F7D;xpath&#x63D2;&#x4EF6;
+chrome_options = webdriver.ChromeOptions()
+extension_path = &apos;D:/extension/XPath-Helper_v2.0.2.crx&apos;
+chrome_options.add_extension(extension_path)
+
+browser = webdriver.Chrome(chrome_options=chrome_options)
+#browser.maximize_window()
+wait = WebDriverWait(browser, 25)
+waitPopWindow = WebDriverWait(browser, 25)
+
+browser.get(&quot;https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&amp;field-keywords=phone&quot;)
+
+time.sleep(random.randrange(5, 10, 1))
+
+#&#x627E;&#x5230; Next Page &#x6309;&#x94AE;&#xFF0C; &#x5C5E;&#x4E8E;&#x53EF;&#x89C1;&#x5143;&#x7D20;
+#js&#x4EE3;&#x7801;&#x6709;&#x4E24;&#x79CD;&#x5199;&#x6CD5;&#xFF0C;&#x4F46;&#x662F;&#x5BF9;&#x5143;&#x7D20;&#x7684;&#x8981;&#x6C42;&#x4E0D;&#x540C;&#xFF0C;focus&#x66F4;&#x4E3A;&#x4E25;&#x683C;
+
+#&#x7B2C;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;&#xFF1A;focus
+targetElem = browser.find_element_by_xpath(&quot;//a[@id=&apos;pagnNextLink&apos;]&quot;)
+browser.execute_script(&quot;arguments[0].focus();&quot;, targetElem)
+
+#&#x7B2C;&#x4E8C;&#x79CD;&#x65B9;&#x6CD5;&#xFF1A;scrollIntoView
+#targetElem = browser.find_element_by_xpath(&quot;//a[@id=&apos;pagnNextLink&apos;]/span[@id=&apos;pagnNextString&apos;]&quot;)
+#browser.execute_script(&quot;arguments[0].scrollIntoView();&quot;, targetElem)    # &#x62D6;&#x52A8;&#x5230;&#x53EF;&#x89C1;&#x7684;&#x5143;&#x7D20;&#x53BB;
+
+print(f&quot;&#x7ED3;&#x675F;&#x62D6;&#x52A8;&#x6EDA;&#x52A8;&#x6761;....&quot;)
+time.sleep(random.randrange(5, 10, 1))
+browser.quit()
+</code></pre><p>&#x53C2;&#x8003;</p>
+<ul>
+<li><a href="https://www.jianshu.com/p/e2758e830120" target="_blank">selenium_&#x901A;&#x8FC7;selenium&#x63A7;&#x5236;&#x6D4F;&#x89C8;&#x5668;&#x6EDA;&#x52A8;&#x6761;</a> </li>
+<li><a href="https://blog.csdn.net/qq_16069927/article/details/81074331" target="_blank">selenium &#x5982;&#x4F55;&#x63A7;&#x5236;&#x6EDA;&#x52A8;&#x6761;&#x9010;&#x6B65;&#x6EDA;&#x52A8;</a> </li>
+<li><a href="https://blog.csdn.net/zwq912318834/article/details/79262007" target="_blank">python + selenium + chrome &#x5982;&#x4F55;&#x64CD;&#x4F5C;&#x6EDA;&#x52A8;&#x6761;</a></li>
+</ul>
+<footer class="page-footer"><span class="copyright">  </span><span class="footer-modification">Update time&#xFF1A;
+2020-08-15 
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="操作被定位的元素.html" class="navigation navigation-prev " aria-label="Previous page: 操作被定位的元素">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="等待页面加载完成(Waits.html" class="navigation navigation-next " aria-label="Next page: 等待页面加载完成(Waits)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"selenium控制浏览器滚动条","level":"2.2.4","depth":2,"next":{"title":"等待页面加载完成(Waits)","level":"2.2.5","depth":2,"path":"Selenium/等待页面加载完成(Waits.md","ref":"Selenium/等待页面加载完成(Waits.md","articles":[]},"previous":{"title":"操作被定位的元素","level":"2.2.3","depth":2,"path":"Selenium/操作被定位的元素.md","ref":"Selenium/操作被定位的元素.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","disqus@^0.1.0","prism@^2.1.0","prism-themes@^0.0.2","theme-comscore","anchors@^0.7.1","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","expandable-chapters","local-video@^1.0.1","anchor-navigation-ex@0.1.8","custom-favicon","todo@^0.1.3","hide-element","copy-code-button","tbfed-pagefooter","advanced-emoji","lightbox","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":" ","modify_label":"Update time：","modify_format":"YYYY-MM-DD "},"prism":{"css":["prism-themes/themes/prism-vs.css"]},"disqus":{"useIdentifier":false,"shortName":"HG1227"},"styles":{"website":"styles/website.css"},"emphasize":{},"ace":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"favicon":"favicon.ico","lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"prism-themes":{},"custom-favicon":{},"local-video":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"template":"ace","unindent":true,"edit":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"HHG","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"readme.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"python 学习记录","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":""}},"gitbook":"*","description":"。"},"file":{"path":"Selenium/selenium控制浏览器滚动条.md","mtime":"2020-08-15T12:36:34.048Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-20T03:00:50.152Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-local-video/video.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

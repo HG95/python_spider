@@ -1,0 +1,1122 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>selenium处理select标签下拉框的选项 · python 学习记录</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="HHG">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-vs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-local-video/video-js.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="单选框和复选框radiobox、checkbox.html" />
+    
+    
+    <link rel="prev" href="selenium表格提交.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Chapter1/">
+            
+                <a href="../Chapter1/">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../Chapter1/HTTP基本原理.html">
+            
+                <a href="../Chapter1/HTTP基本原理.html">
+            
+                    
+                    HTTP基本原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../Chapter1/requests库.html">
+            
+                <a href="../Chapter1/requests库.html">
+            
+                    
+                    requests库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../Chapter1/requests库：代理proxies.html">
+            
+                <a href="../Chapter1/requests库：代理proxies.html">
+            
+                    
+                    requests库：代理proxies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../Chapter1/requestsSession应用.html">
+            
+                <a href="../Chapter1/requestsSession应用.html">
+            
+                    
+                    requests.Session应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../Chapter1/XPath语法和lxml模块.html">
+            
+                <a href="../Chapter1/XPath语法和lxml模块.html">
+            
+                    
+                    XPath语法和lxml模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../Chapter1/正则表达式匹配.html">
+            
+                <a href="../Chapter1/正则表达式匹配.html">
+            
+                    
+                    正则表达式匹配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="../Chapter1/chardet识别文件的编码格式.html">
+            
+                <a href="../Chapter1/chardet识别文件的编码格式.html">
+            
+                    
+                    chardet识别文件的编码格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../Chapter1/fake-useragent.html">
+            
+                <a href="../Chapter1/fake-useragent.html">
+            
+                    
+                    fake-useragent
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Selenium
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="基本使用.html">
+            
+                <a href="基本使用.html">
+            
+                    
+                    基本使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="查找元素.html">
+            
+                <a href="查找元素.html">
+            
+                    
+                    查找元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="操作被定位的元素.html">
+            
+                <a href="操作被定位的元素.html">
+            
+                    
+                    操作被定位的元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="selenium控制浏览器滚动条.html">
+            
+                <a href="selenium控制浏览器滚动条.html">
+            
+                    
+                    selenium控制浏览器滚动条
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5" data-path="等待页面加载完成(Waits.html">
+            
+                <a href="等待页面加载完成(Waits.html">
+            
+                    
+                    等待页面加载完成(Waits)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.6" data-path="切换窗口.html">
+            
+                <a href="切换窗口.html">
+            
+                    
+                    切换窗口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.7" data-path="Chrome无头模式与操作窗口.html">
+            
+                <a href="Chrome无头模式与操作窗口.html">
+            
+                    
+                    Chrome无头模式与操作窗口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.8" data-path="selenium时间日期控件处理.html">
+            
+                <a href="selenium时间日期控件处理.html">
+            
+                    
+                    selenium时间日期控件处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.9" data-path="selenium表格提交.html">
+            
+                <a href="selenium表格提交.html">
+            
+                    
+                    selenium表格提交
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2.10" data-path="selenium处理select标签下拉框的选项.html">
+            
+                <a href="selenium处理select标签下拉框的选项.html">
+            
+                    
+                    selenium处理select标签下拉框的选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.11" data-path="单选框和复选框radiobox、checkbox.html">
+            
+                <a href="单选框和复选框radiobox、checkbox.html">
+            
+                    
+                    单选框和复选框(radiobox、checkbox)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.12" data-path="selenium给元素的属性赋值.html">
+            
+                <a href="selenium给元素的属性赋值.html">
+            
+                    
+                    selenium给元素的属性赋值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.13" data-path="ActionChains行为连.html">
+            
+                <a href="ActionChains行为连.html">
+            
+                    
+                    ActionChains行为连
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../Scrapy/">
+            
+                <a href="../Scrapy/">
+            
+                    
+                    Scrapy
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../Scrapy/Scrapy介绍.html">
+            
+                <a href="../Scrapy/Scrapy介绍.html">
+            
+                    
+                    Scrapy介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../Scrapy/Items.html">
+            
+                <a href="../Scrapy/Items.html">
+            
+                    
+                    Items
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="../Scrapy/Spiders.html">
+            
+                <a href="../Scrapy/Spiders.html">
+            
+                    
+                    Spiders
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4" data-path="../Scrapy/Item Pipeline.html">
+            
+                <a href="../Scrapy/Item Pipeline.html">
+            
+                    
+                    Item Pipeline
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.5" data-path="../Scrapy/下载项目图片.html">
+            
+                <a href="../Scrapy/下载项目图片.html">
+            
+                    
+                    下载项目图片
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.6" data-path="../Scrapy/Scrapy的Request和Response.html">
+            
+                <a href="../Scrapy/Scrapy的Request和Response.html">
+            
+                    
+                    Scrapy的Request和Response
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.7" data-path="../Scrapy/Scrapy模拟人人网登录.html">
+            
+                <a href="../Scrapy/Scrapy模拟人人网登录.html">
+            
+                    
+                    Scrapy模拟人人网登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.8" data-path="../Scrapy/Scrapy模拟登录豆瓣网.html">
+            
+                <a href="../Scrapy/Scrapy模拟登录豆瓣网.html">
+            
+                    
+                    Scrapy模拟登录豆瓣网
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.9" data-path="../Scrapy/Settings.html">
+            
+                <a href="../Scrapy/Settings.html">
+            
+                    
+                    Settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.10" data-path="../Scrapy/使用Scrapy框架爬取糗事百科段子.html">
+            
+                <a href="../Scrapy/使用Scrapy框架爬取糗事百科段子.html">
+            
+                    
+                    使用Scrapy框架爬取糗事百科段子
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.11" data-path="../Scrapy/糗事百科之抓取多个页面.html">
+            
+                <a href="../Scrapy/糗事百科之抓取多个页面.html">
+            
+                    
+                    糗事百科之抓取多个页面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.12" data-path="../Scrapy/CrawlSpider爬虫.html">
+            
+                <a href="../Scrapy/CrawlSpider爬虫.html">
+            
+                    
+                    CrawlSpider爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../案例/">
+            
+                <a href="../案例/">
+            
+                    
+                    案例
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../案例/爬取地理坐标.html">
+            
+                <a href="../案例/爬取地理坐标.html">
+            
+                    
+                    爬取地理坐标
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../案例/批量查询地址经纬度信息.html">
+            
+                <a href="../案例/批量查询地址经纬度信息.html">
+            
+                    
+                    批量查询地址经纬度信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="../案例/拉钩网数据爬取.html">
+            
+                <a href="../案例/拉钩网数据爬取.html">
+            
+                    
+                    拉钩网数据爬取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.4" data-path="../案例/selenium静态数据爬取.html">
+            
+                <a href="../案例/selenium静态数据爬取.html">
+            
+                    
+                    selenium静态数据爬取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.5" data-path="../案例/爬取淘宝商品评论.html">
+            
+                <a href="../案例/爬取淘宝商品评论.html">
+            
+                    
+                    爬取淘宝商品评论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.6" data-path="../案例/爬取京东商品评论.html">
+            
+                <a href="../案例/爬取京东商品评论.html">
+            
+                    
+                    爬取京东商品评论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.7" data-path="../案例/爬取网易云音乐.html">
+            
+                <a href="../案例/爬取网易云音乐.html">
+            
+                    
+                    爬取网易云音乐
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.8" data-path="../案例/网易云音乐API集合_测试抓取评论.html">
+            
+                <a href="../案例/网易云音乐API集合_测试抓取评论.html">
+            
+                    
+                    网易云音乐API集合_测试抓取评论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.9" data-path="../案例/B站弹幕爬取.html">
+            
+                <a href="../案例/B站弹幕爬取.html">
+            
+                    
+                    B站弹幕爬取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.10" data-path="../案例/Pandas爬取表格数据.html">
+            
+                <a href="../案例/Pandas爬取表格数据.html">
+            
+                    
+                    Pandas爬取表格数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.11" data-path="../案例/有道翻译案例.html">
+            
+                <a href="../案例/有道翻译案例.html">
+            
+                    
+                    有道翻译案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.12" data-path="../案例/移动端微博评论抓取.html">
+            
+                <a href="../案例/移动端微博评论抓取.html">
+            
+                    
+                    移动端微博评论抓取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.13" data-path="../案例/豆果网数据爬取.html">
+            
+                <a href="../案例/豆果网数据爬取.html">
+            
+                    
+                    豆果网数据爬取
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >selenium处理select标签下拉框的选项</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#selenium&#x5904;&#x7406;select&#x6807;&#x7B7E;&#x4E0B;&#x62C9;&#x6846;&#x7684;&#x9009;&#x9879;">selenium&#x5904;&#x7406;select&#x6807;&#x7B7E;&#x4E0B;&#x62C9;&#x6846;&#x7684;&#x9009;&#x9879;</a></li><ul><li><a href="#1-&#x80CC;&#x666F;">1. &#x80CC;&#x666F;</a></li><li><a href="#2-select&#x4E0B;&#x62C9;&#x6846;&#x7684;&#x5904;&#x7406;&#x65B9;&#x6848;">2. select&#x4E0B;&#x62C9;&#x6846;&#x7684;&#x5904;&#x7406;&#x65B9;&#x6848;</a></li><ul><li><a href="#&#x7B2C;&#x4E00;&#x79CD;&#x65B9;&#x6848;&#xFF1A;selectbyvalue">&#x7B2C;&#x4E00;&#x79CD;&#x65B9;&#x6848;&#xFF1A;select_by_value</a></li></ul></ul><li><a href="#&#x9009;&#x4E2D;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x9009;&#x9879;">&#x9009;&#x4E2D;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x9009;&#x9879;</a></li><li><a href="#video-games">Video Games</a></li><li><a href="#&#x62FF;&#x5230;&#x641C;&#x7D22;&#x6846;">&#x62FF;&#x5230;&#x641C;&#x7D22;&#x6846;</a></li><li><a href="#&#x8F93;&#x5165;&#x641C;&#x7D22;&#x5173;&#x952E;&#x5B57;">&#x8F93;&#x5165;&#x641C;&#x7D22;&#x5173;&#x952E;&#x5B57;</a></li><li><a href="#&#x6572;enter&#x952E;">&#x6572;enter&#x952E;</a></li></ul></div><a href="#selenium&#x5904;&#x7406;select&#x6807;&#x7B7E;&#x4E0B;&#x62C9;&#x6846;&#x7684;&#x9009;&#x9879;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="selenium&#x5904;&#x7406;select&#x6807;&#x7B7E;&#x4E0B;&#x62C9;&#x6846;&#x7684;&#x9009;&#x9879;"><a name="selenium&#x5904;&#x7406;select&#x6807;&#x7B7E;&#x4E0B;&#x62C9;&#x6846;&#x7684;&#x9009;&#x9879;" class="anchor-navigation-ex-anchor" href="#selenium&#x5904;&#x7406;select&#x6807;&#x7B7E;&#x4E0B;&#x62C9;&#x6846;&#x7684;&#x9009;&#x9879;"><i class="fa fa-link" aria-hidden="true"></i></a>selenium&#x5904;&#x7406;select&#x6807;&#x7B7E;&#x4E0B;&#x62C9;&#x6846;&#x7684;&#x9009;&#x9879;</h1>
+<h2 id="1-&#x80CC;&#x666F;"><a name="1-&#x80CC;&#x666F;" class="anchor-navigation-ex-anchor" href="#1-&#x80CC;&#x666F;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x80CC;&#x666F;</h2>
+<ul>
+<li>&#x5728;&#x722C;&#x53D6;&#x7F51;&#x9875;&#x662F;&#xFF0C;&#x6709;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x4F1A;&#x9047;&#x5230;&#x4E0B;&#x56FE;&#x4E2D;&#x7684;&#x4E0B;&#x62C9;&#x6846;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;<strong>&lt; select &gt; &lt; /select &gt;</strong>&#x6807;&#x7B7E;&#x3002;&#x6309;&#x7167;&#x4E00;&#x822C;&#x7684;&#x70B9;&#x51FB;&#x65B9;&#x6848;&#x662F;&#x65E0;&#x6CD5;&#x6210;&#x529F;&#x7684;&#xFF0C;&#x800C;selenium&#x63D0;&#x4F9B;&#x4E86;&#x4E13;&#x95E8;&#x7684;Select&#x7C7B;&#x6765;&#x5904;&#x7406;&#x8FD9;&#x79CD;&#x4E0B;&#x62C9;&#x6846;&#x3002;</li>
+</ul>
+<p><a href="img/image-20200814153303033.png" data-lightbox="0504012c-ac99-4cad-b3f9-d5e7f061e7b3" data-title="image-20200814153303033"><img src="img/image-20200814153303033.png" alt="image-20200814153303033"></a></p>
+<h2 id="2-select&#x4E0B;&#x62C9;&#x6846;&#x7684;&#x5904;&#x7406;&#x65B9;&#x6848;"><a name="2-select&#x4E0B;&#x62C9;&#x6846;&#x7684;&#x5904;&#x7406;&#x65B9;&#x6848;" class="anchor-navigation-ex-anchor" href="#2-select&#x4E0B;&#x62C9;&#x6846;&#x7684;&#x5904;&#x7406;&#x65B9;&#x6848;"><i class="fa fa-link" aria-hidden="true"></i></a>2. select&#x4E0B;&#x62C9;&#x6846;&#x7684;&#x5904;&#x7406;&#x65B9;&#x6848;</h2>
+<p>&#x4E0A;&#x56FE;&#x4E2D;&#x7684;&#x7F51;&#x9875;&#x6E90;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>select</span> <span class="token attr-name">aria-describedby</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>searchDropdownDescription<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>nav-search-dropdown searchSelect<span class="token punctuation">&quot;</span></span> <span class="token attr-name">data-nav-digest</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>RflwCB5c/WnDs5EtBNnFFArlBJk<span class="token punctuation">&quot;</span></span> <span class="token attr-name">data-nav-selected</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>0<span class="token punctuation">&quot;</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>searchDropdownBox<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>url<span class="token punctuation">&quot;</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">=&quot;</span><span class="token attr-value"><span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span> <span class="token property">top</span><span class="token punctuation">:</span> 0px<span class="token punctuation">;</span></span><span class="token punctuation">&quot;</span></span> <span class="token attr-name">tabindex</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>18<span class="token punctuation">&quot;</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>Search in<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">selected</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>selected<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=aps<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>All Departments<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=alexa-skills<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Alexa Skills<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=amazon-devices<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Amazon Devices<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=instant-video<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Amazon Video<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=warehouse-deals<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Amazon Warehouse Deals<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=appliances<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Appliances<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=mobile-apps<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Apps <span class="token entity" title="&amp;">&amp;amp;</span> Games<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=arts-crafts<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Arts, Crafts <span class="token entity" title="&amp;">&amp;amp;</span> Sewing<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=automotive<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Automotive Parts <span class="token entity" title="&amp;">&amp;amp;</span> Accessories<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=baby-products<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Baby<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=beauty<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Beauty <span class="token entity" title="&amp;">&amp;amp;</span> Personal Care<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=stripbooks<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Books<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=popular<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>CDs <span class="token entity" title="&amp;">&amp;amp;</span> Vinyl<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=mobile<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Cell Phones <span class="token entity" title="&amp;">&amp;amp;</span> Accessories<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=fashion<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Clothing, Shoes <span class="token entity" title="&amp;">&amp;amp;</span> Jewelry<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=fashion-womens<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token entity" title="&#xA0;">&amp;nbsp;</span><span class="token entity" title="&#xA0;">&amp;nbsp;</span><span class="token entity" title="&#xA0;">&amp;nbsp;</span>Women<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=fashion-mens<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token entity" title="&#xA0;">&amp;nbsp;</span><span class="token entity" title="&#xA0;">&amp;nbsp;</span><span class="token entity" title="&#xA0;">&amp;nbsp;</span>Men<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=fashion-girls<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token entity" title="&#xA0;">&amp;nbsp;</span><span class="token entity" title="&#xA0;">&amp;nbsp;</span><span class="token entity" title="&#xA0;">&amp;nbsp;</span>Girls<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=fashion-boys<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token entity" title="&#xA0;">&amp;nbsp;</span><span class="token entity" title="&#xA0;">&amp;nbsp;</span><span class="token entity" title="&#xA0;">&amp;nbsp;</span>Boys<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=fashion-baby<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token entity" title="&#xA0;">&amp;nbsp;</span><span class="token entity" title="&#xA0;">&amp;nbsp;</span><span class="token entity" title="&#xA0;">&amp;nbsp;</span>Baby<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=collectibles<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Collectibles <span class="token entity" title="&amp;">&amp;amp;</span> Fine Art<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=computers<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Computers<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=courses<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Courses<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=financial<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Credit and Payment Cards<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=digital-music<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Digital Music<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=electronics<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Electronics<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=lawngarden<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Garden <span class="token entity" title="&amp;">&amp;amp;</span> Outdoor<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=gift-cards<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Gift Cards<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=grocery<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Grocery <span class="token entity" title="&amp;">&amp;amp;</span> Gourmet Food<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=handmade<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Handmade<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=hpc<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Health, Household <span class="token entity" title="&amp;">&amp;amp;</span> Baby Care<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=local-services<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Home <span class="token entity" title="&amp;">&amp;amp;</span> Business Services<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=garden<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Home <span class="token entity" title="&amp;">&amp;amp;</span> Kitchen<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=industrial<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Industrial <span class="token entity" title="&amp;">&amp;amp;</span> Scientific<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=digital-text<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Kindle Store<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=fashion-luggage<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Luggage <span class="token entity" title="&amp;">&amp;amp;</span> Travel Gear<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=luxury-beauty<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Luxury Beauty<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=magazines<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Magazine Subscriptions<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=movies-tv<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Movies <span class="token entity" title="&amp;">&amp;amp;</span> TV<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=mi<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Musical Instruments<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=office-products<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Office Products<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=pets<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Pet Supplies<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=prime-exclusive<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Prime Exclusive Savings<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=pantry<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Prime Pantry<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=software<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Software<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=sporting<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Sports <span class="token entity" title="&amp;">&amp;amp;</span> Outdoors<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=tools<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Tools <span class="token entity" title="&amp;">&amp;amp;</span> Home Improvement<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=toys-and-games<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Toys <span class="token entity" title="&amp;">&amp;amp;</span> Games<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=vehicles<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Vehicles<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>search-alias=videogames<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Video Games<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>select</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<h3 id="&#x7B2C;&#x4E00;&#x79CD;&#x65B9;&#x6848;&#xFF1A;selectbyvalue"><a name="&#x7B2C;&#x4E00;&#x79CD;&#x65B9;&#x6848;&#xFF1A;selectbyvalue" class="anchor-navigation-ex-anchor" href="#&#x7B2C;&#x4E00;&#x79CD;&#x65B9;&#x6848;&#xFF1A;selectbyvalue"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B2C;&#x4E00;&#x79CD;&#x65B9;&#x6848;&#xFF1A;select_by_value</h3>
+<ul>
+<li><p>&#x4F7F;&#x7528;&#x6761;&#x4EF6;&#xFF1A;&#x7528;&#x4E8E;&#x9009;&#x53D6;&lt; option&gt;&#x6807;&#x7B7E;&#x7684;value&#x503C;&#xFF0C;&#x8981;&#x6C42;&#x5FC5;&#x987B;&#x8981;&#x6709;value&#x5C5E;&#x6027;&#xFF0C;&#x5F53;&#x7136;&#xFF0C;&#x8FD9;&#x4E0D;&#x662F;&#x5E9F;&#x8BDD;&#x561B;&#x2026;&#x3002;</p>
+<p>```python
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import Select
+import random
+import time</p>
+</li>
+</ul>
+<p>  browser = webdriver.Chrome()
+  browser.get(&quot;<a href="https://www.amazom.com/" target="_blank">https://www.amazom.com/</a>&quot;)</p>
+<h1 id="&#x9009;&#x4E2D;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x9009;&#x9879;"><a name="&#x9009;&#x4E2D;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x9009;&#x9879;" class="anchor-navigation-ex-anchor" href="#&#x9009;&#x4E2D;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x9009;&#x9879;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9009;&#x4E2D;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x9009;&#x9879;</h1>
+<h1 id="video-games"><a name="video-games" class="anchor-navigation-ex-anchor" href="#video-games"><i class="fa fa-link" aria-hidden="true"></i></a>Video Games</h1>
+<p>  classSelectValue = &apos;search-alias=videogames&apos;
+  Select(browser.find_element_by_tag_name(&quot;select&quot;)).select_by_value(classSelectValue)</p>
+<h1 id="&#x62FF;&#x5230;&#x641C;&#x7D22;&#x6846;"><a name="&#x62FF;&#x5230;&#x641C;&#x7D22;&#x6846;" class="anchor-navigation-ex-anchor" href="#&#x62FF;&#x5230;&#x641C;&#x7D22;&#x6846;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x62FF;&#x5230;&#x641C;&#x7D22;&#x6846;</h1>
+<p>  input = browser.find_element_by_xpath(&quot;//form[@name=&apos;site-search&apos;]/div[@class=&apos;nav-fill&apos;]//input[@class=&apos;nav-input&apos;]&quot;)</p>
+<h1 id="&#x8F93;&#x5165;&#x641C;&#x7D22;&#x5173;&#x952E;&#x5B57;"><a name="&#x8F93;&#x5165;&#x641C;&#x7D22;&#x5173;&#x952E;&#x5B57;" class="anchor-navigation-ex-anchor" href="#&#x8F93;&#x5165;&#x641C;&#x7D22;&#x5173;&#x952E;&#x5B57;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8F93;&#x5165;&#x641C;&#x7D22;&#x5173;&#x952E;&#x5B57;</h1>
+<p>  time.sleep(random.randrange(1, 5, 1))
+  input.clear()
+  input.send_keys(&apos;mount&apos;)</p>
+<h1 id="&#x6572;enter&#x952E;"><a name="&#x6572;enter&#x952E;" class="anchor-navigation-ex-anchor" href="#&#x6572;enter&#x952E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6572;enter&#x952E;</h1>
+<p>  input.send_keys(Keys.RETURN)</p>
+<pre class="language-"><code>
+
+
+### &#x7B2C;&#x4E8C;&#x79CD;&#x65B9;&#x6848;&#xFF1A;select_by_index
+
+&#x4F7F;&#x7528;&#x6761;&#x4EF6;&#xFF1A;&#x8981;&#x6C42;&#x4E0B;&#x62C9;&#x6846;&#x7684;&#x9009;&#x9879;&#x5FC5;&#x987B;&#x8981;&#x6709;**index&#x5C5E;&#x6027;**&#xFF0C;&#x4F8B;&#x5982;index=&#x201D;1&#x201D;&#x3002;&#x6CE8;&#x610F;&#xFF0C;&#x8FD9;&#x4E0D;&#x662F;&#x6570;&#x7EC4;&#x4E0B;&#x6807;&#x503C;&#xFF0C;&#x800C;&#x662F;&#x5C5E;&#x6027;&#x503C;&#xFF01;
+
+```python
+# &#x7A0D;&#x5FAE;&#x53D8;&#x4E00;&#x4E0B;&#xFF0C;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x5728;&#x8FD9;&#x4E0D;&#x5408;&#x9002;&#xFF0C;&#x4EC5;&#x4EC5;&#x662F;mark&#x4E00;&#x4E0B;
+Select(browser.find_element_by_tag_name(&quot;select&quot;)).select_by_index(2)
+</code></pre><h3 id="&#x7B2C;&#x4E09;&#x79CD;&#x65B9;&#x6848;&#xFF1A;selectbyvisibletext"><a name="&#x7B2C;&#x4E09;&#x79CD;&#x65B9;&#x6848;&#xFF1A;selectbyvisibletext" class="anchor-navigation-ex-anchor" href="#&#x7B2C;&#x4E09;&#x79CD;&#x65B9;&#x6848;&#xFF1A;selectbyvisibletext"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B2C;&#x4E09;&#x79CD;&#x65B9;&#x6848;&#xFF1A;select_by_visible_text</h3>
+<p>&#x4F7F;&#x7528;&#x6761;&#x4EF6;&#xFF1A;&#x7528;&#x4E8E;&#x9009;&#x53D6;&lt; option&gt;&#x6807;&#x7B7E;&#x7684; text &#x503C;&#xFF01;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># &lt;option value=&quot;search-alias=toys-and-games&quot;&gt;Toys &amp;amp; Games&lt;/option&gt;</span>
+<span class="token comment"># &#x4E00;&#x5B9A;&#x8981;&#x6CE8;&#x610F;&#x662F;&#x6E90;&#x4EE3;&#x7801;&#x4E2D;&#x7684;text&#x503C;&#xFF0C;&#x800C;&#x4E0D;&#x8981;&#x4ECE;&#x9875;&#x9762;&#x53BB;&#x590D;&#x5236;&#xFF0C;&#x533A;&#x522B;&#x5C31;&#x5728;&#x4E8E;&#xFF0C;&#x6E90;&#x4EE3;&#x7801;&#x4E2D;&#x4F1A;&#x6709;&amp;amp</span>
+classSelectText <span class="token operator">=</span> <span class="token string">&apos;Toys &amp;amp; Games&apos;</span>
+Select<span class="token punctuation">(</span>browser<span class="token punctuation">.</span>find_element_by_tag_name<span class="token punctuation">(</span><span class="token string">&quot;select&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>select_by_visible_text<span class="token punctuation">(</span>classSelectText <span class="token punctuation">)</span>
+</code></pre>
+<p>&#x53C2;&#x8003;</p>
+<ul>
+<li><a href="https://blog.csdn.net/zwq912318834/article/details/79197114" target="_blank">selenium + python&#x5904;&#x7406;select&#x6807;&#x7B7E;&#x4E0B;&#x62C9;&#x6846;&#x7684;&#x9009;&#x9879;</a> </li>
+</ul>
+<footer class="page-footer"><span class="copyright">  </span><span class="footer-modification">Update time&#xFF1A;
+2020-08-15 
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="selenium表格提交.html" class="navigation navigation-prev " aria-label="Previous page: selenium表格提交">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="单选框和复选框radiobox、checkbox.html" class="navigation navigation-next " aria-label="Next page: 单选框和复选框(radiobox、checkbox)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"selenium处理select标签下拉框的选项","level":"2.2.10","depth":2,"next":{"title":"单选框和复选框(radiobox、checkbox)","level":"2.2.11","depth":2,"path":"Selenium/单选框和复选框radiobox、checkbox.md","ref":"Selenium/单选框和复选框radiobox、checkbox.md","articles":[]},"previous":{"title":"selenium表格提交","level":"2.2.9","depth":2,"path":"Selenium/selenium表格提交.md","ref":"Selenium/selenium表格提交.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","disqus@^0.1.0","prism@^2.1.0","prism-themes@^0.0.2","theme-comscore","anchors@^0.7.1","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","expandable-chapters","local-video@^1.0.1","anchor-navigation-ex@0.1.8","custom-favicon","todo@^0.1.3","hide-element","copy-code-button","tbfed-pagefooter","advanced-emoji","lightbox","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":" ","modify_label":"Update time：","modify_format":"YYYY-MM-DD "},"prism":{"css":["prism-themes/themes/prism-vs.css"]},"disqus":{"useIdentifier":false,"shortName":"HG1227"},"styles":{"website":"styles/website.css"},"emphasize":{},"ace":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"favicon":"favicon.ico","lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"prism-themes":{},"custom-favicon":{},"local-video":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"template":"ace","unindent":true,"edit":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"HHG","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"readme.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"python 学习记录","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":""}},"gitbook":"*","description":"。"},"file":{"path":"Selenium/selenium处理select标签下拉框的选项.md","mtime":"2020-08-15T12:40:19.075Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-20T03:00:50.152Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-local-video/video.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

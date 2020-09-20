@@ -1,0 +1,223 @@
+/* CSS for website */
+
+h1 {
+    padding-bottom: .4rem;
+    font-size: 2.2rem;
+    line-height: 1.3;
+	font-weight: bold;
+	color: #452489;
+	text-align: center ;
+	
+}
+
+h2 {
+	font-weight: bold;
+	color: #336699;
+    font-size: 1.75rem;
+    line-height: 1.225;
+    margin: 35px 0 15px;
+	
+	padding-left:12px;
+	border-left: 9px solid #cd5c5c;
+}
+
+h3 {
+	color: #4f8a8b;
+    font-size: 1.4rem;
+    line-height: 1.43;
+    margin: 20px 0 7px;
+	/*padding-left:10px;*/
+	/*border-left: 5px solid #cd5c5c;*/
+}
+
+h4 {
+	color: #4f8a8b;
+	font-weight: bold;
+    font-size: 1.2rem;
+}
+
+h5 {
+	color: #4f8a8b;
+    font-size: 1rem;
+}
+
+h6 {
+	color: #4f8a8b;
+    font-size: 1rem;
+    color: #777;
+}
+
+.markdown-section>:first-child {
+    margin-top: 0!important;
+}
+.page-wrapper {
+    margin-top: -1.275em;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal {
+    min-height:350px;
+    margin-bottom: 20px;
+}
+
+
+
+.book .book-body .page-wrapper .page-inner section.normal hr {
+    height: 0px;
+    padding: 0;
+    margin: 1 em 0;
+    overflow: hidden;
+
+}
+/*
+.book .book-body .page-wrapper .page-inner section.normal hr {
+    font-family: 'Times New Roman', 宋体;
+    color: #34495e;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.3rem;
+    letter-spacing: 0.3;
+    margin: 0;
+    overflow-x: hidden;
+	-webkit-text-size-adjust: 100%;
+
+}
+*/
+
+/*设置代码格式*/
+.book-body  code {
+    padding: 1px 2px;
+    margin: 0 2px;
+    font-size: 101%;
+    border-radius: 3px;
+    color: #383e56;
+    background-color: rgb(143, 115, 115,0.25);
+    font-family: Monaco,Menlo,"Microsoft YaHei Mono",Consolas,"Courier New",monospace,sans-serif;
+	/*
+    color: #00008b;
+    background-color: rgba(0, 0, 0, 0.1);*/
+	
+	/*
+    padding: 1px 4px;
+    margin: 0 2px;
+    font-size: 90%;
+    border-radius: 3px;
+    color: #000;
+    background-color: rgba(0, 0, 0, 0.06);
+    border: 1px solid #d7d0d2;
+    font-family: Monaco,Menlo,"Microsoft YaHei Mono",Consolas,"Courier New",monospace,sans-serif;
+	*/
+}
+
+
+
+
+
+
+.video-js {
+    width:100%;
+    height: 100%;
+}
+
+/*正文字体设置*/
+.book .book-body .page-wrapper  section.normal {
+    font-size: 17px;
+	letter-spacing: 0.15;
+	
+    font-family:'Ubuntu', 'Source Sans Pro', 'Microsoft YaHei' !important;
+}
+
+pre[class*="language-"] {
+    /*border: none;
+    background-color: #ffffe0;*/
+    font-size: 1.2em;
+    line-height: 1.0 em;
+
+}
+
+
+
+/*
+一个插件的设置参数
+使 GitBook 支持ace 。默认情况下，line-height 为 1，*/
+/*
+.aceCode {
+	padding: 1px 2px;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    color: #00477d;
+    background-color: #e6e6fa;
+    /*font-size: 16px !important;
+ }
+*/
+
+input[type=checkbox]{
+    margin-left: -2em;
+}
+
+.book-body table {
+    padding: 0;
+    word-break: initial;
+}
+
+.book-body table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+
+.book-body table tr:nth-child(2n),
+.book-body thead {
+    background-color: #fafafa;
+}
+
+.book-body table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    text-align: center;
+    margin: 0;
+    padding: 6px 13px;
+}
+
+.book-body table tr td {
+    border: 1px solid #dfe2e5;
+    text-align: center;
+    margin: 0;
+    padding: 6px 13px;
+}
+
+.book-body table tr th:first-child,
+ table tr td:first-child {
+    margin-top: 0;
+}
+
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+
+blockquote {
+    color: #444;
+    border-left: 5px solid #D6DBDF;
+    padding-left: 15px;
+    background: rgba(112,138,153,.1);
+    padding: 10px 20px;
+    margin: 0 0 20px;
+
+}
+
+
+strong {
+	color: #616161;
+    padding: 0 1px;
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1629 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>XPath语法和lxml模块 · python 学习记录</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="HHG">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-vs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-local-video/video-js.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="正则表达式匹配.html" />
+    
+    
+    <link rel="prev" href="requestsSession应用.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="HTTP基本原理.html">
+            
+                <a href="HTTP基本原理.html">
+            
+                    
+                    HTTP基本原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="requests库.html">
+            
+                <a href="requests库.html">
+            
+                    
+                    requests库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="requests库：代理proxies.html">
+            
+                <a href="requests库：代理proxies.html">
+            
+                    
+                    requests库：代理proxies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="requestsSession应用.html">
+            
+                <a href="requestsSession应用.html">
+            
+                    
+                    requests.Session应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.1.5" data-path="XPath语法和lxml模块.html">
+            
+                <a href="XPath语法和lxml模块.html">
+            
+                    
+                    XPath语法和lxml模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="正则表达式匹配.html">
+            
+                <a href="正则表达式匹配.html">
+            
+                    
+                    正则表达式匹配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="chardet识别文件的编码格式.html">
+            
+                <a href="chardet识别文件的编码格式.html">
+            
+                    
+                    chardet识别文件的编码格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="fake-useragent.html">
+            
+                <a href="fake-useragent.html">
+            
+                    
+                    fake-useragent
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../Selenium/">
+            
+                <a href="../Selenium/">
+            
+                    
+                    Selenium
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../Selenium/基本使用.html">
+            
+                <a href="../Selenium/基本使用.html">
+            
+                    
+                    基本使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../Selenium/查找元素.html">
+            
+                <a href="../Selenium/查找元素.html">
+            
+                    
+                    查找元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../Selenium/操作被定位的元素.html">
+            
+                <a href="../Selenium/操作被定位的元素.html">
+            
+                    
+                    操作被定位的元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="../Selenium/selenium控制浏览器滚动条.html">
+            
+                <a href="../Selenium/selenium控制浏览器滚动条.html">
+            
+                    
+                    selenium控制浏览器滚动条
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5" data-path="../Selenium/等待页面加载完成(Waits.html">
+            
+                <a href="../Selenium/等待页面加载完成(Waits.html">
+            
+                    
+                    等待页面加载完成(Waits)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.6" data-path="../Selenium/切换窗口.html">
+            
+                <a href="../Selenium/切换窗口.html">
+            
+                    
+                    切换窗口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.7" data-path="../Selenium/Chrome无头模式与操作窗口.html">
+            
+                <a href="../Selenium/Chrome无头模式与操作窗口.html">
+            
+                    
+                    Chrome无头模式与操作窗口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.8" data-path="../Selenium/selenium时间日期控件处理.html">
+            
+                <a href="../Selenium/selenium时间日期控件处理.html">
+            
+                    
+                    selenium时间日期控件处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.9" data-path="../Selenium/selenium表格提交.html">
+            
+                <a href="../Selenium/selenium表格提交.html">
+            
+                    
+                    selenium表格提交
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.10" data-path="../Selenium/selenium处理select标签下拉框的选项.html">
+            
+                <a href="../Selenium/selenium处理select标签下拉框的选项.html">
+            
+                    
+                    selenium处理select标签下拉框的选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.11" data-path="../Selenium/单选框和复选框radiobox、checkbox.html">
+            
+                <a href="../Selenium/单选框和复选框radiobox、checkbox.html">
+            
+                    
+                    单选框和复选框(radiobox、checkbox)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.12" data-path="../Selenium/selenium给元素的属性赋值.html">
+            
+                <a href="../Selenium/selenium给元素的属性赋值.html">
+            
+                    
+                    selenium给元素的属性赋值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.13" data-path="../Selenium/ActionChains行为连.html">
+            
+                <a href="../Selenium/ActionChains行为连.html">
+            
+                    
+                    ActionChains行为连
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../Scrapy/">
+            
+                <a href="../Scrapy/">
+            
+                    
+                    Scrapy
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../Scrapy/Scrapy介绍.html">
+            
+                <a href="../Scrapy/Scrapy介绍.html">
+            
+                    
+                    Scrapy介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../Scrapy/Items.html">
+            
+                <a href="../Scrapy/Items.html">
+            
+                    
+                    Items
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="../Scrapy/Spiders.html">
+            
+                <a href="../Scrapy/Spiders.html">
+            
+                    
+                    Spiders
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4" data-path="../Scrapy/Item Pipeline.html">
+            
+                <a href="../Scrapy/Item Pipeline.html">
+            
+                    
+                    Item Pipeline
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.5" data-path="../Scrapy/下载项目图片.html">
+            
+                <a href="../Scrapy/下载项目图片.html">
+            
+                    
+                    下载项目图片
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.6" data-path="../Scrapy/Scrapy的Request和Response.html">
+            
+                <a href="../Scrapy/Scrapy的Request和Response.html">
+            
+                    
+                    Scrapy的Request和Response
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.7" data-path="../Scrapy/Scrapy模拟人人网登录.html">
+            
+                <a href="../Scrapy/Scrapy模拟人人网登录.html">
+            
+                    
+                    Scrapy模拟人人网登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.8" data-path="../Scrapy/Scrapy模拟登录豆瓣网.html">
+            
+                <a href="../Scrapy/Scrapy模拟登录豆瓣网.html">
+            
+                    
+                    Scrapy模拟登录豆瓣网
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.9" data-path="../Scrapy/Settings.html">
+            
+                <a href="../Scrapy/Settings.html">
+            
+                    
+                    Settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.10" data-path="../Scrapy/使用Scrapy框架爬取糗事百科段子.html">
+            
+                <a href="../Scrapy/使用Scrapy框架爬取糗事百科段子.html">
+            
+                    
+                    使用Scrapy框架爬取糗事百科段子
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.11" data-path="../Scrapy/糗事百科之抓取多个页面.html">
+            
+                <a href="../Scrapy/糗事百科之抓取多个页面.html">
+            
+                    
+                    糗事百科之抓取多个页面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.12" data-path="../Scrapy/CrawlSpider爬虫.html">
+            
+                <a href="../Scrapy/CrawlSpider爬虫.html">
+            
+                    
+                    CrawlSpider爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../案例/">
+            
+                <a href="../案例/">
+            
+                    
+                    案例
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../案例/爬取地理坐标.html">
+            
+                <a href="../案例/爬取地理坐标.html">
+            
+                    
+                    爬取地理坐标
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../案例/批量查询地址经纬度信息.html">
+            
+                <a href="../案例/批量查询地址经纬度信息.html">
+            
+                    
+                    批量查询地址经纬度信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="../案例/拉钩网数据爬取.html">
+            
+                <a href="../案例/拉钩网数据爬取.html">
+            
+                    
+                    拉钩网数据爬取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.4" data-path="../案例/selenium静态数据爬取.html">
+            
+                <a href="../案例/selenium静态数据爬取.html">
+            
+                    
+                    selenium静态数据爬取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.5" data-path="../案例/爬取淘宝商品评论.html">
+            
+                <a href="../案例/爬取淘宝商品评论.html">
+            
+                    
+                    爬取淘宝商品评论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.6" data-path="../案例/爬取京东商品评论.html">
+            
+                <a href="../案例/爬取京东商品评论.html">
+            
+                    
+                    爬取京东商品评论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.7" data-path="../案例/爬取网易云音乐.html">
+            
+                <a href="../案例/爬取网易云音乐.html">
+            
+                    
+                    爬取网易云音乐
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.8" data-path="../案例/网易云音乐API集合_测试抓取评论.html">
+            
+                <a href="../案例/网易云音乐API集合_测试抓取评论.html">
+            
+                    
+                    网易云音乐API集合_测试抓取评论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.9" data-path="../案例/B站弹幕爬取.html">
+            
+                <a href="../案例/B站弹幕爬取.html">
+            
+                    
+                    B站弹幕爬取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.10" data-path="../案例/Pandas爬取表格数据.html">
+            
+                <a href="../案例/Pandas爬取表格数据.html">
+            
+                    
+                    Pandas爬取表格数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.11" data-path="../案例/有道翻译案例.html">
+            
+                <a href="../案例/有道翻译案例.html">
+            
+                    
+                    有道翻译案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.12" data-path="../案例/移动端微博评论抓取.html">
+            
+                <a href="../案例/移动端微博评论抓取.html">
+            
+                    
+                    移动端微博评论抓取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.13" data-path="../案例/豆果网数据爬取.html">
+            
+                <a href="../案例/豆果网数据爬取.html">
+            
+                    
+                    豆果网数据爬取
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >XPath语法和lxml模块</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#xpath&#x8BED;&#x6CD5;&#x548C;lxml&#x6A21;&#x5757;">XPath&#x8BED;&#x6CD5;&#x548C;lxml&#x6A21;&#x5757;</a></li><ul><li><a href="#&#x4EC0;&#x4E48;&#x662F;xpath&#xFF1F;">&#x4EC0;&#x4E48;&#x662F;XPath&#xFF1F;</a></li><li><a href="#xpath&#x8BED;&#x6CD5;">XPath&#x8BED;&#x6CD5;</a></li><ul><li><a href="#&#x9009;&#x53D6;&#x8282;&#x70B9;&#xFF1A;">&#x9009;&#x53D6;&#x8282;&#x70B9;&#xFF1A;</a></li><li><a href="#&#x8C13;&#x8BED;&#xFF1A;">&#x8C13;&#x8BED;&#xFF1A;</a></li><li><a href="#&#x901A;&#x914D;&#x7B26;">&#x901A;&#x914D;&#x7B26;</a></li><li><a href="#&#x9009;&#x53D6;&#x591A;&#x4E2A;&#x8DEF;&#x5F84;&#xFF1A;">&#x9009;&#x53D6;&#x591A;&#x4E2A;&#x8DEF;&#x5F84;&#xFF1A;</a></li></ul><li><a href="#lxml&#x5E93;">lxml&#x5E93;</a></li><ul><li><a href="#&#x57FA;&#x672C;&#x4F7F;&#x7528;&#xFF1A;">&#x57FA;&#x672C;&#x4F7F;&#x7528;&#xFF1A;</a></li><li><a href="#&#x4ECE;&#x6587;&#x4EF6;&#x4E2D;&#x8BFB;&#x53D6;html&#x4EE3;&#x7801;">&#x4ECE;&#x6587;&#x4EF6;&#x4E2D;&#x8BFB;&#x53D6;html&#x4EE3;&#x7801;</a></li></ul><li><a href="#&#x5728;lxml&#x4E2D;&#x4F7F;&#x7528;xpath&#x8BED;&#x6CD5;&#xFF1A;">&#x5728;lxml&#x4E2D;&#x4F7F;&#x7528;XPath&#x8BED;&#x6CD5;&#xFF1A;</a></li><ul><li><a href="#&#x8BFB;&#x53D6;&#x6587;&#x672C;&#x89E3;&#x6790;&#x8282;&#x70B9;">&#x8BFB;&#x53D6;&#x6587;&#x672C;&#x89E3;&#x6790;&#x8282;&#x70B9;</a></li><li><a href="#&#x8BFB;&#x53D6;html&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x89E3;&#x6790;">&#x8BFB;&#x53D6;HTML&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x89E3;&#x6790;</a></li><li><a href="#&#x83B7;&#x53D6;&#x6240;&#x6709;&#x8282;&#x70B9;">&#x83B7;&#x53D6;&#x6240;&#x6709;&#x8282;&#x70B9;</a></li><li><a href="#&#x83B7;&#x53D6;&#x5B50;&#x8282;&#x70B9;">&#x83B7;&#x53D6;&#x5B50;&#x8282;&#x70B9;</a></li><li><a href="#&#x5C5E;&#x6027;&#x5339;&#x914D;">&#x5C5E;&#x6027;&#x5339;&#x914D;</a></li><li><a href="#&#x6587;&#x672C;&#x83B7;&#x53D6;">&#x6587;&#x672C;&#x83B7;&#x53D6;</a></li><li><a href="#&#x5C5E;&#x6027;&#x83B7;&#x53D6;">&#x5C5E;&#x6027;&#x83B7;&#x53D6;</a></li><li><a href="#&#x5C5E;&#x6027;&#x591A;&#x503C;&#x5339;&#x914D;">&#x5C5E;&#x6027;&#x591A;&#x503C;&#x5339;&#x914D;</a></li><li><a href="#&#x591A;&#x5C5E;&#x6027;&#x5339;&#x914D;">&#x591A;&#x5C5E;&#x6027;&#x5339;&#x914D;</a></li><li><a href="#&#x6309;&#x5E8F;&#x9009;&#x62E9;">&#x6309;&#x5E8F;&#x9009;&#x62E9;</a></li></ul><li><a href="#lxml&#x7ED3;&#x5408;xpath&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#xFF1A;">lxml&#x7ED3;&#x5408;xpath&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#xFF1A;</a></li><li><a href="#&#x7EC3;&#x4E60;">&#x7EC3;&#x4E60;</a></li><li><a href="#&#x6848;&#x4F8B;&#x5E94;&#x7528;&#xFF1A;&#x6293;&#x53D6;tiobe&#x6307;&#x6570;&#x524D;20&#x540D;&#x6392;&#x884C;&#x5F00;&#x53D1;&#x8BED;&#x8A00;">&#x6848;&#x4F8B;&#x5E94;&#x7528;&#xFF1A;&#x6293;&#x53D6;TIOBE&#x6307;&#x6570;&#x524D;20&#x540D;&#x6392;&#x884C;&#x5F00;&#x53D1;&#x8BED;&#x8A00;</a></li><li><a href="#&#x4F7F;&#x7528;requests&#x548C;xpath&#x722C;&#x53D6;&#x7535;&#x5F71;&#x5929;&#x5802;">&#x4F7F;&#x7528;requests&#x548C;xpath&#x722C;&#x53D6;&#x7535;&#x5F71;&#x5929;&#x5802;</a></li><li><a href="#&#x53C2;&#x8003;">&#x53C2;&#x8003;</a></li></ul></ul></div><a href="#xpath&#x8BED;&#x6CD5;&#x548C;lxml&#x6A21;&#x5757;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="xpath&#x8BED;&#x6CD5;&#x548C;lxml&#x6A21;&#x5757;"><a name="xpath&#x8BED;&#x6CD5;&#x548C;lxml&#x6A21;&#x5757;" class="anchor-navigation-ex-anchor" href="#xpath&#x8BED;&#x6CD5;&#x548C;lxml&#x6A21;&#x5757;"><i class="fa fa-link" aria-hidden="true"></i></a>XPath&#x8BED;&#x6CD5;&#x548C;lxml&#x6A21;&#x5757;</h1>
+<h2 id="&#x4EC0;&#x4E48;&#x662F;xpath&#xFF1F;"><a name="&#x4EC0;&#x4E48;&#x662F;xpath&#xFF1F;" class="anchor-navigation-ex-anchor" href="#&#x4EC0;&#x4E48;&#x662F;xpath&#xFF1F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EC0;&#x4E48;&#x662F;XPath&#xFF1F;</h2>
+<p>xpath&#xFF08;XML Path Language&#xFF09;&#x662F;&#x4E00;&#x95E8;&#x5728;XML&#x548C;HTML&#x6587;&#x6863;&#x4E2D;&#x67E5;&#x627E;&#x4FE1;&#x606F;&#x7684;&#x8BED;&#x8A00;&#xFF0C;&#x53EF;&#x7528;&#x6765;&#x5728;XML&#x548C;HTML&#x6587;&#x6863;&#x4E2D;&#x5BF9;&#x5143;&#x7D20;&#x548C;&#x5C5E;&#x6027;&#x8FDB;&#x884C;&#x904D;&#x5386;&#x3002;</p>
+<h2 id="xpath&#x8BED;&#x6CD5;"><a name="xpath&#x8BED;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#xpath&#x8BED;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>XPath&#x8BED;&#x6CD5;</h2>
+<h3 id="&#x9009;&#x53D6;&#x8282;&#x70B9;&#xFF1A;"><a name="&#x9009;&#x53D6;&#x8282;&#x70B9;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x9009;&#x53D6;&#x8282;&#x70B9;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9009;&#x53D6;&#x8282;&#x70B9;&#xFF1A;</h3>
+<p>XPath &#x4F7F;&#x7528;&#x8DEF;&#x5F84;&#x8868;&#x8FBE;&#x5F0F;&#x6765;&#x9009;&#x53D6; XML &#x6587;&#x6863;&#x4E2D;&#x7684;&#x8282;&#x70B9;&#x6216;&#x8005;&#x8282;&#x70B9;&#x96C6;&#x3002;&#x8FD9;&#x4E9B;&#x8DEF;&#x5F84;&#x8868;&#x8FBE;&#x5F0F;&#x548C;&#x6211;&#x4EEC;&#x5728;&#x5E38;&#x89C4;&#x7684;&#x7535;&#x8111;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4E2D;&#x770B;&#x5230;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x975E;&#x5E38;&#x76F8;&#x4F3C;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x8868;&#x8FBE;&#x5F0F;</th>
+<th style="text-align:center">&#x63CF;&#x8FF0;</th>
+<th style="text-align:center">&#x793A;&#x4F8B;</th>
+<th>&#x7ED3;&#x679C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">nodename</td>
+<td style="text-align:center">&#x9009;&#x53D6;&#x6B64;&#x8282;&#x70B9;&#x7684;&#x6240;&#x6709;&#x5B50;&#x8282;&#x70B9;</td>
+<td style="text-align:center">bookstore</td>
+<td>&#x9009;&#x53D6;bookstore&#x4E0B;&#x6240;&#x6709;&#x7684;&#x5B50;&#x8282;&#x70B9;</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>/</code></td>
+<td style="text-align:center">&#x5982;&#x679C;&#x662F;&#x5728;&#x6700;&#x524D;&#x9762;&#xFF0C;&#x4EE3;&#x8868;&#x4ECE;&#x6839;&#x8282;&#x70B9;&#x9009;&#x53D6;&#x3002;&#x5426;&#x5219;&#x9009;&#x62E9;&#x67D0;&#x8282;&#x70B9;&#x4E0B;&#x7684;&#x67D0;&#x4E2A;&#x8282;&#x70B9;</td>
+<td style="text-align:center"><code>/bookstore</code></td>
+<td>&#x9009;&#x53D6;&#x6839;&#x5143;&#x7D20;&#x4E0B;&#x6240;&#x6709;&#x7684;bookstore&#x8282;&#x70B9;</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>//</code></td>
+<td style="text-align:center">&#x4ECE;&#x5168;&#x5C40;&#x8282;&#x70B9;&#x4E2D;&#x9009;&#x62E9;&#x8282;&#x70B9;&#xFF0C;&#x968F;&#x4FBF;&#x5728;&#x54EA;&#x4E2A;&#x4F4D;&#x7F6E;</td>
+<td style="text-align:center"><code>//book</code></td>
+<td>&#x4ECE;&#x5168;&#x5C40;&#x8282;&#x70B9;&#x4E2D;&#x627E;&#x5230;&#x6240;&#x6709;&#x7684;book&#x8282;&#x70B9;</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>@</code></td>
+<td style="text-align:center">&#x9009;&#x53D6;&#x67D0;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x5C5E;&#x6027;</td>
+<td style="text-align:center"><code>//book[@price]</code></td>
+<td>&#x9009;&#x62E9;&#x6240;&#x6709;&#x62E5;&#x6709;price&#x5C5E;&#x6027;&#x7684;book&#x8282;&#x70B9;</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>.</code></td>
+<td style="text-align:center">&#x5F53;&#x524D;&#x8282;&#x70B9;</td>
+<td style="text-align:center"><code>./a</code></td>
+<td>&#x9009;&#x53D6;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x4E0B;&#x7684;a&#x6807;&#x7B7E;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x8C13;&#x8BED;&#xFF1A;"><a name="&#x8C13;&#x8BED;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x8C13;&#x8BED;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8C13;&#x8BED;&#xFF1A;</h3>
+<p>&#x8C13;&#x8BED;&#x7528;&#x6765;&#x67E5;&#x627E;&#x67D0;&#x4E2A;&#x7279;&#x5B9A;&#x7684;&#x8282;&#x70B9;&#x6216;&#x8005;&#x5305;&#x542B;&#x67D0;&#x4E2A;&#x6307;&#x5B9A;&#x7684;&#x503C;&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x88AB;&#x5D4C;&#x5728;&#x65B9;&#x62EC;&#x53F7;&#x4E2D;&#x3002;
+&#x5728;&#x4E0B;&#x9762;&#x7684;&#x8868;&#x683C;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5217;&#x51FA;&#x4E86;&#x5E26;&#x6709;&#x8C13;&#x8BED;&#x7684;&#x4E00;&#x4E9B;&#x8DEF;&#x5F84;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x4EE5;&#x53CA;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x7ED3;&#x679C;&#xFF1A;</p>
+<p><a href="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200526105258.png" data-lightbox="e95ad278-cc79-4796-aa2a-cc88f041ed84" data-title="undefined" target="_blank"><img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200526105258.png" alt="undefined"></a></p>
+<h3 id="&#x901A;&#x914D;&#x7B26;"><a name="&#x901A;&#x914D;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x901A;&#x914D;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x901A;&#x914D;&#x7B26;</h3>
+<p><code>*</code>&#x8868;&#x793A;&#x901A;&#x914D;&#x7B26;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x901A;&#x914D;&#x7B26;</th>
+<th style="text-align:center">&#x63CF;&#x8FF0;</th>
+<th style="text-align:center">&#x793A;&#x4F8B;</th>
+<th style="text-align:center">&#x7ED3;&#x679C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>*</code></td>
+<td style="text-align:center">&#x5339;&#x914D;&#x4EFB;&#x610F;&#x8282;&#x70B9;</td>
+<td style="text-align:center"><code>/bookstore/*</code></td>
+<td style="text-align:center">&#x9009;&#x53D6;bookstore&#x4E0B;&#x7684;&#x6240;&#x6709;&#x5B50;&#x5143;&#x7D20;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>@*</code></td>
+<td style="text-align:center">&#x5339;&#x914D;&#x8282;&#x70B9;&#x4E2D;&#x7684;&#x4EFB;&#x4F55;&#x5C5E;&#x6027;</td>
+<td style="text-align:center"><code>//book[@*]</code></td>
+<td style="text-align:center">&#x9009;&#x53D6;&#x6240;&#x6709;&#x5E26;&#x6709;&#x5C5E;&#x6027;&#x7684;book&#x5143;&#x7D20;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x9009;&#x53D6;&#x591A;&#x4E2A;&#x8DEF;&#x5F84;&#xFF1A;"><a name="&#x9009;&#x53D6;&#x591A;&#x4E2A;&#x8DEF;&#x5F84;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x9009;&#x53D6;&#x591A;&#x4E2A;&#x8DEF;&#x5F84;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9009;&#x53D6;&#x591A;&#x4E2A;&#x8DEF;&#x5F84;&#xFF1A;</h3>
+<p>&#x901A;&#x8FC7;&#x5728;&#x8DEF;&#x5F84;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#x4F7F;&#x7528; &#x201C;|&#x201D; &#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x53EF;&#x4EE5;&#x9009;&#x53D6;&#x82E5;&#x5E72;&#x4E2A;&#x8DEF;&#x5F84;&#x3002;</p>
+<pre class="language-"><code class="lang-python"><span class="token operator">//</span>bookstore<span class="token operator">/</span>book <span class="token operator">|</span> <span class="token operator">//</span>book<span class="token operator">/</span>title
+<span class="token comment"># &#x9009;&#x53D6;&#x6240;&#x6709;book&#x5143;&#x7D20;&#x4EE5;&#x53CA;book&#x5143;&#x7D20;&#x4E0B;&#x6240;&#x6709;&#x7684;title&#x5143;&#x7D20;</span>
+</code></pre>
+<h2 id="lxml&#x5E93;"><a name="lxml&#x5E93;" class="anchor-navigation-ex-anchor" href="#lxml&#x5E93;"><i class="fa fa-link" aria-hidden="true"></i></a>lxml&#x5E93;</h2>
+<p>lxml &#x662F; &#x4E00;&#x4E2A;HTML/XML&#x7684;&#x89E3;&#x6790;&#x5668;&#xFF0C;&#x4E3B;&#x8981;&#x7684;&#x529F;&#x80FD;&#x662F;&#x5982;&#x4F55;&#x89E3;&#x6790;&#x548C;&#x63D0;&#x53D6; HTML/XML &#x6570;&#x636E;&#x3002;</p>
+<p>lxml&#x548C;&#x6B63;&#x5219;&#x4E00;&#x6837;&#xFF0C;&#x4E5F;&#x662F;&#x7528; C &#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x662F;&#x4E00;&#x6B3E;&#x9AD8;&#x6027;&#x80FD;&#x7684; Python HTML/XML &#x89E3;&#x6790;&#x5668;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x4E4B;&#x524D;&#x5B66;&#x4E60;&#x7684;XPath&#x8BED;&#x6CD5;&#xFF0C;&#x6765;&#x5FEB;&#x901F;&#x7684;&#x5B9A;&#x4F4D;&#x7279;&#x5B9A;&#x5143;&#x7D20;&#x4EE5;&#x53CA;&#x8282;&#x70B9;&#x4FE1;&#x606F;&#x3002;</p>
+<h3 id="&#x57FA;&#x672C;&#x4F7F;&#x7528;&#xFF1A;"><a name="&#x57FA;&#x672C;&#x4F7F;&#x7528;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x57FA;&#x672C;&#x4F7F;&#x7528;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x57FA;&#x672C;&#x4F7F;&#x7528;&#xFF1A;</h3>
+<p>&#x89E3;&#x6790;HTML&#x4EE3;&#x7801;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x89E3;&#x6790;HTML&#x4EE3;&#x7801;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5982;&#x679C;HTML&#x4EE3;&#x7801;&#x4E0D;&#x89C4;&#x8303;&#xFF0C;&#x4ED6;&#x4F1A;&#x81EA;&#x52A8;&#x7684;&#x8FDB;&#x884C;&#x8865;&#x5168;&#x3002;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code># &#x4F7F;&#x7528; lxml &#x7684; etree &#x5E93;
+from lxml import etree 
+
+text = &apos;&apos;&apos;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span>
+         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>item-0<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>link1.html<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>first item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>item-1<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>link2.html<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>second item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>item-inactive<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>link3.html<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>third item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>item-1<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>link4.html<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>fourth item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>item-0<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>link5.html<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>fifth item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span> # &#x6CE8;&#x610F;&#xFF0C;&#x6B64;&#x5904;&#x7F3A;&#x5C11;&#x4E00;&#x4E2A; <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span> &#x95ED;&#x5408;&#x6807;&#x7B7E;
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+&apos;&apos;&apos;
+</code></pre><pre class="language-"><code class="lang-python">
+<span class="token comment">#&#x5229;&#x7528;etree.HTML&#xFF0C;&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x89E3;&#x6790;&#x4E3A;HTML&#x6587;&#x6863;</span>
+html <span class="token operator">=</span> etree<span class="token punctuation">.</span>HTML<span class="token punctuation">(</span>text<span class="token punctuation">)</span> 
+
+<span class="token comment"># &#x6309;&#x5B57;&#x7B26;&#x4E32;&#x5E8F;&#x5217;&#x5316;HTML&#x6587;&#x6863;</span>
+result <span class="token operator">=</span> etree<span class="token punctuation">.</span>tostring<span class="token punctuation">(</span>html<span class="token punctuation">)</span> 
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+&#x8F93;&#x5165;&#x7ED3;&#x679C;&#x5982;&#x4E0B;&#xFF1A;
+
+<span class="token operator">&lt;</span>html<span class="token operator">&gt;</span><span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>ul<span class="token operator">&gt;</span>
+         <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;item-0&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">&quot;link1.html&quot;</span><span class="token operator">&gt;</span>first item<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+         <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;item-1&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">&quot;link2.html&quot;</span><span class="token operator">&gt;</span>second item<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+         <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;item-inactive&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">&quot;link3.html&quot;</span><span class="token operator">&gt;</span>third item<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+         <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;item-1&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">&quot;link4.html&quot;</span><span class="token operator">&gt;</span>fourth item<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+         <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;item-0&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">&quot;link5.html&quot;</span><span class="token operator">&gt;</span>fifth item<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">&gt;</span>
+ <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">&gt;</span>
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x3002;lxml&#x4F1A;&#x81EA;&#x52A8;&#x4FEE;&#x6539;HTML&#x4EE3;&#x7801;&#x3002;&#x4F8B;&#x5B50;&#x4E2D;&#x4E0D;&#x4EC5;&#x8865;&#x5168;&#x4E86;li&#x6807;&#x7B7E;&#xFF0C;&#x8FD8;&#x6DFB;&#x52A0;&#x4E86;body&#xFF0C;html&#x6807;&#x7B7E;&#x3002;</p>
+<h3 id="&#x4ECE;&#x6587;&#x4EF6;&#x4E2D;&#x8BFB;&#x53D6;html&#x4EE3;&#x7801;"><a name="&#x4ECE;&#x6587;&#x4EF6;&#x4E2D;&#x8BFB;&#x53D6;html&#x4EE3;&#x7801;" class="anchor-navigation-ex-anchor" href="#&#x4ECE;&#x6587;&#x4EF6;&#x4E2D;&#x8BFB;&#x53D6;html&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4ECE;&#x6587;&#x4EF6;&#x4E2D;&#x8BFB;&#x53D6;html&#x4EE3;&#x7801;</h3>
+<p>&#x9664;&#x4E86;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x5B57;&#x7B26;&#x4E32;&#x8FDB;&#x884C;&#x89E3;&#x6790;&#xFF0C;lxml&#x8FD8;&#x652F;&#x6301;&#x4ECE;&#x6587;&#x4EF6;&#x4E2D;&#x8BFB;&#x53D6;&#x5185;&#x5BB9;&#x3002;&#x6211;&#x4EEC;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;hello.html&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre class="language-"><code><span class="token comment">&lt;!-- hello.html --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span>
+         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>item-0<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>link1.html<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>first item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>item-1<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>link2.html<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>second item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>item-inactive<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>link3.html<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>bold<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>third item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>item-1<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>link4.html<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>fourth item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>item-0<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>link5.html<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>fifth item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>&#x7136;&#x540E;&#x5229;&#x7528; <code>etree.parse()</code>&#x65B9;&#x6CD5;&#x6765;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x3002;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> lxml <span class="token keyword">import</span> etree
+
+<span class="token comment"># &#x8BFB;&#x53D6;&#x5916;&#x90E8;&#x6587;&#x4EF6; hello.html</span>
+html <span class="token operator">=</span> etree<span class="token punctuation">.</span>parse<span class="token punctuation">(</span><span class="token string">&apos;hello.html&apos;</span><span class="token punctuation">)</span>
+result <span class="token operator">=</span> etree<span class="token punctuation">.</span>tostring<span class="token punctuation">(</span>html<span class="token punctuation">,</span> pretty_print<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+</code></pre>
+<h2 id="&#x5728;lxml&#x4E2D;&#x4F7F;&#x7528;xpath&#x8BED;&#x6CD5;&#xFF1A;"><a name="&#x5728;lxml&#x4E2D;&#x4F7F;&#x7528;xpath&#x8BED;&#x6CD5;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x5728;lxml&#x4E2D;&#x4F7F;&#x7528;xpath&#x8BED;&#x6CD5;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5728;lxml&#x4E2D;&#x4F7F;&#x7528;XPath&#x8BED;&#x6CD5;&#xFF1A;</h2>
+<h3 id="&#x8BFB;&#x53D6;&#x6587;&#x672C;&#x89E3;&#x6790;&#x8282;&#x70B9;"><a name="&#x8BFB;&#x53D6;&#x6587;&#x672C;&#x89E3;&#x6790;&#x8282;&#x70B9;" class="anchor-navigation-ex-anchor" href="#&#x8BFB;&#x53D6;&#x6587;&#x672C;&#x89E3;&#x6790;&#x8282;&#x70B9;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BFB;&#x53D6;&#x6587;&#x672C;&#x89E3;&#x6790;&#x8282;&#x70B9;</h3>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> lxml <span class="token keyword">import</span> etree
+
+text<span class="token operator">=</span><span class="token triple-quoted-string string">&apos;&apos;&apos;
+&lt;div&gt;
+    &lt;ul&gt;
+         &lt;li class=&quot;item-0&quot;&gt;&lt;a href=&quot;link1.html&quot;&gt;&#x7B2C;&#x4E00;&#x4E2A;&lt;/a&gt;&lt;/li&gt;
+         &lt;li class=&quot;item-1&quot;&gt;&lt;a href=&quot;link2.html&quot;&gt;second item&lt;/a&gt;&lt;/li&gt;
+         &lt;li class=&quot;item-0&quot;&gt;&lt;a href=&quot;link5.html&quot;&gt;a&#x5C5E;&#x6027;&lt;/a&gt;
+     &lt;/ul&gt;
+ &lt;/div&gt;
+&apos;&apos;&apos;</span>
+html<span class="token operator">=</span>etree<span class="token punctuation">.</span>HTML<span class="token punctuation">(</span>text<span class="token punctuation">)</span> <span class="token comment">#&#x521D;&#x59CB;&#x5316;&#x751F;&#x6210;&#x4E00;&#x4E2A;XPath&#x89E3;&#x6790;&#x5BF9;&#x8C61;</span>
+result<span class="token operator">=</span>etree<span class="token punctuation">.</span>tostring<span class="token punctuation">(</span>html<span class="token punctuation">,</span>encoding<span class="token operator">=</span><span class="token string">&apos;utf-8&apos;</span><span class="token punctuation">)</span>   <span class="token comment">#&#x89E3;&#x6790;&#x5BF9;&#x8C61;&#x8F93;&#x51FA;&#x4EE3;&#x7801;</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">&apos;utf-8&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment">#etree&#x4F1A;&#x4FEE;&#x590D;HTML&#x6587;&#x672C;&#x8282;&#x70B9;</span>
+<span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">&apos;lxml.etree._Element&apos;</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">&apos;bytes&apos;</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>html<span class="token operator">&gt;</span><span class="token operator">&lt;</span>body<span class="token operator">&gt;</span><span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>ul<span class="token operator">&gt;</span>
+         <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;item-0&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">&quot;link1.html&quot;</span><span class="token operator">&gt;</span>&#x7B2C;&#x4E00;&#x4E2A;<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+         <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;item-1&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">&quot;link2.html&quot;</span><span class="token operator">&gt;</span>second item<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+         <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;item-0&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">&quot;link5.html&quot;</span><span class="token operator">&gt;</span>a&#x5C5E;&#x6027;<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+     <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">&gt;</span>
+ <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">&gt;</span>
+</code></pre>
+<h3 id="&#x8BFB;&#x53D6;html&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x89E3;&#x6790;"><a name="&#x8BFB;&#x53D6;html&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x89E3;&#x6790;" class="anchor-navigation-ex-anchor" href="#&#x8BFB;&#x53D6;html&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x89E3;&#x6790;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BFB;&#x53D6;HTML&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x89E3;&#x6790;</h3>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> lxml <span class="token keyword">import</span> etree
+
+html<span class="token operator">=</span>etree<span class="token punctuation">.</span>parse<span class="token punctuation">(</span><span class="token string">&apos;test.html&apos;</span><span class="token punctuation">,</span>etree<span class="token punctuation">.</span>HTMLParser<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">#&#x6307;&#x5B9A;&#x89E3;&#x6790;&#x5668;HTMLParser&#x4F1A;&#x6839;&#x636E;&#x6587;&#x4EF6;&#x4FEE;&#x590D;HTML&#x6587;&#x4EF6;&#x4E2D;&#x7F3A;&#x5931;&#x7684;&#x5982;&#x58F0;&#x660E;&#x4FE1;&#x606F;</span>
+result<span class="token operator">=</span>etree<span class="token punctuation">.</span>tostring<span class="token punctuation">(</span>html<span class="token punctuation">)</span>   <span class="token comment">#&#x89E3;&#x6790;&#x6210;&#x5B57;&#x8282;</span>
+<span class="token comment">#result=etree.tostringlist(html) #&#x89E3;&#x6790;&#x6210;&#x5217;&#x8868;</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+
+<span class="token comment">#</span>
+<span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">&apos;lxml.etree._ElementTree&apos;</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">&apos;bytes&apos;</span><span class="token operator">&gt;</span>
+b&apos;<span class="token operator">&lt;</span>!DOCTYPE html PUBLIC <span class="token string">&quot;-//W3C//DTD HTML 4.0 Transitional//EN&quot;</span> <span class="token string">&quot;http://www.w3.org/TR/REC-html40/loose.dtd&quot;</span><span class="token operator">&gt;</span>\n<span class="token operator">&lt;</span>html<span class="token operator">&gt;</span><span class="token operator">&lt;</span>body<span class="token operator">&gt;</span><span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+\n    <span class="token operator">&lt;</span>ul<span class="token operator">&gt;</span>
+\n         <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;item-0&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">&quot;link1.html&quot;</span><span class="token operator">&gt;</span>first item<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+\n         <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;item-1&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">&quot;link2.html&quot;</span><span class="token operator">&gt;</span>second item<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+\n         <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;item-inactive&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">&quot;link3.html&quot;</span><span class="token operator">&gt;</span>third item<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+\n         <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;item-1&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">&quot;link4.html&quot;</span><span class="token operator">&gt;</span>fourth item<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+\n         <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;item-0&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">&quot;link5.html&quot;</span><span class="token operator">&gt;</span>fifth item<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+\n     <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">&gt;</span>
+\n <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+\n<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">&gt;</span>&apos;
+</code></pre>
+<h3 id="&#x83B7;&#x53D6;&#x6240;&#x6709;&#x8282;&#x70B9;"><a name="&#x83B7;&#x53D6;&#x6240;&#x6709;&#x8282;&#x70B9;" class="anchor-navigation-ex-anchor" href="#&#x83B7;&#x53D6;&#x6240;&#x6709;&#x8282;&#x70B9;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x83B7;&#x53D6;&#x6240;&#x6709;&#x8282;&#x70B9;</h3>
+<p>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x90FD;&#x662F;Element&#x7C7B;&#x578B;&#xFF0C;&#x6240;&#x6709;&#x8282;&#x70B9;&#x90FD;&#x5305;&#x542B;&#x5728;&#x5176;&#x4E2D;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> lxml <span class="token keyword">import</span> etree
+
+html<span class="token operator">=</span>etree<span class="token punctuation">.</span>parse<span class="token punctuation">(</span><span class="token string">&apos;test&apos;</span><span class="token punctuation">,</span>etree<span class="token punctuation">.</span>HTMLParser<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+result<span class="token operator">=</span>html<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&apos;//*&apos;</span><span class="token punctuation">)</span>  <span class="token comment">#//&#x4EE3;&#x8868;&#x83B7;&#x53D6;&#x5B50;&#x5B59;&#x8282;&#x70B9;&#xFF0C;*&#x4EE3;&#x8868;&#x83B7;&#x53D6;&#x6240;&#x6709;</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+
+<span class="token comment">#</span>
+<span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">&apos;lxml.etree._ElementTree&apos;</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">&apos;list&apos;</span><span class="token operator">&gt;</span>
+<span class="token punctuation">[</span><span class="token operator">&lt;</span>Element html at <span class="token number">0x754b210048</span><span class="token operator">&gt;</span><span class="token punctuation">,</span> <span class="token operator">&lt;</span>Element body at <span class="token number">0x754b210108</span><span class="token operator">&gt;</span><span class="token punctuation">,</span> <span class="token operator">&lt;</span>Element div at <span class="token number">0x754b210148</span><span class="token operator">&gt;</span><span class="token punctuation">,</span> <span class="token operator">&lt;</span>Element ul at <span class="token number">0x754b210188</span><span class="token operator">&gt;</span><span class="token punctuation">,</span> <span class="token operator">&lt;</span>Element li at <span class="token number">0x754b2101c8</span><span class="token operator">&gt;</span><span class="token punctuation">,</span> <span class="token operator">&lt;</span>Element a at <span class="token number">0x754b210248</span><span class="token operator">&gt;</span><span class="token punctuation">,</span> <span class="token operator">&lt;</span>Element li at <span class="token number">0x754b210288</span><span class="token operator">&gt;</span><span class="token punctuation">,</span> <span class="token operator">&lt;</span>Element a at <span class="token number">0x754b2102c8</span><span class="token operator">&gt;</span><span class="token punctuation">,</span> <span class="token operator">&lt;</span>Element li at <span class="token number">0x754b210308</span><span class="token operator">&gt;</span><span class="token punctuation">,</span> <span class="token operator">&lt;</span>Element a at <span class="token number">0x754b210208</span><span class="token operator">&gt;</span><span class="token punctuation">,</span> <span class="token operator">&lt;</span>Element li at <span class="token number">0x754b210348</span><span class="token operator">&gt;</span><span class="token punctuation">,</span> <span class="token operator">&lt;</span>Element a at <span class="token number">0x754b210388</span><span class="token operator">&gt;</span><span class="token punctuation">,</span> <span class="token operator">&lt;</span>Element li at <span class="token number">0x754b2103c8</span><span class="token operator">&gt;</span><span class="token punctuation">,</span> <span class="token operator">&lt;</span>Element a at <span class="token number">0x754b210408</span><span class="token operator">&gt;</span><span class="token punctuation">]</span>
+</code></pre>
+<p>&#x5982;&#x8981;&#x83B7;&#x53D6;li&#x8282;&#x70B9;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;//&#x540E;&#x9762;&#x52A0;&#x4E0A;&#x8282;&#x70B9;&#x540D;&#x79F0;&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528;xpath()&#x65B9;&#x6CD5;</p>
+<pre class="language-"><code class="lang-python">html<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&apos;//li&apos;</span><span class="token punctuation">)</span>   <span class="token comment">#&#x83B7;&#x53D6;&#x6240;&#x6709;&#x5B50;&#x5B59;&#x8282;&#x70B9;&#x7684;li&#x8282;&#x70B9;</span>
+</code></pre>
+<h3 id="&#x83B7;&#x53D6;&#x5B50;&#x8282;&#x70B9;"><a name="&#x83B7;&#x53D6;&#x5B50;&#x8282;&#x70B9;" class="anchor-navigation-ex-anchor" href="#&#x83B7;&#x53D6;&#x5B50;&#x8282;&#x70B9;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x83B7;&#x53D6;&#x5B50;&#x8282;&#x70B9;</h3>
+<p>&#x901A;&#x8FC7;/&#x6216;&#x8005;//&#x5373;&#x53EF;&#x67E5;&#x627E;&#x5143;&#x7D20;&#x7684;&#x5B50;&#x8282;&#x70B9;&#x6216;&#x8005;&#x5B50;&#x5B59;&#x8282;&#x70B9;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x9009;&#x62E9;li&#x8282;&#x70B9;&#x7684;&#x6240;&#x6709;&#x76F4;&#x63A5;a&#x8282;&#x70B9;&#xFF0C;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x4F7F;&#x7528;</p>
+<pre class="language-"><code class="lang-python">result<span class="token operator">=</span>html<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&apos;//li/a&apos;</span><span class="token punctuation">)</span>  
+<span class="token comment">#&#x901A;&#x8FC7;&#x8FFD;&#x52A0;/a&#x9009;&#x62E9;&#x6240;&#x6709;li&#x8282;&#x70B9;&#x7684;&#x6240;&#x6709;&#x76F4;&#x63A5;a&#x8282;&#x70B9;&#xFF0C;</span>
+<span class="token comment"># &#x56E0;&#x4E3A;//li&#x7528;&#x4E8E;&#x9009;&#x4E2D;&#x6240;&#x6709;li&#x8282;&#x70B9;&#xFF0C;/a&#x7528;&#x4E8E;&#x9009;&#x4E2D;li&#x8282;&#x70B9;&#x7684;&#x6240;&#x6709;&#x76F4;&#x63A5;&#x5B50;&#x8282;&#x70B9;a</span>
+</code></pre>
+<h3 id="&#x5C5E;&#x6027;&#x5339;&#x914D;"><a name="&#x5C5E;&#x6027;&#x5339;&#x914D;" class="anchor-navigation-ex-anchor" href="#&#x5C5E;&#x6027;&#x5339;&#x914D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5C5E;&#x6027;&#x5339;&#x914D;</h3>
+<p>&#x5728;&#x9009;&#x53D6;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x53EF;&#x4EE5;&#x7528;<code>@</code>&#x7B26;&#x53F7;&#x8FDB;&#x884C;&#x5C5E;&#x6027;&#x8FC7;&#x6EE4;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x8FD9;&#x91CC;&#x5982;&#x679C;&#x8981;&#x9009;&#x53D6;<code>class</code>&#x4E3A;<code>item-1</code>&#x7684;<code>li</code>&#x8282;&#x70B9;&#xFF0C;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x5B9E;&#x73B0;:</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> lxml <span class="token keyword">import</span> etree
+<span class="token keyword">from</span> lxml<span class="token punctuation">.</span>etree <span class="token keyword">import</span> HTMLParser
+text<span class="token operator">=</span><span class="token triple-quoted-string string">&apos;&apos;&apos;
+&lt;div&gt;
+    &lt;ul&gt;
+         &lt;li class=&quot;item-0&quot;&gt;&lt;a href=&quot;link1.html&quot;&gt;&#x7B2C;&#x4E00;&#x4E2A;&lt;/a&gt;&lt;/li&gt;
+         &lt;li class=&quot;item-1&quot;&gt;&lt;a href=&quot;link2.html&quot;&gt;second item&lt;/a&gt;&lt;/li&gt;
+     &lt;/ul&gt;
+ &lt;/div&gt;
+&apos;&apos;&apos;</span>
+
+html<span class="token operator">=</span>etree<span class="token punctuation">.</span>HTML<span class="token punctuation">(</span>text<span class="token punctuation">,</span>etree<span class="token punctuation">.</span>HTMLParser<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+result<span class="token operator">=</span>html<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&apos;//li[@class=&quot;item-1&quot;]&apos;</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+</code></pre>
+<h3 id="&#x6587;&#x672C;&#x83B7;&#x53D6;"><a name="&#x6587;&#x672C;&#x83B7;&#x53D6;" class="anchor-navigation-ex-anchor" href="#&#x6587;&#x672C;&#x83B7;&#x53D6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6587;&#x672C;&#x83B7;&#x53D6;</h3>
+<p>&#x6211;&#x4EEC;&#x7528;XPath&#x4E2D;&#x7684;text()&#x65B9;&#x6CD5;&#x83B7;&#x53D6;&#x8282;&#x70B9;&#x4E2D;&#x7684;&#x6587;&#x672C;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> lxml <span class="token keyword">import</span> etree
+
+text<span class="token operator">=</span><span class="token triple-quoted-string string">&apos;&apos;&apos;
+&lt;div&gt;
+    &lt;ul&gt;
+         &lt;li class=&quot;item-0&quot;&gt;&lt;a href=&quot;link1.html&quot;&gt;&#x7B2C;&#x4E00;&#x4E2A;&lt;/a&gt;&lt;/li&gt;
+         &lt;li class=&quot;item-1&quot;&gt;&lt;a href=&quot;link2.html&quot;&gt;second item&lt;/a&gt;&lt;/li&gt;
+     &lt;/ul&gt;
+ &lt;/div&gt;
+&apos;&apos;&apos;</span>
+
+html<span class="token operator">=</span>etree<span class="token punctuation">.</span>HTML<span class="token punctuation">(</span>text<span class="token punctuation">,</span>etree<span class="token punctuation">.</span>HTMLParser<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+result<span class="token operator">=</span>html<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&apos;//li[@class=&quot;item-1&quot;]/a/text()&apos;</span><span class="token punctuation">)</span> <span class="token comment">#&#x83B7;&#x53D6;a&#x8282;&#x70B9;&#x4E0B;&#x7684;&#x5185;&#x5BB9;</span>
+result1<span class="token operator">=</span>html<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&apos;//li[@class=&quot;item-1&quot;]//text()&apos;</span><span class="token punctuation">)</span> <span class="token comment">#&#x83B7;&#x53D6;li&#x4E0B;&#x6240;&#x6709;&#x5B50;&#x5B59;&#x8282;&#x70B9;&#x7684;&#x5185;&#x5BB9;</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result1<span class="token punctuation">)</span>
+</code></pre>
+<h3 id="&#x5C5E;&#x6027;&#x83B7;&#x53D6;"><a name="&#x5C5E;&#x6027;&#x83B7;&#x53D6;" class="anchor-navigation-ex-anchor" href="#&#x5C5E;&#x6027;&#x83B7;&#x53D6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5C5E;&#x6027;&#x83B7;&#x53D6;</h3>
+<p>&#x4F7F;&#x7528;@&#x7B26;&#x53F7;&#x5373;&#x53EF;&#x83B7;&#x53D6;&#x8282;&#x70B9;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;&#x83B7;&#x53D6;&#x6240;&#x6709;li&#x8282;&#x70B9;&#x4E0B;&#x6240;&#x6709;a&#x8282;&#x70B9;&#x7684;href&#x5C5E;&#x6027;</p>
+<pre class="language-"><code class="lang-python">result<span class="token operator">=</span>html<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&apos;//li/a/@href&apos;</span><span class="token punctuation">)</span>  <span class="token comment">#&#x83B7;&#x53D6;a&#x7684;href&#x5C5E;&#x6027;</span>
+result<span class="token operator">=</span>html<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&apos;//li//@href&apos;</span><span class="token punctuation">)</span>   <span class="token comment">#&#x83B7;&#x53D6;&#x6240;&#x6709;li&#x5B50;&#x5B59;&#x8282;&#x70B9;&#x7684;href&#x5C5E;&#x6027;</span>
+</code></pre>
+<h3 id="&#x5C5E;&#x6027;&#x591A;&#x503C;&#x5339;&#x914D;"><a name="&#x5C5E;&#x6027;&#x591A;&#x503C;&#x5339;&#x914D;" class="anchor-navigation-ex-anchor" href="#&#x5C5E;&#x6027;&#x591A;&#x503C;&#x5339;&#x914D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5C5E;&#x6027;&#x591A;&#x503C;&#x5339;&#x914D;</h3>
+<p>&#x5982;&#x679C;&#x67D0;&#x4E2A;&#x5C5E;&#x6027;&#x7684;&#x503C;&#x6709;&#x591A;&#x4E2A;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;contains()&#x51FD;&#x6570;&#x6765;&#x83B7;&#x53D6;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> lxml <span class="token keyword">import</span> etree
+
+text1<span class="token operator">=</span><span class="token triple-quoted-string string">&apos;&apos;&apos;
+&lt;div&gt;
+    &lt;ul&gt;
+         &lt;li class=&quot;aaa item-0&quot;&gt;&lt;a href=&quot;link1.html&quot;&gt;&#x7B2C;&#x4E00;&#x4E2A;&lt;/a&gt;&lt;/li&gt;
+         &lt;li class=&quot;bbb item-1&quot;&gt;&lt;a href=&quot;link2.html&quot;&gt;second item&lt;/a&gt;&lt;/li&gt;
+     &lt;/ul&gt;
+ &lt;/div&gt;
+&apos;&apos;&apos;</span>
+
+html<span class="token operator">=</span>etree<span class="token punctuation">.</span>HTML<span class="token punctuation">(</span>text1<span class="token punctuation">,</span>etree<span class="token punctuation">.</span>HTMLParser<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+result<span class="token operator">=</span>html<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&apos;//li[@class=&quot;aaa&quot;]/a/text()&apos;</span><span class="token punctuation">)</span>
+result1<span class="token operator">=</span>html<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&apos;//li[contains(@class,&quot;aaa&quot;)]/a/text()&apos;</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result1<span class="token punctuation">)</span>
+
+<span class="token comment">#&#x901A;&#x8FC7;&#x7B2C;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;&#x6CA1;&#x6709;&#x53D6;&#x5230;&#x503C;&#xFF0C;&#x901A;&#x8FC7;contains&#xFF08;&#xFF09;&#x5C31;&#x80FD;&#x7CBE;&#x786E;&#x5339;&#x914D;&#x5230;&#x8282;&#x70B9;&#x4E86;</span>
+<span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token string">&apos;&#x7B2C;&#x4E00;&#x4E2A;&apos;</span><span class="token punctuation">]</span>
+</code></pre>
+<h3 id="&#x591A;&#x5C5E;&#x6027;&#x5339;&#x914D;"><a name="&#x591A;&#x5C5E;&#x6027;&#x5339;&#x914D;" class="anchor-navigation-ex-anchor" href="#&#x591A;&#x5C5E;&#x6027;&#x5339;&#x914D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x591A;&#x5C5E;&#x6027;&#x5339;&#x914D;</h3>
+<p>&#x53E6;&#x5916;&#x6211;&#x4EEC;&#x8FD8;&#x53EF;&#x80FD;&#x9047;&#x5230;&#x4E00;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x90A3;&#x5C31;&#x662F;&#x6839;&#x636E;&#x591A;&#x4E2A;&#x5C5E;&#x6027;&#x786E;&#x5B9A;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x8FD9;&#x65F6;&#x5C31;&#x9700;&#x8981;&#x540C;&#x65F6;&#x5339;&#x914D;&#x591A;&#x4E2A;&#x5C5E;&#x6027;&#xFF0C;&#x6B64;&#x65F6;&#x53EF;&#x7528;&#x8FD0;&#x7528;and&#x8FD0;&#x7B97;&#x7B26;&#x6765;&#x8FDE;&#x63A5;&#x4F7F;&#x7528;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> lxml <span class="token keyword">import</span> etree
+
+text1<span class="token operator">=</span><span class="token triple-quoted-string string">&apos;&apos;&apos;
+&lt;div&gt;
+    &lt;ul&gt;
+         &lt;li class=&quot;aaa&quot; name=&quot;item&quot;&gt;&lt;a href=&quot;link1.html&quot;&gt;&#x7B2C;&#x4E00;&#x4E2A;&lt;/a&gt;&lt;/li&gt;
+         &lt;li class=&quot;aaa&quot; name=&quot;fore&quot;&gt;&lt;a href=&quot;link2.html&quot;&gt;second item&lt;/a&gt;&lt;/li&gt;
+     &lt;/ul&gt;
+ &lt;/div&gt;
+&apos;&apos;&apos;</span>
+
+html<span class="token operator">=</span>etree<span class="token punctuation">.</span>HTML<span class="token punctuation">(</span>text1<span class="token punctuation">,</span>etree<span class="token punctuation">.</span>HTMLParser<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+result<span class="token operator">=</span>html<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&apos;//li[@class=&quot;aaa&quot; and @name=&quot;fore&quot;]/a/text()&apos;</span><span class="token punctuation">)</span>
+result1<span class="token operator">=</span>html<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&apos;//li[contains(@class,&quot;aaa&quot;) and @name=&quot;fore&quot;]/a/text()&apos;</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result1<span class="token punctuation">)</span>
+
+
+<span class="token comment">#</span>
+<span class="token punctuation">[</span><span class="token string">&apos;second item&apos;</span><span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token string">&apos;second item&apos;</span><span class="token punctuation">]</span>
+</code></pre>
+<h3 id="&#x6309;&#x5E8F;&#x9009;&#x62E9;"><a name="&#x6309;&#x5E8F;&#x9009;&#x62E9;" class="anchor-navigation-ex-anchor" href="#&#x6309;&#x5E8F;&#x9009;&#x62E9;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6309;&#x5E8F;&#x9009;&#x62E9;</h3>
+<p>&#x6709;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x9009;&#x62E9;&#x7684;&#x65F6;&#x5019;&#x67D0;&#x4E9B;&#x5C5E;&#x6027;&#x53EF;&#x80FD;&#x540C;&#x65F6;&#x5339;&#x914D;&#x591A;&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x4F46;&#x6211;&#x4EEC;&#x53EA;&#x60F3;&#x8981;&#x5176;&#x4E2D;&#x7684;&#x67D0;&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x5982;&#x7B2C;&#x4E8C;&#x4E2A;&#x8282;&#x70B9;&#x6216;&#x8005;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x8FD9;&#x65F6;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x4E2D;&#x62EC;&#x53F7;&#x5F15;&#x5165;&#x7D22;&#x5F15;&#x7684;&#x65B9;&#x6CD5;&#x83B7;&#x53D6;&#x7279;&#x5B9A;&#x6B21;&#x5E8F;&#x7684;&#x8282;&#x70B9;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> lxml <span class="token keyword">import</span> etree
+
+text1<span class="token operator">=</span><span class="token triple-quoted-string string">&apos;&apos;&apos;
+&lt;div&gt;
+    &lt;ul&gt;
+         &lt;li class=&quot;aaa&quot; name=&quot;item&quot;&gt;&lt;a href=&quot;link1.html&quot;&gt;&#x7B2C;&#x4E00;&#x4E2A;&lt;/a&gt;&lt;/li&gt;
+         &lt;li class=&quot;aaa&quot; name=&quot;item&quot;&gt;&lt;a href=&quot;link1.html&quot;&gt;&#x7B2C;&#x4E8C;&#x4E2A;&lt;/a&gt;&lt;/li&gt;
+         &lt;li class=&quot;aaa&quot; name=&quot;item&quot;&gt;&lt;a href=&quot;link1.html&quot;&gt;&#x7B2C;&#x4E09;&#x4E2A;&lt;/a&gt;&lt;/li&gt;
+         &lt;li class=&quot;aaa&quot; name=&quot;item&quot;&gt;&lt;a href=&quot;link1.html&quot;&gt;&#x7B2C;&#x56DB;&#x4E2A;&lt;/a&gt;&lt;/li&gt; 
+     &lt;/ul&gt;
+ &lt;/div&gt;
+&apos;&apos;&apos;</span>
+
+html<span class="token operator">=</span>etree<span class="token punctuation">.</span>HTML<span class="token punctuation">(</span>text1<span class="token punctuation">,</span>etree<span class="token punctuation">.</span>HTMLParser<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+result<span class="token operator">=</span>html<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&apos;//li[contains(@class,&quot;aaa&quot;)]/a/text()&apos;</span><span class="token punctuation">)</span> <span class="token comment">#&#x83B7;&#x53D6;&#x6240;&#x6709;li&#x8282;&#x70B9;&#x4E0B;a&#x8282;&#x70B9;&#x7684;&#x5185;&#x5BB9;</span>
+result1<span class="token operator">=</span>html<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&apos;//li[1][contains(@class,&quot;aaa&quot;)]/a/text()&apos;</span><span class="token punctuation">)</span> <span class="token comment">#&#x83B7;&#x53D6;&#x7B2C;&#x4E00;&#x4E2A;</span>
+result2<span class="token operator">=</span>html<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&apos;//li[last()][contains(@class,&quot;aaa&quot;)]/a/text()&apos;</span><span class="token punctuation">)</span> <span class="token comment">#&#x83B7;&#x53D6;&#x6700;&#x540E;&#x4E00;&#x4E2A;</span>
+result3<span class="token operator">=</span>html<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&apos;//li[position()&gt;2 and position()&lt;4][contains(@class,&quot;aaa&quot;)]/a/text()&apos;</span><span class="token punctuation">)</span> <span class="token comment">#&#x83B7;&#x53D6;&#x7B2C;&#x4E00;&#x4E2A;</span>
+result4<span class="token operator">=</span>html<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&apos;//li[last()-2][contains(@class,&quot;aaa&quot;)]/a/text()&apos;</span><span class="token punctuation">)</span> <span class="token comment">#&#x83B7;&#x53D6;&#x5012;&#x6570;&#x7B2C;&#x4E09;&#x4E2A;</span>
+
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result1<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result2<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result3<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result4<span class="token punctuation">)</span>
+
+
+<span class="token comment">#</span>
+<span class="token punctuation">[</span><span class="token string">&apos;&#x7B2C;&#x4E00;&#x4E2A;&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x7B2C;&#x4E8C;&#x4E2A;&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x7B2C;&#x4E09;&#x4E2A;&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x7B2C;&#x56DB;&#x4E2A;&apos;</span><span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token string">&apos;&#x7B2C;&#x4E00;&#x4E2A;&apos;</span><span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token string">&apos;&#x7B2C;&#x56DB;&#x4E2A;&apos;</span><span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token string">&apos;&#x7B2C;&#x4E09;&#x4E2A;&apos;</span><span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token string">&apos;&#x7B2C;&#x4E8C;&#x4E2A;&apos;</span><span class="token punctuation">]</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x4F7F;&#x7528;&#x4E86;last()&#x3001;position()&#x51FD;&#x6570;&#xFF0C;&#x5728;XPath&#x4E2D;&#xFF0C;&#x63D0;&#x4F9B;&#x4E86;100&#x591A;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x5305;&#x62EC;&#x5B58;&#x53D6;&#x3001;&#x6570;&#x503C;&#x3001;&#x5B57;&#x7B26;&#x4E32;&#x3001;&#x903B;&#x8F91;&#x3001;&#x8282;&#x70B9;&#x3001;&#x5E8F;&#x5217;&#x7B49;&#x5904;&#x7406;&#x529F;&#x80FD;&#xFF0C;&#x5B83;&#x4EEC;&#x7684;&#x5177;&#x4F53;&#x4F5C;&#x7528;&#x53EF;&#x53C2;&#x8003;&#xFF1A;<a href="http://www.w3school.com.cn/xpath/xpath_functions.asp" target="_blank">http://www.w3school.com.cn/xpath/xpath_functions.asp</a></p>
+<h2 id="lxml&#x7ED3;&#x5408;xpath&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#xFF1A;"><a name="lxml&#x7ED3;&#x5408;xpath&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#lxml&#x7ED3;&#x5408;xpath&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>lxml&#x7ED3;&#x5408;xpath&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#xFF1A;</h2>
+<ul>
+<li>&#x4F7F;&#x7528;<code>xpath</code>&#x8BED;&#x6CD5;&#x3002;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;<code>Element.xpath</code>&#x65B9;&#x6CD5;&#x3002;&#x6765;&#x6267;&#x884C;xpath&#x7684;&#x9009;&#x62E9;&#x3002;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;</li>
+</ul>
+<pre class="language-"><code class="lang-python">trs <span class="token operator">=</span> html<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&quot;//tr[position()&gt;1]&quot;</span><span class="token punctuation">)</span>
+</code></pre>
+<p><code>xpath&#x51FD;&#x6570;</code>&#x8FD4;&#x56DE;&#x6765;&#x7684;&#x6C38;&#x8FDC;&#x662F;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x3002;</p>
+<ul>
+<li>&#x83B7;&#x53D6;&#x67D0;&#x4E2A;&#x6807;&#x7B7E;&#x7684;&#x5C5E;&#x6027;&#xFF1A;</li>
+</ul>
+<pre class="language-"><code class="lang-python">href <span class="token operator">=</span> html<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&quot;//a/@href&quot;</span><span class="token punctuation">)</span>    <span class="token comment"># &#x83B7;&#x53D6;a&#x6807;&#x7B7E;&#x7684;href&#x5C5E;&#x6027;&#x5BF9;&#x5E94;&#x7684;&#x503C;</span>
+</code></pre>
+<p>&#x82E5;&#x518D;&#x67D0;&#x4E2A;&#x6807;&#x7B7E;&#x4E0B;  &#x4E5F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7528;<code>get()&#x51FD;&#x6570;</code></p>
+<pre class="language-"><code class="lang-python">
+html <span class="token operator">=</span> etree<span class="token punctuation">.</span>HTML<span class="token punctuation">(</span>text<span class="token punctuation">)</span>
+imgs <span class="token operator">=</span> html<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&quot;//div[@class=&apos;page-content text-center&apos;]//img[@class!=&apos;gif&apos;]&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> img <span class="token keyword">in</span> imgs<span class="token punctuation">:</span>
+    img_url <span class="token operator">=</span> img<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&apos;data-original&apos;</span><span class="token punctuation">)</span>
+    alt <span class="token operator">=</span> img<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&apos;alt&apos;</span><span class="token punctuation">)</span>
+</code></pre>
+<ul>
+<li>&#x83B7;&#x53D6;&#x6587;&#x672C;&#xFF0C;&#x662F;&#x901A;&#x8FC7;<code>xpath</code>&#x4E2D;&#x7684;<code>text()</code>&#x51FD;&#x6570;&#x3002;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</li>
+</ul>
+<pre class="language-"><code class="lang-python">address <span class="token operator">=</span> tr<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&quot;./td[4]/text()&quot;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+</code></pre>
+<ul>
+<li>&#x5728;&#x67D0;&#x4E2A;&#x6807;&#x7B7E;&#x4E0B;&#xFF0C;&#x518D;&#x6267;&#x884C;xpath&#x51FD;&#x6570;&#xFF0C;&#x83B7;&#x53D6;&#x8FD9;&#x4E2A;&#x6807;&#x7B7E;&#x4E0B;&#x7684;&#x5B50;&#x5B59;&#x5143;&#x7D20;&#xFF0C;&#x90A3;&#x4E48;&#x5E94;&#x8BE5;&#x5728;&#x659C;&#x6760;&#x4E4B;&#x524D;&#x52A0;&#x4E00;&#x4E2A;&#x70B9;<code>.</code> &#xFF0C;&#x4EE3;&#x8868;&#x662F;&#x5728;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x4E0B;&#x83B7;&#x53D6;&#x3002;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</li>
+</ul>
+<pre class="language-"><code class="lang-python"> address <span class="token operator">=</span> tr<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&quot;./td[4]/text()&quot;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+<span class="token comment">#  address = tr.xpath(&quot;./td[4]//text()&quot;)[0] &#x5B50;&#x5B59;&#x6807;&#x7B7E;&#x7684;&#x6240;&#x6709;&#x6587;&#x672C;</span>
+</code></pre>
+<blockquote>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x77E5;&#x8BC6;&#x70B9;&#xFF1A;</p>
+<ul>
+<li><code>/</code> &#x548C;<code>//</code> &#x7684;&#x533A;&#x522B;&#xFF1A;<code>/</code> &#x4EE3;&#x8868;&#x53EA;&#x83B7;&#x53D6;&#x76F4;&#x63A5;&#x5B50;&#x8282;&#x70B9;&#x3002;<code>//</code> &#x83B7;&#x53D6;&#x5B50;&#x5B59;&#x8282;&#x70B9;&#x3002;&#x4E00;&#x822C;<code>//</code> &#x7528;&#x5F97;&#x6BD4;&#x8F83;&#x591A;&#x3002;&#x5F53;&#x7136;&#x4E5F;&#x8981;&#x89C6;&#x60C5;&#x51B5;&#x800C;&#x5B9A;&#x3002;</li>
+<li><code>contains</code>&#xFF1A;&#x6709;&#x65F6;&#x5019;&#x67D0;&#x4E2A;&#x5C5E;&#x6027;&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x591A;&#x4E2A;&#x503C;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>contains</code>&#x51FD;&#x6570;&#x3002;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;<code>//div[contains(@class,&apos;job_detail&apos;)]</code></li>
+<li>&#x8C13;&#x8BCD;&#x4E2D;&#x7684;&#x4E0B;&#x6807;&#x662F;&#x4ECE;1&#x5F00;&#x59CB;&#x7684;&#xFF0C;&#x4E0D;&#x662F;&#x4ECE;0&#x5F00;&#x59CB;&#x7684;&#x3002;</li>
+</ul>
+</blockquote>
+<h2 id="&#x7EC3;&#x4E60;"><a name="&#x7EC3;&#x4E60;" class="anchor-navigation-ex-anchor" href="#&#x7EC3;&#x4E60;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7EC3;&#x4E60;</h2>
+<pre class="language-"><code class="lang-python"><span class="token comment">#encoding: utf-8</span>
+
+<span class="token keyword">from</span> lxml <span class="token keyword">import</span> etree
+
+<span class="token comment"># 1. &#x83B7;&#x53D6;&#x6240;&#x6709;tr&#x6807;&#x7B7E;</span>
+<span class="token comment"># 2. &#x83B7;&#x53D6;&#x7B2C;2&#x4E2A;tr&#x6807;&#x7B7E;</span>
+<span class="token comment"># 3. &#x83B7;&#x53D6;&#x6240;&#x6709;class&#x7B49;&#x4E8E;even&#x7684;tr&#x6807;&#x7B7E;</span>
+<span class="token comment"># 4. &#x83B7;&#x53D6;&#x6240;&#x6709;a&#x6807;&#x7B7E;&#x7684;href&#x5C5E;&#x6027;</span>
+<span class="token comment"># 5. &#x83B7;&#x53D6;&#x6240;&#x6709;&#x7684;&#x804C;&#x4F4D;&#x4FE1;&#x606F;&#xFF08;&#x7EAF;&#x6587;&#x672C;&#xFF09;</span>
+
+parser <span class="token operator">=</span> etree<span class="token punctuation">.</span>HTMLParser<span class="token punctuation">(</span>encoding<span class="token operator">=</span><span class="token string">&apos;utf-8&apos;</span><span class="token punctuation">)</span>
+html <span class="token operator">=</span> etree<span class="token punctuation">.</span>parse<span class="token punctuation">(</span><span class="token string">&quot;tencent.html&quot;</span><span class="token punctuation">,</span>parser<span class="token operator">=</span>parser<span class="token punctuation">)</span>
+
+<span class="token comment"># 1. &#x83B7;&#x53D6;&#x6240;&#x6709;tr&#x6807;&#x7B7E;</span>
+<span class="token comment"># //tr</span>
+<span class="token comment"># xpath&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x5217;&#x8868;</span>
+<span class="token comment"># trs = html.xpath(&quot;//tr&quot;)</span>
+<span class="token comment"># for tr in trs:</span>
+<span class="token comment">#     print(etree.tostring(tr,encoding=&apos;utf-8&apos;).decode(&quot;utf-8&quot;))</span>
+
+<span class="token comment"># 2. &#x83B7;&#x53D6;&#x7B2C;2&#x4E2A;tr&#x6807;&#x7B7E;</span>
+<span class="token comment"># tr = html.xpath(&quot;//tr[2]&quot;)[0]</span>
+<span class="token comment"># print(etree.tostring(tr,encoding=&apos;utf-8&apos;).decode(&quot;utf-8&quot;))</span>
+
+<span class="token comment"># 3. &#x83B7;&#x53D6;&#x6240;&#x6709;class&#x7B49;&#x4E8E;even&#x7684;tr&#x6807;&#x7B7E;</span>
+<span class="token comment"># trs = html.xpath(&quot;//tr[@class=&apos;even&apos;]&quot;)</span>
+<span class="token comment"># for tr in trs:</span>
+<span class="token comment">#     print(etree.tostring(tr,encoding=&apos;utf-8&apos;).decode(&quot;utf-8&quot;))</span>
+
+<span class="token comment"># 4. &#x83B7;&#x53D6;&#x6240;&#x6709;a&#x6807;&#x7B7E;&#x7684;href&#x5C5E;&#x6027;</span>
+<span class="token comment"># aList = html.xpath(&quot;//a/@href&quot;)</span>
+<span class="token comment"># for a in aList:</span>
+<span class="token comment">#     print(&quot;http://hr.tencent.com/&quot;+a)</span>
+
+<span class="token comment"># 5. &#x83B7;&#x53D6;&#x6240;&#x6709;&#x7684;&#x804C;&#x4F4D;&#x4FE1;&#x606F;&#xFF08;&#x7EAF;&#x6587;&#x672C;&#xFF09;</span>
+trs <span class="token operator">=</span> html<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&quot;//tr[position()&gt;1]&quot;</span><span class="token punctuation">)</span>
+positions <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token keyword">for</span> tr <span class="token keyword">in</span> trs<span class="token punctuation">:</span>
+    <span class="token comment"># &#x5728;&#x67D0;&#x4E2A;&#x6807;&#x7B7E;&#x4E0B;&#xFF0C;&#x518D;&#x6267;&#x884C;xpath&#x51FD;&#x6570;&#xFF0C;&#x83B7;&#x53D6;&#x8FD9;&#x4E2A;&#x6807;&#x7B7E;&#x4E0B;&#x7684;&#x5B50;&#x5B59;&#x5143;&#x7D20;</span>
+    <span class="token comment"># &#x90A3;&#x4E48;&#x5E94;&#x8BE5;&#x5728;//&#x4E4B;&#x524D;&#x52A0;&#x4E00;&#x4E2A;&#x70B9;&#xFF0C;&#x4EE3;&#x8868;&#x662F;&#x5728;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x4E0B;&#x83B7;&#x53D6;</span>
+    href <span class="token operator">=</span> tr<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&quot;.//a/@href&quot;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    fullurl <span class="token operator">=</span> <span class="token string">&apos;http://hr.tencent.com/&apos;</span> <span class="token operator">+</span> href
+    title <span class="token operator">=</span> tr<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&quot;./td[1]//text()&quot;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    category <span class="token operator">=</span> tr<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&quot;./td[2]/text()&quot;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    nums <span class="token operator">=</span> tr<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&quot;./td[3]/text()&quot;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    address <span class="token operator">=</span> tr<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&quot;./td[4]/text()&quot;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    pubtime <span class="token operator">=</span> tr<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&quot;./td[5]/text()&quot;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+
+    position <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token string">&apos;url&apos;</span><span class="token punctuation">:</span> fullurl<span class="token punctuation">,</span>
+        <span class="token string">&apos;title&apos;</span><span class="token punctuation">:</span> title<span class="token punctuation">,</span>
+        <span class="token string">&apos;category&apos;</span><span class="token punctuation">:</span> category<span class="token punctuation">,</span>
+        <span class="token string">&apos;nums&apos;</span><span class="token punctuation">:</span> nums<span class="token punctuation">,</span>
+        <span class="token string">&apos;address&apos;</span><span class="token punctuation">:</span> address<span class="token punctuation">,</span>
+        <span class="token string">&apos;pubtime&apos;</span><span class="token punctuation">:</span> pubtime
+    <span class="token punctuation">}</span>
+    positions<span class="token punctuation">.</span>append<span class="token punctuation">(</span>position<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>positions<span class="token punctuation">)</span>
+</code></pre>
+<h2 id="&#x6848;&#x4F8B;&#x5E94;&#x7528;&#xFF1A;&#x6293;&#x53D6;tiobe&#x6307;&#x6570;&#x524D;20&#x540D;&#x6392;&#x884C;&#x5F00;&#x53D1;&#x8BED;&#x8A00;"><a name="&#x6848;&#x4F8B;&#x5E94;&#x7528;&#xFF1A;&#x6293;&#x53D6;tiobe&#x6307;&#x6570;&#x524D;20&#x540D;&#x6392;&#x884C;&#x5F00;&#x53D1;&#x8BED;&#x8A00;" class="anchor-navigation-ex-anchor" href="#&#x6848;&#x4F8B;&#x5E94;&#x7528;&#xFF1A;&#x6293;&#x53D6;tiobe&#x6307;&#x6570;&#x524D;20&#x540D;&#x6392;&#x884C;&#x5F00;&#x53D1;&#x8BED;&#x8A00;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6848;&#x4F8B;&#x5E94;&#x7528;&#xFF1A;&#x6293;&#x53D6;TIOBE&#x6307;&#x6570;&#x524D;20&#x540D;&#x6392;&#x884C;&#x5F00;&#x53D1;&#x8BED;&#x8A00;</h2>
+<pre class="language-"><code class="lang-python"><span class="token comment">#!/usr/bin/env python</span>
+<span class="token comment">#coding:utf-8</span>
+<span class="token keyword">import</span> requests
+<span class="token keyword">from</span> requests<span class="token punctuation">.</span>exceptions <span class="token keyword">import</span> RequestException
+<span class="token keyword">from</span> lxml <span class="token keyword">import</span> etree
+<span class="token keyword">from</span> lxml<span class="token punctuation">.</span>etree <span class="token keyword">import</span> ParseError
+<span class="token keyword">import</span> json
+
+<span class="token keyword">def</span> <span class="token function">one_to_page</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    headers<span class="token operator">=</span><span class="token punctuation">{</span>
+        <span class="token string">&apos;user-agent&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36&apos;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">try</span><span class="token punctuation">:</span>
+        response<span class="token operator">=</span>requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>html<span class="token punctuation">,</span>headers<span class="token operator">=</span>headers<span class="token punctuation">)</span>
+        body<span class="token operator">=</span>response<span class="token punctuation">.</span>text  <span class="token comment">#&#x83B7;&#x53D6;&#x7F51;&#x9875;&#x5185;&#x5BB9;</span>
+    <span class="token keyword">except</span> RequestException <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;request is error!&apos;</span><span class="token punctuation">,</span>e<span class="token punctuation">)</span>
+    <span class="token keyword">try</span><span class="token punctuation">:</span>
+        html<span class="token operator">=</span>etree<span class="token punctuation">.</span>HTML<span class="token punctuation">(</span>body<span class="token punctuation">,</span>etree<span class="token punctuation">.</span>HTMLParser<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment">#&#x89E3;&#x6790;HTML&#x6587;&#x672C;&#x5185;&#x5BB9;</span>
+        result<span class="token operator">=</span>html<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&apos;//table[contains(@class,&quot;table-top20&quot;)]/tbody/tr//text()&apos;</span><span class="token punctuation">)</span> <span class="token comment">#&#x83B7;&#x53D6;&#x5217;&#x8868;&#x6570;&#x636E;</span>
+        pos <span class="token operator">=</span> <span class="token number">0</span>
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> i <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+                <span class="token keyword">yield</span> result<span class="token punctuation">[</span>i<span class="token punctuation">:</span><span class="token number">5</span><span class="token punctuation">]</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                <span class="token keyword">yield</span> result<span class="token punctuation">[</span>pos<span class="token punctuation">:</span>pos<span class="token operator">+</span><span class="token number">5</span><span class="token punctuation">]</span>  <span class="token comment">#&#x8FD4;&#x56DE;&#x6392;&#x540D;&#x751F;&#x6210;&#x5668;&#x6570;&#x636E;</span>
+            pos<span class="token operator">+=</span><span class="token number">5</span>
+    <span class="token keyword">except</span> ParseError <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+         <span class="token keyword">print</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>position<span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">write_file</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">:</span>   <span class="token comment">#&#x5C06;&#x6570;&#x636E;&#x91CD;&#x65B0;&#x7EC4;&#x5408;&#x6210;&#x5B57;&#x5178;&#x5199;&#x5165;&#x6587;&#x4EF6;&#x5E76;&#x8F93;&#x51FA;</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> data<span class="token punctuation">:</span>
+        sul<span class="token operator">=</span><span class="token punctuation">{</span>
+            <span class="token string">&apos;2018&#x5E74;6&#x6708;&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span>i<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token string">&apos;2017&#x5E74;6&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span>i<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token string">&apos;&#x5F00;&#x53D1;&#x8BED;&#x8A00;&apos;</span><span class="token punctuation">:</span>i<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token string">&apos;&#x8BC4;&#x7EA7;&apos;</span><span class="token punctuation">:</span>i<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token string">&apos;&#x53D8;&#x5316;&#x7387;&apos;</span><span class="token punctuation">:</span>i<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">&apos;test.txt&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;a&apos;</span><span class="token punctuation">,</span>encoding<span class="token operator">=</span><span class="token string">&apos;utf-8&apos;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+            f<span class="token punctuation">.</span>write<span class="token punctuation">(</span>json<span class="token punctuation">.</span>dumps<span class="token punctuation">(</span>sul<span class="token punctuation">,</span>ensure_ascii<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">&apos;\n&apos;</span><span class="token punctuation">)</span> <span class="token comment">#&#x5FC5;&#x987B;&#x683C;&#x5F0F;&#x5316;&#x6570;&#x636E;</span>
+            f<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>sul<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token boolean">None</span>
+
+
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    url<span class="token operator">=</span><span class="token string">&apos;https://www.tiobe.com/tiobe-index/&apos;</span>
+    data<span class="token operator">=</span>one_to_page<span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+    revaule<span class="token operator">=</span>write_file<span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> revaule <span class="token operator">==</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;ok&apos;</span><span class="token punctuation">)</span>
+
+
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">&apos;__main__&apos;</span><span class="token punctuation">:</span>
+    main<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+
+<span class="token comment">#</span>
+<span class="token punctuation">{</span><span class="token string">&apos;2018&#x5E74;6&#x6708;&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;1&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;2017&#x5E74;6&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;1&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x5F00;&#x53D1;&#x8BED;&#x8A00;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;Java&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x8BC4;&#x7EA7;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;15.368%&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x53D8;&#x5316;&#x7387;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;+0.88%&apos;</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token string">&apos;2018&#x5E74;6&#x6708;&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;2&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;2017&#x5E74;6&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;2&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x5F00;&#x53D1;&#x8BED;&#x8A00;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;C&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x8BC4;&#x7EA7;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;14.936%&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x53D8;&#x5316;&#x7387;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;+8.09%&apos;</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token string">&apos;2018&#x5E74;6&#x6708;&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;3&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;2017&#x5E74;6&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;3&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x5F00;&#x53D1;&#x8BED;&#x8A00;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;C++&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x8BC4;&#x7EA7;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;8.337%&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x53D8;&#x5316;&#x7387;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;+2.61%&apos;</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token string">&apos;2018&#x5E74;6&#x6708;&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;4&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;2017&#x5E74;6&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;4&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x5F00;&#x53D1;&#x8BED;&#x8A00;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;Python&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x8BC4;&#x7EA7;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;5.761%&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x53D8;&#x5316;&#x7387;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;+1.43%&apos;</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token string">&apos;2018&#x5E74;6&#x6708;&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;5&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;2017&#x5E74;6&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;5&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x5F00;&#x53D1;&#x8BED;&#x8A00;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;C#&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x8BC4;&#x7EA7;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;4.314%&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x53D8;&#x5316;&#x7387;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;+0.78%&apos;</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token string">&apos;2018&#x5E74;6&#x6708;&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;6&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;2017&#x5E74;6&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;6&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x5F00;&#x53D1;&#x8BED;&#x8A00;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;Visual Basic .NET&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x8BC4;&#x7EA7;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;3.762%&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x53D8;&#x5316;&#x7387;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;+0.65%&apos;</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token string">&apos;2018&#x5E74;6&#x6708;&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;7&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;2017&#x5E74;6&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;8&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x5F00;&#x53D1;&#x8BED;&#x8A00;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;PHP&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x8BC4;&#x7EA7;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;2.881%&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x53D8;&#x5316;&#x7387;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;+0.11%&apos;</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token string">&apos;2018&#x5E74;6&#x6708;&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;8&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;2017&#x5E74;6&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;7&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x5F00;&#x53D1;&#x8BED;&#x8A00;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;JavaScript&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x8BC4;&#x7EA7;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;2.495%&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x53D8;&#x5316;&#x7387;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;-0.53%&apos;</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token string">&apos;2018&#x5E74;6&#x6708;&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;9&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;2017&#x5E74;6&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;-&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x5F00;&#x53D1;&#x8BED;&#x8A00;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;SQL&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x8BC4;&#x7EA7;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;2.339%&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x53D8;&#x5316;&#x7387;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;+2.34%&apos;</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token string">&apos;2018&#x5E74;6&#x6708;&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;10&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;2017&#x5E74;6&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;14&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x5F00;&#x53D1;&#x8BED;&#x8A00;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;R&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x8BC4;&#x7EA7;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;1.452%&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x53D8;&#x5316;&#x7387;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;-0.70%&apos;</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token string">&apos;2018&#x5E74;6&#x6708;&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;11&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;2017&#x5E74;6&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;11&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x5F00;&#x53D1;&#x8BED;&#x8A00;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;Ruby&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x8BC4;&#x7EA7;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;1.253%&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x53D8;&#x5316;&#x7387;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;-0.97%&apos;</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token string">&apos;2018&#x5E74;6&#x6708;&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;12&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;2017&#x5E74;6&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;18&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x5F00;&#x53D1;&#x8BED;&#x8A00;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;Objective-C&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x8BC4;&#x7EA7;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;1.181%&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x53D8;&#x5316;&#x7387;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;-0.78%&apos;</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token string">&apos;2018&#x5E74;6&#x6708;&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;13&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;2017&#x5E74;6&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;16&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x5F00;&#x53D1;&#x8BED;&#x8A00;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;Visual Basic&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x8BC4;&#x7EA7;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;1.154%&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x53D8;&#x5316;&#x7387;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;-0.86%&apos;</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token string">&apos;2018&#x5E74;6&#x6708;&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;14&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;2017&#x5E74;6&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;9&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x5F00;&#x53D1;&#x8BED;&#x8A00;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;Perl&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x8BC4;&#x7EA7;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;1.147%&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x53D8;&#x5316;&#x7387;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;-1.16%&apos;</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token string">&apos;2018&#x5E74;6&#x6708;&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;15&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;2017&#x5E74;6&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;12&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x5F00;&#x53D1;&#x8BED;&#x8A00;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;Swift&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x8BC4;&#x7EA7;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;1.145%&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x53D8;&#x5316;&#x7387;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;-1.06%&apos;</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token string">&apos;2018&#x5E74;6&#x6708;&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;16&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;2017&#x5E74;6&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;10&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x5F00;&#x53D1;&#x8BED;&#x8A00;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;Assembly language&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x8BC4;&#x7EA7;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;0.915%&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x53D8;&#x5316;&#x7387;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;-1.34%&apos;</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token string">&apos;2018&#x5E74;6&#x6708;&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;17&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;2017&#x5E74;6&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;17&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x5F00;&#x53D1;&#x8BED;&#x8A00;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;MATLAB&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x8BC4;&#x7EA7;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;0.894%&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x53D8;&#x5316;&#x7387;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;-1.10%&apos;</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token string">&apos;2018&#x5E74;6&#x6708;&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;18&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;2017&#x5E74;6&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;15&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x5F00;&#x53D1;&#x8BED;&#x8A00;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;Go&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x8BC4;&#x7EA7;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;0.879%&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x53D8;&#x5316;&#x7387;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;-1.17%&apos;</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token string">&apos;2018&#x5E74;6&#x6708;&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;19&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;2017&#x5E74;6&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;13&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x5F00;&#x53D1;&#x8BED;&#x8A00;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;Delphi/Object Pascal&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x8BC4;&#x7EA7;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;0.875%&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x53D8;&#x5316;&#x7387;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;-1.28%&apos;</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token string">&apos;2018&#x5E74;6&#x6708;&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;20&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;2017&#x5E74;6&#x6392;&#x884C;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;20&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x5F00;&#x53D1;&#x8BED;&#x8A00;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;PL/SQL&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x8BC4;&#x7EA7;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;0.848%&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x53D8;&#x5316;&#x7387;&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;-0.72%&apos;</span><span class="token punctuation">}</span>
+</code></pre>
+<h2 id="&#x4F7F;&#x7528;requests&#x548C;xpath&#x722C;&#x53D6;&#x7535;&#x5F71;&#x5929;&#x5802;"><a name="&#x4F7F;&#x7528;requests&#x548C;xpath&#x722C;&#x53D6;&#x7535;&#x5F71;&#x5929;&#x5802;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;requests&#x548C;xpath&#x722C;&#x53D6;&#x7535;&#x5F71;&#x5929;&#x5802;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F7F;&#x7528;requests&#x548C;xpath&#x722C;&#x53D6;&#x7535;&#x5F71;&#x5929;&#x5802;</h2>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> requests
+<span class="token keyword">from</span> lxml <span class="token keyword">import</span> etree
+
+BASE_DOMAIN <span class="token operator">=</span> <span class="token string">&apos;http://www.dytt8.net&apos;</span>
+HEADERS <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">&apos;User-Agent&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36&apos;</span><span class="token punctuation">,</span>
+    <span class="token string">&apos;Referer&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;http://www.dytt8.net/html/gndy/dyzz/list_23_2.html&apos;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">def</span> <span class="token function">spider</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    url <span class="token operator">=</span> <span class="token string">&apos;http://www.dytt8.net/html/gndy/dyzz/list_23_1.html&apos;</span>
+    resp <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">,</span>headers<span class="token operator">=</span>HEADERS<span class="token punctuation">)</span>
+    <span class="token comment"># resp.content&#xFF1A;&#x7ECF;&#x8FC7;&#x7F16;&#x7801;&#x540E;&#x7684;&#x5B57;&#x7B26;&#x4E32;</span>
+    <span class="token comment"># resp.text&#xFF1A;&#x6CA1;&#x6709;&#x7ECF;&#x8FC7;&#x7F16;&#x7801;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;unicode&#x5B57;&#x7B26;&#x4E32;</span>
+    <span class="token comment"># text&#xFF1A;&#x76F8;&#x5F53;&#x4E8E;&#x662F;&#x7F51;&#x9875;&#x4E2D;&#x7684;&#x6E90;&#x4EE3;&#x7801;&#x4E86;</span>
+    text <span class="token operator">=</span> resp<span class="token punctuation">.</span>content<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">&apos;gbk&apos;</span><span class="token punctuation">)</span>
+    <span class="token comment"># tree&#xFF1A;&#x7ECF;&#x8FC7;lxml&#x89E3;&#x6790;&#x540E;&#x7684;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x4EE5;&#x540E;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;xpath&#x65B9;&#x6CD5;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;</span>
+    <span class="token comment"># &#x63D0;&#x53D6;&#x4E00;&#x4E9B;&#x60F3;&#x8981;&#x7684;&#x6570;&#x636E;&#x4E86;</span>
+    tree <span class="token operator">=</span> etree<span class="token punctuation">.</span>HTML<span class="token punctuation">(</span>text<span class="token punctuation">)</span>
+    <span class="token comment"># xpath/beautifulsou4</span>
+    all_a <span class="token operator">=</span> tree<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&quot;//div[@class=&apos;co_content8&apos;]//a&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> a <span class="token keyword">in</span> all_a<span class="token punctuation">:</span>
+        title <span class="token operator">=</span> a<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&quot;text()&quot;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+        href <span class="token operator">=</span> a<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&quot;@href&quot;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+        <span class="token keyword">if</span> href<span class="token punctuation">.</span>startswith<span class="token punctuation">(</span><span class="token string">&apos;/&apos;</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            detail_url <span class="token operator">=</span> BASE_DOMAIN <span class="token operator">+</span> href
+            crawl_detail<span class="token punctuation">(</span>detail_url<span class="token punctuation">)</span>
+            <span class="token keyword">break</span>
+
+<span class="token keyword">def</span> <span class="token function">crawl_detail</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    resp <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">,</span>headers<span class="token operator">=</span>HEADERS<span class="token punctuation">)</span>
+    text <span class="token operator">=</span> resp<span class="token punctuation">.</span>content<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">&apos;gbk&apos;</span><span class="token punctuation">)</span>
+    tree <span class="token operator">=</span> etree<span class="token punctuation">.</span>HTML<span class="token punctuation">(</span>text<span class="token punctuation">)</span>
+    create_time <span class="token operator">=</span> tree<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&quot;//div[@class=&apos;co_content8&apos;]/ul/text()&quot;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    imgs <span class="token operator">=</span> tree<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&quot;//div[@id=&apos;Zoom&apos;]//img/@src&quot;</span><span class="token punctuation">)</span>
+    <span class="token comment"># &#x7535;&#x5F71;&#x6D77;&#x62A5;</span>
+    cover <span class="token operator">=</span> imgs<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    <span class="token comment"># &#x7535;&#x5F71;&#x622A;&#x56FE;</span>
+    screenshoot <span class="token operator">=</span> imgs<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+    <span class="token comment"># &#x83B7;&#x53D6;span&#x6807;&#x7B7E;&#x4E0B;&#x6240;&#x6709;&#x7684;&#x6587;&#x672C;</span>
+    infos <span class="token operator">=</span> tree<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">&quot;//div[@id=&apos;Zoom&apos;]//text()&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> index<span class="token punctuation">,</span>info <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>infos<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> info<span class="token punctuation">.</span>startswith<span class="token punctuation">(</span><span class="token string">&quot;&#x25CE;&#x5E74;&#x3000;&#x3000;&#x4EE3;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            year <span class="token operator">=</span> info<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">&quot;&#x25CE;&#x5E74;&#x3000;&#x3000;&#x4EE3;&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+        <span class="token keyword">if</span> info<span class="token punctuation">.</span>startswith<span class="token punctuation">(</span><span class="token string">&quot;&#x25CE;&#x8C46;&#x74E3;&#x8BC4;&#x5206;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            douban_rating <span class="token operator">=</span> info<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">&quot;&#x25CE;&#x8C46;&#x74E3;&#x8BC4;&#x5206;&quot;</span><span class="token punctuation">,</span><span class="token string">&apos;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span>douban_rating<span class="token punctuation">)</span>
+
+        <span class="token keyword">if</span> info<span class="token punctuation">.</span>startswith<span class="token punctuation">(</span><span class="token string">&quot;&#x25CE;&#x4E3B;&#x3000;&#x3000;&#x6F14;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token comment"># &#x4ECE;&#x5F53;&#x524D;&#x4F4D;&#x7F6E;&#xFF0C;&#x4E00;&#x76F4;&#x5F80;&#x4E0B;&#x9762;&#x904D;&#x5386;</span>
+            actors <span class="token operator">=</span> <span class="token punctuation">[</span>info<span class="token punctuation">]</span>
+            <span class="token keyword">for</span> x <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>index<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token builtin">len</span><span class="token punctuation">(</span>infos<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                actor <span class="token operator">=</span> infos<span class="token punctuation">[</span>x<span class="token punctuation">]</span>
+                <span class="token keyword">if</span> actor<span class="token punctuation">.</span>startswith<span class="token punctuation">(</span><span class="token string">&quot;&#x25CE;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                    <span class="token keyword">break</span>
+                actors<span class="token punctuation">.</span>append<span class="token punctuation">(</span>actor<span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;,&quot;</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>actors<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">&apos;__main__&apos;</span><span class="token punctuation">:</span>
+    spider<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<h2 id="&#x53C2;&#x8003;"><a name="&#x53C2;&#x8003;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x8003;</h2>
+<ol>
+<li><p><a href="https://blog.csdn.net/zgkli6com/article/details/17491479" target="_blank">XPath&#x8BED;&#x6CD5;&#x8BE6;&#x89E3;</a> </p>
+</li>
+<li><p><a href="https://blog.csdn.net/qq_31518167/article/details/78555076" target="_blank">XPath-&#x8BED;&#x6CD5;&#x5927;&#x5168;</a>  </p>
+</li>
+<li><p>XPath&#x7684;&#x66F4;&#x591A;&#x7528;&#x6CD5;&#x53C2;&#x8003;&#xFF1A;<a href="http://www.w3school.com.cn/xpath/index.asp" target="_blank">http://www.w3school.com.cn/xpath/index.asp</a></p>
+<p>python lxml&#x5E93;&#x7684;&#x66F4;&#x591A;&#x7528;&#x6CD5;&#x53C2;&#x8003;&#xFF1A;<a href="http://lxml.de/" target="_blank">http://lxml.de/</a></p>
+</li>
+<li><p><a href="https://www.cnblogs.com/zhangxinqi/p/9210211.html" target="_blank">python3&#x89E3;&#x6790;&#x5E93;lxml</a></p>
+</li>
+</ol>
+<footer class="page-footer"><span class="copyright">  </span><span class="footer-modification">Update time&#xFF1A;
+2020-05-26 
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="requestsSession应用.html" class="navigation navigation-prev " aria-label="Previous page: requests.Session应用">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="正则表达式匹配.html" class="navigation navigation-next " aria-label="Next page: 正则表达式匹配">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"XPath语法和lxml模块","level":"2.1.5","depth":2,"next":{"title":"正则表达式匹配","level":"2.1.6","depth":2,"path":"Chapter1/正则表达式匹配.md","ref":"Chapter1/正则表达式匹配.md","articles":[]},"previous":{"title":"requests.Session应用","level":"2.1.4","depth":2,"path":"Chapter1/requestsSession应用.md","ref":"Chapter1/requestsSession应用.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","disqus@^0.1.0","prism@^2.1.0","prism-themes@^0.0.2","theme-comscore","anchors@^0.7.1","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","expandable-chapters","local-video@^1.0.1","anchor-navigation-ex@0.1.8","custom-favicon","todo@^0.1.3","hide-element","copy-code-button","tbfed-pagefooter","advanced-emoji","lightbox","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":" ","modify_label":"Update time：","modify_format":"YYYY-MM-DD "},"prism":{"css":["prism-themes/themes/prism-vs.css"]},"disqus":{"useIdentifier":false,"shortName":"HG1227"},"styles":{"website":"styles/website.css"},"emphasize":{},"ace":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"favicon":"favicon.ico","lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"prism-themes":{},"custom-favicon":{},"local-video":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"template":"ace","unindent":true,"edit":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"HHG","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"readme.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"python 学习记录","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":""}},"gitbook":"*","description":"。"},"file":{"path":"Chapter1/XPath语法和lxml模块.md","mtime":"2020-05-26T03:45:39.399Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-20T03:00:50.152Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-local-video/video.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

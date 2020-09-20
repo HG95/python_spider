@@ -1,0 +1,1113 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>批量查询地址经纬度信息 · python 学习记录</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="HHG">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-vs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-local-video/video-js.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="拉钩网数据爬取.html" />
+    
+    
+    <link rel="prev" href="爬取地理坐标.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Chapter1/">
+            
+                <a href="../Chapter1/">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../Chapter1/HTTP基本原理.html">
+            
+                <a href="../Chapter1/HTTP基本原理.html">
+            
+                    
+                    HTTP基本原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../Chapter1/requests库.html">
+            
+                <a href="../Chapter1/requests库.html">
+            
+                    
+                    requests库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../Chapter1/requests库：代理proxies.html">
+            
+                <a href="../Chapter1/requests库：代理proxies.html">
+            
+                    
+                    requests库：代理proxies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../Chapter1/requestsSession应用.html">
+            
+                <a href="../Chapter1/requestsSession应用.html">
+            
+                    
+                    requests.Session应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../Chapter1/XPath语法和lxml模块.html">
+            
+                <a href="../Chapter1/XPath语法和lxml模块.html">
+            
+                    
+                    XPath语法和lxml模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../Chapter1/正则表达式匹配.html">
+            
+                <a href="../Chapter1/正则表达式匹配.html">
+            
+                    
+                    正则表达式匹配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="../Chapter1/chardet识别文件的编码格式.html">
+            
+                <a href="../Chapter1/chardet识别文件的编码格式.html">
+            
+                    
+                    chardet识别文件的编码格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../Chapter1/fake-useragent.html">
+            
+                <a href="../Chapter1/fake-useragent.html">
+            
+                    
+                    fake-useragent
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../Selenium/">
+            
+                <a href="../Selenium/">
+            
+                    
+                    Selenium
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../Selenium/基本使用.html">
+            
+                <a href="../Selenium/基本使用.html">
+            
+                    
+                    基本使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../Selenium/查找元素.html">
+            
+                <a href="../Selenium/查找元素.html">
+            
+                    
+                    查找元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../Selenium/操作被定位的元素.html">
+            
+                <a href="../Selenium/操作被定位的元素.html">
+            
+                    
+                    操作被定位的元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="../Selenium/selenium控制浏览器滚动条.html">
+            
+                <a href="../Selenium/selenium控制浏览器滚动条.html">
+            
+                    
+                    selenium控制浏览器滚动条
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5" data-path="../Selenium/等待页面加载完成(Waits.html">
+            
+                <a href="../Selenium/等待页面加载完成(Waits.html">
+            
+                    
+                    等待页面加载完成(Waits)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.6" data-path="../Selenium/切换窗口.html">
+            
+                <a href="../Selenium/切换窗口.html">
+            
+                    
+                    切换窗口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.7" data-path="../Selenium/Chrome无头模式与操作窗口.html">
+            
+                <a href="../Selenium/Chrome无头模式与操作窗口.html">
+            
+                    
+                    Chrome无头模式与操作窗口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.8" data-path="../Selenium/selenium时间日期控件处理.html">
+            
+                <a href="../Selenium/selenium时间日期控件处理.html">
+            
+                    
+                    selenium时间日期控件处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.9" data-path="../Selenium/selenium表格提交.html">
+            
+                <a href="../Selenium/selenium表格提交.html">
+            
+                    
+                    selenium表格提交
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.10" data-path="../Selenium/selenium处理select标签下拉框的选项.html">
+            
+                <a href="../Selenium/selenium处理select标签下拉框的选项.html">
+            
+                    
+                    selenium处理select标签下拉框的选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.11" data-path="../Selenium/单选框和复选框radiobox、checkbox.html">
+            
+                <a href="../Selenium/单选框和复选框radiobox、checkbox.html">
+            
+                    
+                    单选框和复选框(radiobox、checkbox)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.12" data-path="../Selenium/selenium给元素的属性赋值.html">
+            
+                <a href="../Selenium/selenium给元素的属性赋值.html">
+            
+                    
+                    selenium给元素的属性赋值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.13" data-path="../Selenium/ActionChains行为连.html">
+            
+                <a href="../Selenium/ActionChains行为连.html">
+            
+                    
+                    ActionChains行为连
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../Scrapy/">
+            
+                <a href="../Scrapy/">
+            
+                    
+                    Scrapy
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../Scrapy/Scrapy介绍.html">
+            
+                <a href="../Scrapy/Scrapy介绍.html">
+            
+                    
+                    Scrapy介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../Scrapy/Items.html">
+            
+                <a href="../Scrapy/Items.html">
+            
+                    
+                    Items
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="../Scrapy/Spiders.html">
+            
+                <a href="../Scrapy/Spiders.html">
+            
+                    
+                    Spiders
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4" data-path="../Scrapy/Item Pipeline.html">
+            
+                <a href="../Scrapy/Item Pipeline.html">
+            
+                    
+                    Item Pipeline
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.5" data-path="../Scrapy/下载项目图片.html">
+            
+                <a href="../Scrapy/下载项目图片.html">
+            
+                    
+                    下载项目图片
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.6" data-path="../Scrapy/Scrapy的Request和Response.html">
+            
+                <a href="../Scrapy/Scrapy的Request和Response.html">
+            
+                    
+                    Scrapy的Request和Response
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.7" data-path="../Scrapy/Scrapy模拟人人网登录.html">
+            
+                <a href="../Scrapy/Scrapy模拟人人网登录.html">
+            
+                    
+                    Scrapy模拟人人网登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.8" data-path="../Scrapy/Scrapy模拟登录豆瓣网.html">
+            
+                <a href="../Scrapy/Scrapy模拟登录豆瓣网.html">
+            
+                    
+                    Scrapy模拟登录豆瓣网
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.9" data-path="../Scrapy/Settings.html">
+            
+                <a href="../Scrapy/Settings.html">
+            
+                    
+                    Settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.10" data-path="../Scrapy/使用Scrapy框架爬取糗事百科段子.html">
+            
+                <a href="../Scrapy/使用Scrapy框架爬取糗事百科段子.html">
+            
+                    
+                    使用Scrapy框架爬取糗事百科段子
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.11" data-path="../Scrapy/糗事百科之抓取多个页面.html">
+            
+                <a href="../Scrapy/糗事百科之抓取多个页面.html">
+            
+                    
+                    糗事百科之抓取多个页面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.12" data-path="../Scrapy/CrawlSpider爬虫.html">
+            
+                <a href="../Scrapy/CrawlSpider爬虫.html">
+            
+                    
+                    CrawlSpider爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    案例
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="爬取地理坐标.html">
+            
+                <a href="爬取地理坐标.html">
+            
+                    
+                    爬取地理坐标
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.4.2" data-path="批量查询地址经纬度信息.html">
+            
+                <a href="批量查询地址经纬度信息.html">
+            
+                    
+                    批量查询地址经纬度信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="拉钩网数据爬取.html">
+            
+                <a href="拉钩网数据爬取.html">
+            
+                    
+                    拉钩网数据爬取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.4" data-path="selenium静态数据爬取.html">
+            
+                <a href="selenium静态数据爬取.html">
+            
+                    
+                    selenium静态数据爬取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.5" data-path="爬取淘宝商品评论.html">
+            
+                <a href="爬取淘宝商品评论.html">
+            
+                    
+                    爬取淘宝商品评论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.6" data-path="爬取京东商品评论.html">
+            
+                <a href="爬取京东商品评论.html">
+            
+                    
+                    爬取京东商品评论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.7" data-path="爬取网易云音乐.html">
+            
+                <a href="爬取网易云音乐.html">
+            
+                    
+                    爬取网易云音乐
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.8" data-path="网易云音乐API集合_测试抓取评论.html">
+            
+                <a href="网易云音乐API集合_测试抓取评论.html">
+            
+                    
+                    网易云音乐API集合_测试抓取评论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.9" data-path="B站弹幕爬取.html">
+            
+                <a href="B站弹幕爬取.html">
+            
+                    
+                    B站弹幕爬取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.10" data-path="Pandas爬取表格数据.html">
+            
+                <a href="Pandas爬取表格数据.html">
+            
+                    
+                    Pandas爬取表格数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.11" data-path="有道翻译案例.html">
+            
+                <a href="有道翻译案例.html">
+            
+                    
+                    有道翻译案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.12" data-path="移动端微博评论抓取.html">
+            
+                <a href="移动端微博评论抓取.html">
+            
+                    
+                    移动端微博评论抓取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.13" data-path="豆果网数据爬取.html">
+            
+                <a href="豆果网数据爬取.html">
+            
+                    
+                    豆果网数据爬取
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >批量查询地址经纬度信息</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#&#x6279;&#x91CF;&#x67E5;&#x8BE2;&#x5730;&#x5740;&#x7ECF;&#x7EAC;&#x5EA6;&#x4FE1;&#x606F;">&#x6279;&#x91CF;&#x67E5;&#x8BE2;&#x5730;&#x5740;&#x7ECF;&#x7EAC;&#x5EA6;&#x4FE1;&#x606F;</a></li><ul><li><a href="#&#x7ECF;&#x7EAC;&#x5EA6;&#x67E5;&#x8BE2;&#x722C;&#x866B;&#x51FD;&#x6570;query">&#x7ECF;&#x7EAC;&#x5EA6;&#x67E5;&#x8BE2;&#x722C;&#x866B;&#x51FD;&#x6570;query</a></li><li><a href="#&#x6D4B;&#x8BD5;&#x6570;&#x636E;">&#x6D4B;&#x8BD5;&#x6570;&#x636E;</a></li><li><a href="#&#x6279;&#x91CF;&#x67E5;&#x8BE2;">&#x6279;&#x91CF;&#x67E5;&#x8BE2;</a></li><li><a href="#&#x4FDD;&#x5B58;">&#x4FDD;&#x5B58;</a></li><li><a href="#&#x5BFC;&#x51FA;csv">&#x5BFC;&#x51FA;csv</a></li></ul></ul></div><a href="#&#x6279;&#x91CF;&#x67E5;&#x8BE2;&#x5730;&#x5740;&#x7ECF;&#x7EAC;&#x5EA6;&#x4FE1;&#x606F;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x6279;&#x91CF;&#x67E5;&#x8BE2;&#x5730;&#x5740;&#x7ECF;&#x7EAC;&#x5EA6;&#x4FE1;&#x606F;"><a name="&#x6279;&#x91CF;&#x67E5;&#x8BE2;&#x5730;&#x5740;&#x7ECF;&#x7EAC;&#x5EA6;&#x4FE1;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x6279;&#x91CF;&#x67E5;&#x8BE2;&#x5730;&#x5740;&#x7ECF;&#x7EAC;&#x5EA6;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6279;&#x91CF;&#x67E5;&#x8BE2;&#x5730;&#x5740;&#x7ECF;&#x7EAC;&#x5EA6;&#x4FE1;&#x606F;</h1>
+<h3 id="&#x6293;&#x5305;"><a name="&#x6293;&#x5305;" class="anchor-navigation-ex-anchor" href="#&#x6293;&#x5305;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6293;&#x5305;</h3>
+<p><a href="img/640.webp" data-lightbox="06f32d0d-3e17-4d1c-88a5-29d192f385e9" data-title="640"><img src="img/640.webp" alt="640"></a></p>
+<ol>
+<li>&#x6253;&#x5F00;<a href="https://jingweidu.51240.com/" target="_blank">https://jingweidu.51240.com/</a></li>
+<li>F12&#x952E;(mac&#x7535;&#x8111;&#x5FEB;&#x6377;&#x952E;option+command+I)&#x6253;&#x5F00;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;Network&#x9762;&#x677F;</li>
+<li>&#x641C;&#x7D22;&#x6846;&#x8F93;&#x5165;&#x67E5;&#x8BE2;&#x5730;&#x5740;&#xFF0C;&#x56DE;&#x8F66;&#x67E5;&#x8BE2;</li>
+<li>&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;Network&#x4F1A;&#x770B;&#x5230;&#x622A;&#x56FE;&#x4E2D;&#x7684;&#x7F51;&#x5740;</li>
+<li>&#x70B9;&#x51FB;Preview&#xFF0C;&#x80FD;&#x770B;&#x5230;&#x5177;&#x4F53;&#x4FE1;&#x606F;</li>
+</ol>
+<p><a href="img/640.png" data-lightbox="cf9b03f2-5f53-4941-ad73-fcf55fb7b2b8" data-title="640"><img src="img/640.png" alt="640"></a></p>
+<p><a href="C:\Users\Hu\AppData\Roaming\Typora\typora-user-images\image-20200810162052700.png" data-lightbox="0d253ab7-8d6c-4e21-a3dd-c2c93a436ffd" data-title="image-20200810162052700" target="_blank"><img src="C:\Users\Hu\AppData\Roaming\Typora\typora-user-images\image-20200810162052700.png" alt="image-20200810162052700"></a></p>
+<h2 id="&#x7ECF;&#x7EAC;&#x5EA6;&#x67E5;&#x8BE2;&#x722C;&#x866B;&#x51FD;&#x6570;query"><a name="&#x7ECF;&#x7EAC;&#x5EA6;&#x67E5;&#x8BE2;&#x722C;&#x866B;&#x51FD;&#x6570;query" class="anchor-navigation-ex-anchor" href="#&#x7ECF;&#x7EAC;&#x5EA6;&#x67E5;&#x8BE2;&#x722C;&#x866B;&#x51FD;&#x6570;query"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7ECF;&#x7EAC;&#x5EA6;&#x67E5;&#x8BE2;&#x722C;&#x866B;&#x51FD;&#x6570;query</h2>
+<ol>
+<li>&#x6839;&#x636E;&#x6293;&#x5305;&#x5206;&#x6790;&#xFF0C;&#x6784;&#x9020;&#x7F51;&#x5740;&#x6A21;&#x677F;template</li>
+<li>&#x4F7F;&#x7528;requests&#x5E93;&#x53D1;&#x8D77;&#x8BBF;&#x95EE;</li>
+<li>&#x4F7F;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;re&#x5E93;&#x89E3;&#x6790;&#x51FA;&#x7ECF;&#x7EAC;&#x5EA6;&#x4FE1;&#x606F;</li>
+</ol>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> requests
+
+<span class="token keyword">def</span> <span class="token function">query</span><span class="token punctuation">(</span>addr<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment">#&#x67E5;&#x8BE2;addr&#x7684;&#x7ECF;&#x7EAC;&#x5EA6;</span>
+    template <span class="token operator">=</span> <span class="token string">&apos;https://apis.map.qq.com/jsapi?qt=geoc&amp;addr={addr}&amp;key=UGMBZ-CINWR-DDRW5-W52AK-D3ENK-ZEBRC&amp;output=jsonp&amp;pf=jsapi&amp;ref=jsapi&amp;cb=qq.maps._svcb2.geocoder0&apos;</span>
+    url <span class="token operator">=</span> template<span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>addr<span class="token operator">=</span>addr<span class="token punctuation">)</span>
+    resp <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+    x <span class="token operator">=</span> re<span class="token punctuation">.</span>findall<span class="token punctuation">(</span><span class="token string">&apos;pointx&quot;:&quot;(.*?)&quot;,&apos;</span><span class="token punctuation">,</span>resp<span class="token punctuation">.</span>text<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    y <span class="token operator">=</span> re<span class="token punctuation">.</span>findall<span class="token punctuation">(</span><span class="token string">&apos;pointy&quot;:&quot;(.*?)&quot;,&apos;</span><span class="token punctuation">,</span>resp<span class="token punctuation">.</span>text<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    <span class="token keyword">return</span> x<span class="token punctuation">,</span>y
+
+query<span class="token punctuation">(</span>addr<span class="token operator">=</span><span class="token string">&quot;&#x5357;&#x4EAC;&#x5E08;&#x8303;&#x5927;&#x5B66;&quot;</span><span class="token punctuation">)</span>
+</code></pre>
+<p><code>resp = requests.get(url)</code> &#x7684;&#x8FD4;&#x56DE;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code>qq.maps._svcb2.geocoder0&amp;&amp;qq.maps._svcb2.geocoder0({
+&quot;info&quot;:{
+&quot;type&quot;:45,
+ &quot;error&quot;:0,
+ &quot;time&quot;:0 
+ },
+&quot;detail&quot;:{
+&quot;name&quot;:&quot;&#x5357;&#x4EAC;&#x5E08;&#x8303;&#x5927;&#x5B66;(&#x4E2D;&#x5317;&#x5B66;&#x9662;)&quot;,
+&quot;city&quot;:&quot;&#x5357;&#x4EAC;&#x5E02;&quot;, 
+&quot;district&quot;:&quot;&#x6816;&#x971E;&#x533A;&quot;,
+&quot;adcode&quot;:&quot;320113&quot;,
+&quot;pointx&quot;:&quot;118.909073&quot;,
+&quot;pointy&quot;:&quot;32.115414&quot;,
+&quot;gps_type&quot;:&quot;11&quot;,
+&quot;reliability&quot;:&quot;7&quot;,
+&quot;province&quot;:&quot;&#x6C5F;&#x82CF;&#x7701;&quot;, 
+&quot;deviation&quot;:&quot;1000.000000&quot;, 
+&quot;pcd_conflict_flag&quot;:&quot;0&quot;, 
+&quot;query_status&quot;:&quot;0&quot;, 
+&quot;server_retcode&quot;:&quot;0&quot;, 
+&quot;similarity&quot;:&quot;0.800000&quot; ,
+&quot;split_addr&quot;:&quot;&quot; ,
+&quot;street&quot;:&quot;&quot; ,
+&quot;street_number&quot;:&quot;&quot;, 
+&quot;key_poi&quot;:&quot;&#x5357;&#x4EAC;&#x5E08;&#x8303;&#x5927;&#x5B66;&quot;, 
+&quot;category_code&quot;:&quot;&quot;, 
+&quot;address_type&quot;:&quot;1&quot; , 
+&quot;poi_id&quot;:&quot;1787570519875429111&quot;, 
+&quot;town&quot;:&quot;&#x4ED9;&#x6797;&#x8857;&#x9053;&quot;, 
+&quot;town_code&quot;:&quot;320113007&quot;, 
+&quot;key_role&quot;:&quot;&quot; 
+}
+})
+</code></pre><p>&#x901A;&#x8FC7;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x67E5;&#x8BE2;&#x83B7;&#x53D6;&#x6700;&#x540E;&#x7684;&#x7ECF;&#x7EAC;&#x5EA6;&#x4FE1;&#x606F;&#x3002;</p>
+<pre class="language-"><code>(&apos;118.909073&apos;, &apos;32.115414&apos;)
+</code></pre><h2 id="&#x6D4B;&#x8BD5;&#x6570;&#x636E;"><a name="&#x6D4B;&#x8BD5;&#x6570;&#x636E;" class="anchor-navigation-ex-anchor" href="#&#x6D4B;&#x8BD5;&#x6570;&#x636E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6D4B;&#x8BD5;&#x6570;&#x636E;</h2>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+
+df <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span><span class="token string">&quot;test.csv&quot;</span><span class="token punctuation">)</span>
+df
+</code></pre>
+<p><a href="img/image-20200810163512637.png" data-lightbox="2043da09-32e9-4614-8b16-ddca9392ad14" data-title="image-20200810163512637"><img src="img/image-20200810163512637.png" alt="image-20200810163512637"></a></p>
+<pre class="language-"><code>df[&apos;addr&apos;]
+
+0    &#x5C71;&#x4E1C;&#x7701;&#x6F4D;&#x574A;&#x5E02;&#x5B89;&#x4E18;&#x5E02;&#x5174;&#x5B89;&#x8857;&#x9053;
+1        &#x6D59;&#x6C5F;&#x7701;&#x676D;&#x5DDE;&#x5E02;&#x8427;&#x5C71;&#x533A;
+2        &#x5E7F;&#x4E1C;&#x7701;&#x5E7F;&#x5DDE;&#x5E02;&#x756A;&#x79BA;&#x533A;
+3        &#x9655;&#x897F;&#x7701;&#x897F;&#x5B89;&#x5E02;&#x83B2;&#x6E56;&#x533A;
+Name: addr, dtype: object
+</code></pre><h2 id="&#x6279;&#x91CF;&#x67E5;&#x8BE2;"><a name="&#x6279;&#x91CF;&#x67E5;&#x8BE2;" class="anchor-navigation-ex-anchor" href="#&#x6279;&#x91CF;&#x67E5;&#x8BE2;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6279;&#x91CF;&#x67E5;&#x8BE2;</h2>
+<p>&#x4F7F;&#x7528;apply&#x65B9;&#x6CD5;&#x8C03;&#x7528;query&#x51FD;&#x6570;&#x6279;&#x91CF;&#x67E5;&#x8BE2;&#x7ECF;&#x7EAC;&#x5EA6;</p>
+<pre class="language-"><code class="lang-python">df<span class="token punctuation">[</span><span class="token string">&apos;addr&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">apply</span><span class="token punctuation">(</span>query<span class="token punctuation">)</span>
+</code></pre>
+<pre class="language-"><code>0    (119.161423, 36.331699)
+1    (120.264570, 30.185340)
+2    (113.384240, 22.937720)
+3    (108.940200, 34.267030)
+Name: addr, dtype: object
+</code></pre><h2 id="&#x4FDD;&#x5B58;"><a name="&#x4FDD;&#x5B58;" class="anchor-navigation-ex-anchor" href="#&#x4FDD;&#x5B58;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4FDD;&#x5B58;</h2>
+<pre class="language-"><code>df[&apos;&#x7ECF;&#x7EAC;&#x5EA6;&apos;]=df[&apos;addr&apos;].apply(query)
+df
+</code></pre><p><a href="img/image-20200810163652753.png" data-lightbox="57ad2852-6a88-4c0c-8f10-f91d7f860281" data-title="image-20200810163652753"><img src="img/image-20200810163652753.png" alt="image-20200810163652753"></a></p>
+<h2 id="&#x5BFC;&#x51FA;csv"><a name="&#x5BFC;&#x51FA;csv" class="anchor-navigation-ex-anchor" href="#&#x5BFC;&#x51FA;csv"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5BFC;&#x51FA;csv</h2>
+<p>&#x7ED3;&#x679C;&#x5BFC;&#x51FA;&#x5230; csv &#x4E2D;</p>
+<pre class="language-"><code class="lang-python">df<span class="token punctuation">.</span>to_csv<span class="token punctuation">(</span><span class="token string">&apos;result.csv&apos;</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x53C2;&#x8003;</p>
+<ul>
+<li><a href="https://mp.weixin.qq.com/s/RC544dO7c0Bg1FWAbm0Cdg" target="_blank">&#x722C;&#x866B;&#x5C0F;&#x6848;&#x4F8B; | &#x6279;&#x91CF;&#x67E5;&#x8BE2;&#x5730;&#x5740;&#x7ECF;&#x7EAC;&#x5EA6;&#x4FE1;&#x606F;</a> </li>
+</ul>
+<footer class="page-footer"><span class="copyright">  </span><span class="footer-modification">Update time&#xFF1A;
+2020-08-10 
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="爬取地理坐标.html" class="navigation navigation-prev " aria-label="Previous page: 爬取地理坐标">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="拉钩网数据爬取.html" class="navigation navigation-next " aria-label="Next page: 拉钩网数据爬取">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"批量查询地址经纬度信息","level":"2.4.2","depth":2,"next":{"title":"拉钩网数据爬取","level":"2.4.3","depth":2,"path":"案例/拉钩网数据爬取.md","ref":"案例/拉钩网数据爬取.md","articles":[]},"previous":{"title":"爬取地理坐标","level":"2.4.1","depth":2,"path":"案例/爬取地理坐标.md","ref":"案例/爬取地理坐标.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","disqus@^0.1.0","prism@^2.1.0","prism-themes@^0.0.2","theme-comscore","anchors@^0.7.1","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","expandable-chapters","local-video@^1.0.1","anchor-navigation-ex@0.1.8","custom-favicon","todo@^0.1.3","hide-element","copy-code-button","tbfed-pagefooter","advanced-emoji","lightbox","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":" ","modify_label":"Update time：","modify_format":"YYYY-MM-DD "},"prism":{"css":["prism-themes/themes/prism-vs.css"]},"disqus":{"useIdentifier":false,"shortName":"HG1227"},"styles":{"website":"styles/website.css"},"emphasize":{},"ace":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"favicon":"favicon.ico","lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"prism-themes":{},"custom-favicon":{},"local-video":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"template":"ace","unindent":true,"edit":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"HHG","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"readme.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"python 学习记录","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":""}},"gitbook":"*","description":"。"},"file":{"path":"案例/批量查询地址经纬度信息.md","mtime":"2020-08-10T08:38:18.734Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-20T03:00:50.152Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-local-video/video.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

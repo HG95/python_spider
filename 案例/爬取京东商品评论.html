@@ -1,0 +1,1144 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>爬取京东商品评论 · python 学习记录</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="HHG">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-vs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-local-video/video-js.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="爬取网易云音乐.html" />
+    
+    
+    <link rel="prev" href="爬取淘宝商品评论.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Chapter1/">
+            
+                <a href="../Chapter1/">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../Chapter1/HTTP基本原理.html">
+            
+                <a href="../Chapter1/HTTP基本原理.html">
+            
+                    
+                    HTTP基本原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../Chapter1/requests库.html">
+            
+                <a href="../Chapter1/requests库.html">
+            
+                    
+                    requests库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../Chapter1/requests库：代理proxies.html">
+            
+                <a href="../Chapter1/requests库：代理proxies.html">
+            
+                    
+                    requests库：代理proxies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../Chapter1/requestsSession应用.html">
+            
+                <a href="../Chapter1/requestsSession应用.html">
+            
+                    
+                    requests.Session应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../Chapter1/XPath语法和lxml模块.html">
+            
+                <a href="../Chapter1/XPath语法和lxml模块.html">
+            
+                    
+                    XPath语法和lxml模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../Chapter1/正则表达式匹配.html">
+            
+                <a href="../Chapter1/正则表达式匹配.html">
+            
+                    
+                    正则表达式匹配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="../Chapter1/chardet识别文件的编码格式.html">
+            
+                <a href="../Chapter1/chardet识别文件的编码格式.html">
+            
+                    
+                    chardet识别文件的编码格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../Chapter1/fake-useragent.html">
+            
+                <a href="../Chapter1/fake-useragent.html">
+            
+                    
+                    fake-useragent
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../Selenium/">
+            
+                <a href="../Selenium/">
+            
+                    
+                    Selenium
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../Selenium/基本使用.html">
+            
+                <a href="../Selenium/基本使用.html">
+            
+                    
+                    基本使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../Selenium/查找元素.html">
+            
+                <a href="../Selenium/查找元素.html">
+            
+                    
+                    查找元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../Selenium/操作被定位的元素.html">
+            
+                <a href="../Selenium/操作被定位的元素.html">
+            
+                    
+                    操作被定位的元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="../Selenium/selenium控制浏览器滚动条.html">
+            
+                <a href="../Selenium/selenium控制浏览器滚动条.html">
+            
+                    
+                    selenium控制浏览器滚动条
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5" data-path="../Selenium/等待页面加载完成(Waits.html">
+            
+                <a href="../Selenium/等待页面加载完成(Waits.html">
+            
+                    
+                    等待页面加载完成(Waits)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.6" data-path="../Selenium/切换窗口.html">
+            
+                <a href="../Selenium/切换窗口.html">
+            
+                    
+                    切换窗口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.7" data-path="../Selenium/Chrome无头模式与操作窗口.html">
+            
+                <a href="../Selenium/Chrome无头模式与操作窗口.html">
+            
+                    
+                    Chrome无头模式与操作窗口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.8" data-path="../Selenium/selenium时间日期控件处理.html">
+            
+                <a href="../Selenium/selenium时间日期控件处理.html">
+            
+                    
+                    selenium时间日期控件处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.9" data-path="../Selenium/selenium表格提交.html">
+            
+                <a href="../Selenium/selenium表格提交.html">
+            
+                    
+                    selenium表格提交
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.10" data-path="../Selenium/selenium处理select标签下拉框的选项.html">
+            
+                <a href="../Selenium/selenium处理select标签下拉框的选项.html">
+            
+                    
+                    selenium处理select标签下拉框的选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.11" data-path="../Selenium/单选框和复选框radiobox、checkbox.html">
+            
+                <a href="../Selenium/单选框和复选框radiobox、checkbox.html">
+            
+                    
+                    单选框和复选框(radiobox、checkbox)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.12" data-path="../Selenium/selenium给元素的属性赋值.html">
+            
+                <a href="../Selenium/selenium给元素的属性赋值.html">
+            
+                    
+                    selenium给元素的属性赋值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.13" data-path="../Selenium/ActionChains行为连.html">
+            
+                <a href="../Selenium/ActionChains行为连.html">
+            
+                    
+                    ActionChains行为连
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../Scrapy/">
+            
+                <a href="../Scrapy/">
+            
+                    
+                    Scrapy
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../Scrapy/Scrapy介绍.html">
+            
+                <a href="../Scrapy/Scrapy介绍.html">
+            
+                    
+                    Scrapy介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../Scrapy/Items.html">
+            
+                <a href="../Scrapy/Items.html">
+            
+                    
+                    Items
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="../Scrapy/Spiders.html">
+            
+                <a href="../Scrapy/Spiders.html">
+            
+                    
+                    Spiders
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4" data-path="../Scrapy/Item Pipeline.html">
+            
+                <a href="../Scrapy/Item Pipeline.html">
+            
+                    
+                    Item Pipeline
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.5" data-path="../Scrapy/下载项目图片.html">
+            
+                <a href="../Scrapy/下载项目图片.html">
+            
+                    
+                    下载项目图片
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.6" data-path="../Scrapy/Scrapy的Request和Response.html">
+            
+                <a href="../Scrapy/Scrapy的Request和Response.html">
+            
+                    
+                    Scrapy的Request和Response
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.7" data-path="../Scrapy/Scrapy模拟人人网登录.html">
+            
+                <a href="../Scrapy/Scrapy模拟人人网登录.html">
+            
+                    
+                    Scrapy模拟人人网登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.8" data-path="../Scrapy/Scrapy模拟登录豆瓣网.html">
+            
+                <a href="../Scrapy/Scrapy模拟登录豆瓣网.html">
+            
+                    
+                    Scrapy模拟登录豆瓣网
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.9" data-path="../Scrapy/Settings.html">
+            
+                <a href="../Scrapy/Settings.html">
+            
+                    
+                    Settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.10" data-path="../Scrapy/使用Scrapy框架爬取糗事百科段子.html">
+            
+                <a href="../Scrapy/使用Scrapy框架爬取糗事百科段子.html">
+            
+                    
+                    使用Scrapy框架爬取糗事百科段子
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.11" data-path="../Scrapy/糗事百科之抓取多个页面.html">
+            
+                <a href="../Scrapy/糗事百科之抓取多个页面.html">
+            
+                    
+                    糗事百科之抓取多个页面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.12" data-path="../Scrapy/CrawlSpider爬虫.html">
+            
+                <a href="../Scrapy/CrawlSpider爬虫.html">
+            
+                    
+                    CrawlSpider爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    案例
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="爬取地理坐标.html">
+            
+                <a href="爬取地理坐标.html">
+            
+                    
+                    爬取地理坐标
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="批量查询地址经纬度信息.html">
+            
+                <a href="批量查询地址经纬度信息.html">
+            
+                    
+                    批量查询地址经纬度信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="拉钩网数据爬取.html">
+            
+                <a href="拉钩网数据爬取.html">
+            
+                    
+                    拉钩网数据爬取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.4" data-path="selenium静态数据爬取.html">
+            
+                <a href="selenium静态数据爬取.html">
+            
+                    
+                    selenium静态数据爬取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.5" data-path="爬取淘宝商品评论.html">
+            
+                <a href="爬取淘宝商品评论.html">
+            
+                    
+                    爬取淘宝商品评论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.4.6" data-path="爬取京东商品评论.html">
+            
+                <a href="爬取京东商品评论.html">
+            
+                    
+                    爬取京东商品评论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.7" data-path="爬取网易云音乐.html">
+            
+                <a href="爬取网易云音乐.html">
+            
+                    
+                    爬取网易云音乐
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.8" data-path="网易云音乐API集合_测试抓取评论.html">
+            
+                <a href="网易云音乐API集合_测试抓取评论.html">
+            
+                    
+                    网易云音乐API集合_测试抓取评论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.9" data-path="B站弹幕爬取.html">
+            
+                <a href="B站弹幕爬取.html">
+            
+                    
+                    B站弹幕爬取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.10" data-path="Pandas爬取表格数据.html">
+            
+                <a href="Pandas爬取表格数据.html">
+            
+                    
+                    Pandas爬取表格数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.11" data-path="有道翻译案例.html">
+            
+                <a href="有道翻译案例.html">
+            
+                    
+                    有道翻译案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.12" data-path="移动端微博评论抓取.html">
+            
+                <a href="移动端微博评论抓取.html">
+            
+                    
+                    移动端微博评论抓取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.13" data-path="豆果网数据爬取.html">
+            
+                <a href="豆果网数据爬取.html">
+            
+                    
+                    豆果网数据爬取
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >爬取京东商品评论</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#&#x722C;&#x53D6;&#x4EAC;&#x4E1C;&#x5546;&#x54C1;&#x8BC4;&#x8BBA;">&#x722C;&#x53D6;&#x4EAC;&#x4E1C;&#x5546;&#x54C1;&#x8BC4;&#x8BBA;</a></li></ul></div><a href="#&#x722C;&#x53D6;&#x4EAC;&#x4E1C;&#x5546;&#x54C1;&#x8BC4;&#x8BBA;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x722C;&#x53D6;&#x4EAC;&#x4E1C;&#x5546;&#x54C1;&#x8BC4;&#x8BBA;"><a name="&#x722C;&#x53D6;&#x4EAC;&#x4E1C;&#x5546;&#x54C1;&#x8BC4;&#x8BBA;" class="anchor-navigation-ex-anchor" href="#&#x722C;&#x53D6;&#x4EAC;&#x4E1C;&#x5546;&#x54C1;&#x8BC4;&#x8BBA;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x722C;&#x53D6;&#x4EAC;&#x4E1C;&#x5546;&#x54C1;&#x8BC4;&#x8BBA;</h1>
+<p>&#x6253;&#x5F00;&#x4EAC;&#x4E1C;&#x4E3B;&#x9875;&#xFF0C;&#x627E;&#x5230;&#x9700;&#x8981;&#x722C;&#x53D6;&#x8BC4;&#x8BBA;&#x7684;&#x5546;&#x54C1;&#xFF1A;</p>
+<p><a href="img/image-20200812110125490.png" data-lightbox="cf52935a-f829-49ce-93ca-c8a0f95d8c13" data-title="image-20200812110125490"><img src="img/image-20200812110125490.png" alt="image-20200812110125490"></a></p>
+<p>&#x53F3;&#x952E; &#x68C0;&#x67E5;&#x7F51;&#x9875;&#xFF0C;&#x5C06;&#x8BB0;&#x8F7D;&#x7684;&#x6587;&#x4EF6;&#x5148;&#x6E05;&#x7A7A;&#xFF0C;&#x627E;&#x5230;&#x5546;&#x54C1;&#x8BC4;&#x8BBA;&#x5904; &#xFF0C;&#x5F53;&#x5207;&#x6362;&#x4E0D;&#x540C;&#x9875;&#x7684;&#x8BC4;&#x8BBA;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x52A0;&#x8F7D;&#x51FA;&#x65B0;&#x7684;&#x6587;&#x4EF6;&#xFF1A;</p>
+<p><a href="img/image-20200812110417205.png" data-lightbox="8b66a96c-eaa1-437c-bdce-f8b8677640ad" data-title="image-20200812110417205"><img src="img/image-20200812110417205.png" alt="image-20200812110417205"></a></p>
+<p>&#x5C06; <code>Request URL</code> &#x590D;&#x5236;&#x5230;&#x6D4F;&#x89C8;&#x5668;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x672C;&#x9875;&#x8BC4;&#x8BBA;&#x7684;&#x5185;&#x5BB9;&#xFF1B;</p>
+<p><a href="https://club.jd.com/comment/productPageComments.action?callback=fetchJSON_comment98&amp;productId=100005207111&amp;score=0&amp;sortType=5&amp;page=0&amp;pageSize=10&amp;isShadowSku=0&amp;rid=0&amp;fold=1" target="_blank">https://club.jd.com/comment/productPageComments.action?callback=fetchJSON_comment98&amp;productId=100005207111&amp;score=0&amp;sortType=5&amp;page=0&amp;pageSize=10&amp;isShadowSku=0&amp;rid=0&amp;fold=1</a> </p>
+<p>url &#x5206;&#x6790;&#xFF1A;<a href="https://club.jd.com/comment/productPageComments.action?" target="_blank">https://club.jd.com/comment/productPageComments.action?</a> &#x540E;&#x9762;&#x7684;&#x90E8;&#x5206;&#x662F;&#x8BF7;&#x6C42;&#x6240;&#x9700;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x5728;&#x4E0B;&#x9762;&#x7684; Query String Parameters &#x4E2D;&#x4E5F;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x3002;&#x5728;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x7684;&#x65F6;&#x5019; &#x5C06; <a href="https://club.jd.com/comment/productPageComments.action?" target="_blank">https://club.jd.com/comment/productPageComments.action?</a> &#x4F5C;&#x4E3A; url, &#x540E;&#x9762;&#x7684;&#x90E8;&#x5206;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x8FDB;&#x884C;&#x4F20;&#x9012;&#x3002;</p>
+<p>&#x53C2;&#x6570;&#x89E3;&#x6790;&#xFF1A;</p>
+<p><a href="img/image-20200812111236090.png" data-lightbox="6025a49f-158e-494d-bc29-318ee8b9b92f" data-title="image-20200812111236090"><img src="img/image-20200812111236090.png" alt="image-20200812111236090"></a></p>
+<ul>
+<li><strong>callback:</strong>  &#x56FA;&#x5B9A;&#x53C2;&#x6570;</li>
+<li><strong>productId:</strong>  &#x5546;&#x54C1; ID</li>
+<li><strong>score:</strong>  &#x4E0D;&#x540C;&#x7684;&#x8BC4;&#x4EF7;&#x7C7B;&#x578B;,<ul>
+<li>0 : &#x5168;&#x90E8;&#x8BC4;&#x4EF7;</li>
+<li>1&#xFF1A;&#x5DEE;&#x8BC4;</li>
+<li>2&#xFF1A;&#x4E2D;&#x8BC4;</li>
+<li>3&#xFF1A;&#x597D;&#x8BC4;</li>
+</ul>
+</li>
+<li><strong>sortType:</strong>  &#x8BC4;&#x8BBA;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;&#xFF1A;&#x63A8;&#x8350;&#x6392;&#x5E8F;(5)&#xFF0C;&#x65F6;&#x95F4;&#x6392;&#x5E8F;(6)</li>
+<li><strong>page:</strong> &#x8BC4;&#x8BBA;&#x9875;&#xFF0C;&#x901A;&#x8FC7;&#x6539;&#x53D8;&#x8BC4;&#x8BBA;&#x9875;&#xFF0C;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x4E0D;&#x540C;&#x9875;&#x9762;&#x8BC4;&#x8BBA;&#x7684;&#x5FAA;&#x73AF;&#x722C;&#x53D6;</li>
+<li><strong>pageSize:</strong> &#x56FA;&#x5B9A;&#x53C2;&#x6570;</li>
+<li><strong>isShadowSku:</strong></li>
+<li><strong>rid:</strong> </li>
+<li><strong>fold:</strong> </li>
+</ul>
+<p>&#x6D4B;&#x8BD5;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> requests
+<span class="token keyword">import</span> json
+<span class="token keyword">import</span> re
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+<span class="token keyword">import</span> time
+
+url <span class="token operator">=</span> <span class="token string">&apos;https://club.jd.com/comment/productPageComments.action?&apos;</span>
+
+
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># &#x8BF7;&#x6C42;&#x53C2;&#x6570;</span>
+    params <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token string">&apos;callback&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;fetchJSON_comment98&apos;</span><span class="token punctuation">,</span>  <span class="token comment"># &#x56FA;&#x5B9A;&#x503C;</span>
+        <span class="token string">&apos;productId&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;100005207111&apos;</span><span class="token punctuation">,</span>        <span class="token comment"># &#x4EA7;&#x54C1; ID</span>
+        <span class="token string">&apos;score&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;0&apos;</span><span class="token punctuation">,</span>   <span class="token comment"># 0-5 &#x5206;&#x522B;&#x5BF9;&#x5E94;&#x4E0D;&#x540C;&#x7684;&#x8BC4;&#x4EF7;&#xFF0C;&#x597D;&#x8BC4;&#x3001;&#x4E2D;&#x8BC4;&#x3001;&#x5168;&#x90E8;&#x8BC4;&#x4EF7;&#x7B49;</span>
+        <span class="token string">&apos;sortType&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;5&apos;</span><span class="token punctuation">,</span>    <span class="token comment"># &#x6392;&#x5E8F;&#x65B9;&#x5F0F;</span>
+        <span class="token string">&apos;page&apos;</span><span class="token punctuation">:</span> i<span class="token punctuation">,</span>    <span class="token comment"># &#x5F53;&#x524D;&#x7684;&#x8BC4;&#x8BBA;&#x9875;</span>
+        <span class="token string">&apos;pageSize&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;10&apos;</span><span class="token punctuation">,</span>   <span class="token comment"># &#x6BCF;&#x9875;&#x8BC4;&#x8BBA;&#x7684;&#x6570;&#x91CF;</span>
+        <span class="token string">&apos;isShadowSku&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;0&apos;</span><span class="token punctuation">,</span>
+        <span class="token string">&apos;rid&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;0&apos;</span><span class="token punctuation">,</span>
+        <span class="token string">&apos;fold&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;1&apos;</span>
+    <span class="token punctuation">}</span>
+
+    headers <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token string">&apos;Referer&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;https://item.jd.com/100005207111.html&apos;</span><span class="token punctuation">,</span>
+        <span class="token string">&apos;User-Agent&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36&apos;</span><span class="token punctuation">,</span>
+        <span class="token string">&apos;Cookie&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;__jdu=1568007721111834248469; shshshfpa=6814de79-d912-fb65-2445-e0c1001418be-1568007725; shshshfpb=eK6h%2FTTG3UOQIjI3nubc4rg%3D%3D; pinId=uKm5zMomrBzAmLNKou2uKDqrJX175ugD; unpl=V2_ZzNtbRcFShclDkVTchwOAGIDR1VKV0EWcwxCBnobD1IzURFaclRCFnQUR11nGF4UZgsZX0RcQRNFCEVkexhdBGAAE19BVXMlRQtGZHopXAFgChNcRFFAFXUIRl15HF8AbgYVVXJnRBV8OHYfIl9VAmIAE1hAVEcldg1BUX8bbARXARNcQVBKFXwJRmQwd11IZwcVVENWRRN2CEZUexBeAGQGG1hFX3MVdAlHVXseXQZmMxE%3d; __jdv=122270672|google|tw6|cpc|not set|1596435399183; areaId=12; ipLoc-djd=12-904-3373-0; PCSYCityID=CN_320000_320100_0; __jdc=122270672; __jda=122270672.1568007721111834248469.1568007721.1596435399.1597198601.61; shshshfp=220f18c9406df7935c99c0b11d700617; 3AB9D23F7A4B3C9B=IXUELWJK3WKMGCI6K6VNEMY5JTJRYFIN7UACHEU53PFRGL26M3Z4EPHTURYSBFSZOFLSHWLCALKBM2HL2Z6PVCSWZ4; jwotest_product=99; wlfstk_smdl=ehul02b6y6mrpp3c0io9rgen0mvqvz09; TrackID=1odMbOfz9qDnsQUriX0MI0xuEBMGOvndQJls-Cnyljpewp5cEF-8coPrSiWOAgRyjr8am57HCcwV9xQf_rr3xTPy5hoA-MhDYUFaH7zOoUlO458mlGY3vk0rpwZPB_jrZ; thor=E720FC5049F725A474B2F674576F76565C554ECB4F3557F926E8468A57A9F7319EE2F9D0A1DB99CB745E9A3DD4FB61D813FCC037D93474C5510BE4250A6DA7A54A946F6619D1239AE6A096341CF9A38620295216FAF185554394D80EC04D8B5A7B46EF7FC4618FA645AD46ED4BD7383928B3013693A6F5931E4F5AA7EFCBBA78; pin=%E4%B8%B6%E5%8C%97%E5%9F%8E%E9%B1%BC%E5%AE%89%E7%94%9F; unick=___%E6%A2%A6%E5%AF%90___; ceshi3.com=000; _tp=6KbAcOO79y3rwvtuJvHoHRBSFSbWIqCOxKNAM%2FSmxbwMBsbJ8KsKQWmVHGQC11rU1S2%2FwNGWzgqqKzflVhJMlw%3D%3D; _pst=%E4%B8%B6%E5%8C%97%E5%9F%8E%E9%B1%BC%E5%AE%89%E7%94%9F; shshshsID=8ed6a639183b7cc4d65115ddd4ec2c4b_5_1597199326879; __jdb=122270672.8.1568007721111834248469|61.1597198601; JSESSIONID=C4161CA90DF9781E4CF679DB423DF2D6.s1&apos;</span>
+    <span class="token punctuation">}</span>
+
+    res <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token operator">=</span>url<span class="token punctuation">,</span>params<span class="token operator">=</span>params<span class="token punctuation">,</span>headers<span class="token operator">=</span>headers<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span>status_code<span class="token punctuation">)</span>
+
+    <span class="token comment"># &#x8FD4;&#x56DE;&#x7684;&#x5185;&#x5BB9;&#x5E76;&#x4E0D;&#x662F;&#x89C4;&#x8303;&#x7684;json &#x683C;&#x5F0F;&#x6587;&#x4EF6;, &#x5229;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5C06;&#x5176;&#x8F6C;&#x5316;&#x4E3A;&#x89C4;&#x8303;&#x7684; json &#x6587;&#x4EF6;</span>
+    html_json <span class="token operator">=</span> re<span class="token punctuation">.</span>search<span class="token punctuation">(</span><span class="token string">&apos;(?&lt;=fetchJSON_comment98\().*(?=\);)&apos;</span><span class="token punctuation">,</span>res<span class="token punctuation">.</span>text<span class="token punctuation">)</span><span class="token punctuation">.</span>group<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+    j <span class="token operator">=</span> json<span class="token punctuation">.</span>loads<span class="token punctuation">(</span>html_json<span class="token punctuation">)</span>
+    <span class="token keyword">for</span> jj <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>j<span class="token punctuation">[</span><span class="token string">&apos;comments&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        data1 <span class="token operator">=</span> <span class="token punctuation">[</span>j<span class="token punctuation">[</span><span class="token string">&apos;comments&apos;</span><span class="token punctuation">]</span><span class="token punctuation">[</span>jj<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">&apos;content&apos;</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+        data2 <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>data1<span class="token punctuation">)</span>
+        <span class="token comment"># print(data1)</span>
+        data2<span class="token punctuation">.</span>to_csv<span class="token punctuation">(</span><span class="token string">&apos;jd.csv&apos;</span><span class="token punctuation">,</span>header<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span>index<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span>mode<span class="token operator">=</span><span class="token string">&apos;a+&apos;</span><span class="token punctuation">)</span>
+
+    time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;page&apos;</span><span class="token operator">+</span><span class="token builtin">str</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">+</span>i<span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">&apos; has done&apos;</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x662F;&#x5546;&#x54C1;&#x7684;&#x5168;&#x90E8;&#x8BC4;&#x4EF7;&#xFF0C;&#x5F53;&#x7136;&#x4E5F;&#x53EF;&#x4EE5;&#x53EA;&#x722C;&#x53D6;&#x5F53;&#x524D;&#x5546;&#x54C1;&#x7684;&#x8BC4;&#x4EF7;&#xFF1B;</p>
+<p>&#x5237;&#x65B0;&#x7F51;&#x9875;&#xFF0C;&#x68C0;&#x67E5;&#xFF0C;&#x6E05;&#x7A7A;&#x3002; &#x9009;&#x62E9;&#x53EA;&#x770B;&#x5F53;&#x524D;&#x5546;&#x54C1;&#x8BC4;&#x4EF7;&#xFF1A;</p>
+<p><a href="img/image-20200812113908758.png" data-lightbox="b9061610-977b-4550-bf5d-526ef1f6e7c8" data-title="image-20200812113908758"><img src="img/image-20200812113908758.png" alt="image-20200812113908758"></a></p>
+<p><a href="img/image-20200812114016651.png" data-lightbox="e412f3d3-a9bb-4fc8-87d6-0447376da3f4" data-title="image-20200812114016651"><img src="img/image-20200812114016651.png" alt="image-20200812114016651"></a></p>
+<p><a href="img/image-20200812114045752.png" data-lightbox="ad47ef91-4c03-421d-b079-f0b0f54d530a" data-title="image-20200812114045752"><img src="img/image-20200812114045752.png" alt="image-20200812114045752"></a></p>
+<p>&#x6211;&#x4EEC;&#x540C;&#x6837;&#x53EF;&#x4EE5; &#x53D1;&#x9001;<code>Request URL</code> &#x7684; request &#x8BF7;&#x6C42;&#xFF0C;&#x5E76;&#x4F20;&#x9012;&#x76F8;&#x5E94;&#x7684;&#x53C2;&#x6570;&#x83B7;&#x53D6;&#x8BC4;&#x8BBA;&#x3002;</p>
+<p>&#x6D4B;&#x8BD5;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># -*- encoding: utf-8 -*-</span>
+<span class="token triple-quoted-string string">&quot;&quot;&quot;
+@software: PyCharm
+@file : jd2.py
+@time : 2020/8/12 
+&quot;&quot;&quot;</span>
+<span class="token keyword">import</span> requests
+<span class="token keyword">import</span> json
+<span class="token keyword">import</span> re
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+<span class="token keyword">import</span> time
+
+url <span class="token operator">=</span> <span class="token string">&apos;https://club.jd.com/comment/skuProductPageComments.action?&apos;</span>
+
+
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">25</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># &#x8BF7;&#x6C42;&#x53C2;&#x6570;, &#x4E0E;&#x5168;&#x90E8;&#x8BC4;&#x4EF7;&#x76F8;&#x6BD4;&#x5C11;&#x4E86;&#x4E00;&#x4E2A; &apos;rid&apos; &#x53C2;&#x6570;</span>
+    params <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token string">&apos;callback&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;fetchJSON_comment98&apos;</span><span class="token punctuation">,</span>  <span class="token comment"># &#x56FA;&#x5B9A;&#x503C;</span>
+        <span class="token string">&apos;productId&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;100005207111&apos;</span><span class="token punctuation">,</span>        <span class="token comment"># &#x4EA7;&#x54C1; ID</span>
+        <span class="token string">&apos;score&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;0&apos;</span><span class="token punctuation">,</span>   <span class="token comment"># 0-5 &#x5206;&#x522B;&#x5BF9;&#x5E94;&#x4E0D;&#x540C;&#x7684;&#x8BC4;&#x4EF7;&#xFF0C;&#x597D;&#x8BC4;&#x3001;&#x4E2D;&#x8BC4;&#x3001;&#x5168;&#x90E8;&#x8BC4;&#x4EF7;&#x7B49;</span>
+        <span class="token string">&apos;sortType&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;5&apos;</span><span class="token punctuation">,</span>    <span class="token comment"># &#x6392;&#x5E8F;&#x65B9;&#x5F0F;</span>
+        <span class="token string">&apos;page&apos;</span><span class="token punctuation">:</span> i<span class="token punctuation">,</span>    <span class="token comment"># &#x5F53;&#x524D;&#x7684;&#x8BC4;&#x8BBA;&#x9875;</span>
+        <span class="token string">&apos;pageSize&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;10&apos;</span><span class="token punctuation">,</span>   <span class="token comment"># &#x6BCF;&#x9875;&#x8BC4;&#x8BBA;&#x7684;&#x6570;&#x91CF;</span>
+        <span class="token string">&apos;isShadowSku&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;0&apos;</span><span class="token punctuation">,</span>
+        <span class="token string">&apos;fold&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;1&apos;</span>
+    <span class="token punctuation">}</span>
+
+    headers <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token string">&apos;Referer&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;https://item.jd.com/100005207111.html&apos;</span><span class="token punctuation">,</span>
+        <span class="token string">&apos;User-Agent&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36&apos;</span><span class="token punctuation">,</span>
+        <span class="token string">&apos;Cookie&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;__jdu=1568007721111834248469; shshshfpa=6814de79-d912-fb65-2445-e0c1001418be-1568007725; shshshfpb=eK6h%2FTTG3UOQIjI3nubc4rg%3D%3D; pinId=uKm5zMomrBzAmLNKou2uKDqrJX175ugD; unpl=V2_ZzNtbRcFShclDkVTchwOAGIDR1VKV0EWcwxCBnobD1IzURFaclRCFnQUR11nGF4UZgsZX0RcQRNFCEVkexhdBGAAE19BVXMlRQtGZHopXAFgChNcRFFAFXUIRl15HF8AbgYVVXJnRBV8OHYfIl9VAmIAE1hAVEcldg1BUX8bbARXARNcQVBKFXwJRmQwd11IZwcVVENWRRN2CEZUexBeAGQGG1hFX3MVdAlHVXseXQZmMxE%3d; __jdv=122270672|google|tw6|cpc|not set|1596435399183; areaId=12; ipLoc-djd=12-904-3373-0; PCSYCityID=CN_320000_320100_0; __jdc=122270672; __jda=122270672.1568007721111834248469.1568007721.1596435399.1597198601.61; shshshfp=220f18c9406df7935c99c0b11d700617; 3AB9D23F7A4B3C9B=IXUELWJK3WKMGCI6K6VNEMY5JTJRYFIN7UACHEU53PFRGL26M3Z4EPHTURYSBFSZOFLSHWLCALKBM2HL2Z6PVCSWZ4; jwotest_product=99; wlfstk_smdl=ehul02b6y6mrpp3c0io9rgen0mvqvz09; TrackID=1odMbOfz9qDnsQUriX0MI0xuEBMGOvndQJls-Cnyljpewp5cEF-8coPrSiWOAgRyjr8am57HCcwV9xQf_rr3xTPy5hoA-MhDYUFaH7zOoUlO458mlGY3vk0rpwZPB_jrZ; thor=E720FC5049F725A474B2F674576F76565C554ECB4F3557F926E8468A57A9F7319EE2F9D0A1DB99CB745E9A3DD4FB61D813FCC037D93474C5510BE4250A6DA7A54A946F6619D1239AE6A096341CF9A38620295216FAF185554394D80EC04D8B5A7B46EF7FC4618FA645AD46ED4BD7383928B3013693A6F5931E4F5AA7EFCBBA78; pin=%E4%B8%B6%E5%8C%97%E5%9F%8E%E9%B1%BC%E5%AE%89%E7%94%9F; unick=___%E6%A2%A6%E5%AF%90___; ceshi3.com=000; _tp=6KbAcOO79y3rwvtuJvHoHRBSFSbWIqCOxKNAM%2FSmxbwMBsbJ8KsKQWmVHGQC11rU1S2%2FwNGWzgqqKzflVhJMlw%3D%3D; _pst=%E4%B8%B6%E5%8C%97%E5%9F%8E%E9%B1%BC%E5%AE%89%E7%94%9F; shshshsID=8ed6a639183b7cc4d65115ddd4ec2c4b_5_1597199326879; __jdb=122270672.8.1568007721111834248469|61.1597198601; JSESSIONID=C4161CA90DF9781E4CF679DB423DF2D6.s1&apos;</span>
+    <span class="token punctuation">}</span>
+
+    res <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token operator">=</span>url<span class="token punctuation">,</span>params<span class="token operator">=</span>params<span class="token punctuation">,</span>headers<span class="token operator">=</span>headers<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span>status_code<span class="token punctuation">)</span>
+
+    <span class="token comment"># &#x8FD4;&#x56DE;&#x7684;&#x5185;&#x5BB9;&#x5E76;&#x4E0D;&#x662F;&#x89C4;&#x8303;&#x7684;json &#x683C;&#x5F0F;&#x6587;&#x4EF6;, &#x5229;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5C06;&#x5176;&#x8F6C;&#x5316;&#x4E3A;&#x89C4;&#x8303;&#x7684; json &#x6587;&#x4EF6;</span>
+    html_json <span class="token operator">=</span> re<span class="token punctuation">.</span>search<span class="token punctuation">(</span><span class="token string">&apos;(?&lt;=fetchJSON_comment98\().*(?=\);)&apos;</span><span class="token punctuation">,</span>res<span class="token punctuation">.</span>text<span class="token punctuation">)</span><span class="token punctuation">.</span>group<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+    j <span class="token operator">=</span> json<span class="token punctuation">.</span>loads<span class="token punctuation">(</span>html_json<span class="token punctuation">)</span>
+    <span class="token keyword">for</span> jj <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>j<span class="token punctuation">[</span><span class="token string">&apos;comments&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        data1 <span class="token operator">=</span> <span class="token punctuation">[</span>j<span class="token punctuation">[</span><span class="token string">&apos;comments&apos;</span><span class="token punctuation">]</span><span class="token punctuation">[</span>jj<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">&apos;content&apos;</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+        data2 <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>data1<span class="token punctuation">)</span>
+        <span class="token comment"># print(data1)</span>
+        data2<span class="token punctuation">.</span>to_csv<span class="token punctuation">(</span><span class="token string">&apos;jd_dq.csv&apos;</span><span class="token punctuation">,</span>header<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span>index<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span>mode<span class="token operator">=</span><span class="token string">&apos;a+&apos;</span><span class="token punctuation">)</span>
+
+    time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;page&apos;</span><span class="token operator">+</span><span class="token builtin">str</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">+</span>i<span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">&apos;has done&apos;</span><span class="token punctuation">)</span>
+</code></pre>
+<p><a href="img/image-20200812115202981.png" data-lightbox="6a185420-ef0f-4554-bea6-3e1d71086a3e" data-title="image-20200812115202981"><img src="img/image-20200812115202981.png" alt="image-20200812115202981"></a></p>
+<p>&#x53C2;&#x8003;</p>
+<ul>
+<li>B&#x7AD9; &#xFF1A;&#x9F99;&#x738B;&#x5C71;&#x5C0F;&#x9752;&#x6912; <a href="https://www.bilibili.com/video/BV1bZ4y1j76X" target="_blank">python&#x4EAC;&#x4E1C;&#x8BC4;&#x8BBA;&#x6293;&#x53D6;-&#x5206;&#x8BCD;-&#x8BCD;&#x4E91;&#x5C55;&#x793A;</a> </li>
+</ul>
+<footer class="page-footer"><span class="copyright">  </span><span class="footer-modification">Update time&#xFF1A;
+2020-08-15 
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="爬取淘宝商品评论.html" class="navigation navigation-prev " aria-label="Previous page: 爬取淘宝商品评论">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="爬取网易云音乐.html" class="navigation navigation-next " aria-label="Next page: 爬取网易云音乐">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"爬取京东商品评论","level":"2.4.6","depth":2,"next":{"title":"爬取网易云音乐","level":"2.4.7","depth":2,"path":"案例/爬取网易云音乐.md","ref":"案例/爬取网易云音乐.md","articles":[]},"previous":{"title":"爬取淘宝商品评论","level":"2.4.5","depth":2,"path":"案例/爬取淘宝商品评论.md","ref":"案例/爬取淘宝商品评论.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","disqus@^0.1.0","prism@^2.1.0","prism-themes@^0.0.2","theme-comscore","anchors@^0.7.1","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","expandable-chapters","local-video@^1.0.1","anchor-navigation-ex@0.1.8","custom-favicon","todo@^0.1.3","hide-element","copy-code-button","tbfed-pagefooter","advanced-emoji","lightbox","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":" ","modify_label":"Update time：","modify_format":"YYYY-MM-DD "},"prism":{"css":["prism-themes/themes/prism-vs.css"]},"disqus":{"useIdentifier":false,"shortName":"HG1227"},"styles":{"website":"styles/website.css"},"emphasize":{},"ace":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"favicon":"favicon.ico","lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"prism-themes":{},"custom-favicon":{},"local-video":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"template":"ace","unindent":true,"edit":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"HHG","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"readme.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"python 学习记录","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":""}},"gitbook":"*","description":"。"},"file":{"path":"案例/爬取京东商品评论.md","mtime":"2020-08-15T13:12:50.101Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-20T03:00:50.152Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-local-video/video.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1250 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>requests库 · python 学习记录</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="HHG">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-vs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-local-video/video-js.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="requests库：代理proxies.html" />
+    
+    
+    <link rel="prev" href="HTTP基本原理.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="HTTP基本原理.html">
+            
+                <a href="HTTP基本原理.html">
+            
+                    
+                    HTTP基本原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.1.2" data-path="requests库.html">
+            
+                <a href="requests库.html">
+            
+                    
+                    requests库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="requests库：代理proxies.html">
+            
+                <a href="requests库：代理proxies.html">
+            
+                    
+                    requests库：代理proxies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="requestsSession应用.html">
+            
+                <a href="requestsSession应用.html">
+            
+                    
+                    requests.Session应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="XPath语法和lxml模块.html">
+            
+                <a href="XPath语法和lxml模块.html">
+            
+                    
+                    XPath语法和lxml模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="正则表达式匹配.html">
+            
+                <a href="正则表达式匹配.html">
+            
+                    
+                    正则表达式匹配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="chardet识别文件的编码格式.html">
+            
+                <a href="chardet识别文件的编码格式.html">
+            
+                    
+                    chardet识别文件的编码格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="fake-useragent.html">
+            
+                <a href="fake-useragent.html">
+            
+                    
+                    fake-useragent
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../Selenium/">
+            
+                <a href="../Selenium/">
+            
+                    
+                    Selenium
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../Selenium/基本使用.html">
+            
+                <a href="../Selenium/基本使用.html">
+            
+                    
+                    基本使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../Selenium/查找元素.html">
+            
+                <a href="../Selenium/查找元素.html">
+            
+                    
+                    查找元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../Selenium/操作被定位的元素.html">
+            
+                <a href="../Selenium/操作被定位的元素.html">
+            
+                    
+                    操作被定位的元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="../Selenium/selenium控制浏览器滚动条.html">
+            
+                <a href="../Selenium/selenium控制浏览器滚动条.html">
+            
+                    
+                    selenium控制浏览器滚动条
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5" data-path="../Selenium/等待页面加载完成(Waits.html">
+            
+                <a href="../Selenium/等待页面加载完成(Waits.html">
+            
+                    
+                    等待页面加载完成(Waits)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.6" data-path="../Selenium/切换窗口.html">
+            
+                <a href="../Selenium/切换窗口.html">
+            
+                    
+                    切换窗口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.7" data-path="../Selenium/Chrome无头模式与操作窗口.html">
+            
+                <a href="../Selenium/Chrome无头模式与操作窗口.html">
+            
+                    
+                    Chrome无头模式与操作窗口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.8" data-path="../Selenium/selenium时间日期控件处理.html">
+            
+                <a href="../Selenium/selenium时间日期控件处理.html">
+            
+                    
+                    selenium时间日期控件处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.9" data-path="../Selenium/selenium表格提交.html">
+            
+                <a href="../Selenium/selenium表格提交.html">
+            
+                    
+                    selenium表格提交
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.10" data-path="../Selenium/selenium处理select标签下拉框的选项.html">
+            
+                <a href="../Selenium/selenium处理select标签下拉框的选项.html">
+            
+                    
+                    selenium处理select标签下拉框的选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.11" data-path="../Selenium/单选框和复选框radiobox、checkbox.html">
+            
+                <a href="../Selenium/单选框和复选框radiobox、checkbox.html">
+            
+                    
+                    单选框和复选框(radiobox、checkbox)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.12" data-path="../Selenium/selenium给元素的属性赋值.html">
+            
+                <a href="../Selenium/selenium给元素的属性赋值.html">
+            
+                    
+                    selenium给元素的属性赋值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.13" data-path="../Selenium/ActionChains行为连.html">
+            
+                <a href="../Selenium/ActionChains行为连.html">
+            
+                    
+                    ActionChains行为连
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../Scrapy/">
+            
+                <a href="../Scrapy/">
+            
+                    
+                    Scrapy
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../Scrapy/Scrapy介绍.html">
+            
+                <a href="../Scrapy/Scrapy介绍.html">
+            
+                    
+                    Scrapy介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../Scrapy/Items.html">
+            
+                <a href="../Scrapy/Items.html">
+            
+                    
+                    Items
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="../Scrapy/Spiders.html">
+            
+                <a href="../Scrapy/Spiders.html">
+            
+                    
+                    Spiders
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4" data-path="../Scrapy/Item Pipeline.html">
+            
+                <a href="../Scrapy/Item Pipeline.html">
+            
+                    
+                    Item Pipeline
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.5" data-path="../Scrapy/下载项目图片.html">
+            
+                <a href="../Scrapy/下载项目图片.html">
+            
+                    
+                    下载项目图片
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.6" data-path="../Scrapy/Scrapy的Request和Response.html">
+            
+                <a href="../Scrapy/Scrapy的Request和Response.html">
+            
+                    
+                    Scrapy的Request和Response
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.7" data-path="../Scrapy/Scrapy模拟人人网登录.html">
+            
+                <a href="../Scrapy/Scrapy模拟人人网登录.html">
+            
+                    
+                    Scrapy模拟人人网登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.8" data-path="../Scrapy/Scrapy模拟登录豆瓣网.html">
+            
+                <a href="../Scrapy/Scrapy模拟登录豆瓣网.html">
+            
+                    
+                    Scrapy模拟登录豆瓣网
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.9" data-path="../Scrapy/Settings.html">
+            
+                <a href="../Scrapy/Settings.html">
+            
+                    
+                    Settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.10" data-path="../Scrapy/使用Scrapy框架爬取糗事百科段子.html">
+            
+                <a href="../Scrapy/使用Scrapy框架爬取糗事百科段子.html">
+            
+                    
+                    使用Scrapy框架爬取糗事百科段子
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.11" data-path="../Scrapy/糗事百科之抓取多个页面.html">
+            
+                <a href="../Scrapy/糗事百科之抓取多个页面.html">
+            
+                    
+                    糗事百科之抓取多个页面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.12" data-path="../Scrapy/CrawlSpider爬虫.html">
+            
+                <a href="../Scrapy/CrawlSpider爬虫.html">
+            
+                    
+                    CrawlSpider爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../案例/">
+            
+                <a href="../案例/">
+            
+                    
+                    案例
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../案例/爬取地理坐标.html">
+            
+                <a href="../案例/爬取地理坐标.html">
+            
+                    
+                    爬取地理坐标
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../案例/批量查询地址经纬度信息.html">
+            
+                <a href="../案例/批量查询地址经纬度信息.html">
+            
+                    
+                    批量查询地址经纬度信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="../案例/拉钩网数据爬取.html">
+            
+                <a href="../案例/拉钩网数据爬取.html">
+            
+                    
+                    拉钩网数据爬取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.4" data-path="../案例/selenium静态数据爬取.html">
+            
+                <a href="../案例/selenium静态数据爬取.html">
+            
+                    
+                    selenium静态数据爬取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.5" data-path="../案例/爬取淘宝商品评论.html">
+            
+                <a href="../案例/爬取淘宝商品评论.html">
+            
+                    
+                    爬取淘宝商品评论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.6" data-path="../案例/爬取京东商品评论.html">
+            
+                <a href="../案例/爬取京东商品评论.html">
+            
+                    
+                    爬取京东商品评论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.7" data-path="../案例/爬取网易云音乐.html">
+            
+                <a href="../案例/爬取网易云音乐.html">
+            
+                    
+                    爬取网易云音乐
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.8" data-path="../案例/网易云音乐API集合_测试抓取评论.html">
+            
+                <a href="../案例/网易云音乐API集合_测试抓取评论.html">
+            
+                    
+                    网易云音乐API集合_测试抓取评论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.9" data-path="../案例/B站弹幕爬取.html">
+            
+                <a href="../案例/B站弹幕爬取.html">
+            
+                    
+                    B站弹幕爬取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.10" data-path="../案例/Pandas爬取表格数据.html">
+            
+                <a href="../案例/Pandas爬取表格数据.html">
+            
+                    
+                    Pandas爬取表格数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.11" data-path="../案例/有道翻译案例.html">
+            
+                <a href="../案例/有道翻译案例.html">
+            
+                    
+                    有道翻译案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.12" data-path="../案例/移动端微博评论抓取.html">
+            
+                <a href="../案例/移动端微博评论抓取.html">
+            
+                    
+                    移动端微博评论抓取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.13" data-path="../案例/豆果网数据爬取.html">
+            
+                <a href="../案例/豆果网数据爬取.html">
+            
+                    
+                    豆果网数据爬取
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >requests库</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#requests&#x5E93;">requests&#x5E93;</a></li><ul><li><a href="#&#x5B89;&#x88C5;">&#x5B89;&#x88C5;</a></li><ul><li><a href="#&#x4F7F;&#x7528;pip&#x8FDB;&#x884C;&#x5B89;&#x88C5;">&#x4F7F;&#x7528;pip&#x8FDB;&#x884C;&#x5B89;&#x88C5;</a></li></ul><li><a href="#&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x4E0E;&#x4F20;&#x9012;&#x53C2;&#x6570;">&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x4E0E;&#x4F20;&#x9012;&#x53C2;&#x6570;</a></li><li><a href="#&#x4F20;&#x9012;-url-&#x53C2;&#x6570;">&#x4F20;&#x9012; URL &#x53C2;&#x6570;</a></li><li><a href="#&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</a></li><li><a href="#response&#x5BF9;&#x8C61;">Response&#x5BF9;&#x8C61;</a></li><li><a href="#post&#x8BF7;&#x6C42;&#xFF0C;&#x4E0A;&#x4F20;&#x8868;&#x5355;&#xFF0C;&#x6587;&#x672C;&#xFF0C;&#x6587;&#x4EF6;&#x56FE;&#x7247;">post&#x8BF7;&#x6C42;&#xFF0C;&#x4E0A;&#x4F20;&#x8868;&#x5355;&#xFF0C;&#x6587;&#x672C;&#xFF0C;&#x6587;&#x4EF6;\&#x56FE;&#x7247;</a></li><li><a href="#&#x5B9A;&#x5236;&#x8BF7;&#x6C42;&#x5934;">&#x5B9A;&#x5236;&#x8BF7;&#x6C42;&#x5934;</a></li><li><a href="#session&#x4E0E;cookie&#x5B58;&#x50A8;">session&#x4E0E;cookie&#x5B58;&#x50A8;</a></li><li><a href="#requests&#x8BF7;&#x6C42;&#x8FD4;&#x56DE;&#x5BF9;&#x8C61;response&#x7684;&#x5E38;&#x7528;&#x65B9;&#x6CD5;">requests&#x8BF7;&#x6C42;&#x8FD4;&#x56DE;&#x5BF9;&#x8C61;Response&#x7684;&#x5E38;&#x7528;&#x65B9;&#x6CD5;</a></li><li><a href="#&#x53C2;&#x8003;">&#x53C2;&#x8003;</a></li></ul></ul></div><a href="#requests&#x5E93;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="requests&#x5E93;"><a name="requests&#x5E93;" class="anchor-navigation-ex-anchor" href="#requests&#x5E93;"><i class="fa fa-link" aria-hidden="true"></i></a>requests&#x5E93;</h1>
+<h2 id="&#x5B89;&#x88C5;"><a name="&#x5B89;&#x88C5;" class="anchor-navigation-ex-anchor" href="#&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B89;&#x88C5;</h2>
+<h3 id="&#x4F7F;&#x7528;pip&#x8FDB;&#x884C;&#x5B89;&#x88C5;"><a name="&#x4F7F;&#x7528;pip&#x8FDB;&#x884C;&#x5B89;&#x88C5;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;pip&#x8FDB;&#x884C;&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F7F;&#x7528;pip&#x8FDB;&#x884C;&#x5B89;&#x88C5;</h3>
+<p>&#x8981;&#x5B89;&#x88C5; <code>requests</code>&#xFF0C;&#x6700;&#x65B9;&#x4FBF;&#x5FEB;&#x6377;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x4F7F;&#x7528; pip &#x8FDB;&#x884C;&#x5B89;&#x88C5;&#x3002;</p>
+<pre class="language-"><code class="lang-python">pip install requests
+</code></pre>
+<p>&#x5982;&#x679C;&#x8FD8;&#x6CA1;&#x6709;&#x5B89;&#x88C5;pip&#xFF0C;&#x8FD9;&#x4E2A;&#x94FE;&#x63A5; <a href="http://docs.python-guide.org/en/latest/starting/installation/" target="_blank">Properly Installing Python</a> &#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x4E86;&#x5728;&#x5404;&#x79CD;&#x5E73;&#x53F0;&#x4E0B;&#x5982;&#x4F55;&#x5B89;&#x88C5; python &#x4EE5;&#x53CA; setuptools&#xFF0C;pip&#xFF0C;virtualenv &#x7B49;&#x5E38;&#x7528;&#x7684; python &#x5DE5;&#x5177;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x5176;&#x4E2D;&#x7684;&#x6B65;&#x9AA4;&#x6765;&#x8FDB;&#x884C;&#x5B89;&#x88C5;&#x3002;</p>
+<h2 id="&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x4E0E;&#x4F20;&#x9012;&#x53C2;&#x6570;"><a name="&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x4E0E;&#x4F20;&#x9012;&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x4E0E;&#x4F20;&#x9012;&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x4E0E;&#x4F20;&#x9012;&#x53C2;&#x6570;</h2>
+<p>&#x4F7F;&#x7528; Requests &#x53D1;&#x9001;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x975E;&#x5E38;&#x7B80;&#x5355;&#x3002;</p>
+<p>&#x4E00;&#x5F00;&#x59CB;&#x8981;&#x5BFC;&#x5165; Requests &#x6A21;&#x5757;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token keyword">import</span> requests
+</code></pre>
+<p>&#x7136;&#x540E;&#xFF0C;&#x5C1D;&#x8BD5;&#x83B7;&#x53D6;&#x67D0;&#x4E2A;&#x7F51;&#x9875;&#x3002;&#x672C;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x83B7;&#x53D6; Github &#x7684;&#x516C;&#x5171;&#x65F6;&#x95F4;&#x7EBF;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> r <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&apos;https://api.github.com/events&apos;</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x6211;&#x4EEC;&#x6709;&#x4E00;&#x4E2A;&#x540D;&#x4E3A; <code>r</code> &#x7684; <a href="https://requests.readthedocs.io/zh_CN/latest/api.html#requests.Response" target="_blank"><code>Response</code></a> &#x5BF9;&#x8C61;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4ECE;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x4E2D;&#x83B7;&#x53D6;&#x6240;&#x6709;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x7684;&#x4FE1;&#x606F;&#x3002;</p>
+<p>Requests &#x7B80;&#x4FBF;&#x7684; API &#x610F;&#x5473;&#x7740;&#x6240;&#x6709; HTTP &#x8BF7;&#x6C42;&#x7C7B;&#x578B;&#x90FD;&#x662F;&#x663E;&#x800C;&#x6613;&#x89C1;&#x7684;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x53D1;&#x9001;&#x4E00;&#x4E2A; HTTP POST &#x8BF7;&#x6C42;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> r <span class="token operator">=</span> requests<span class="token punctuation">.</span>post<span class="token punctuation">(</span><span class="token string">&apos;http://httpbin.org/post&apos;</span><span class="token punctuation">,</span> data <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&apos;key&apos;</span><span class="token punctuation">:</span><span class="token string">&apos;value&apos;</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x6F02;&#x4EAE;&#xFF0C;&#x5BF9;&#x5427;&#xFF1F;&#x90A3;&#x4E48;&#x5176;&#x4ED6; HTTP &#x8BF7;&#x6C42;&#x7C7B;&#x578B;&#xFF1A;PUT&#xFF0C;DELETE&#xFF0C;HEAD &#x4EE5;&#x53CA; OPTIONS &#x53C8;&#x662F;&#x5982;&#x4F55;&#x7684;&#x5462;&#xFF1F;&#x90FD;&#x662F;&#x4E00;&#x6837;&#x7684;&#x7B80;&#x5355;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> r <span class="token operator">=</span> requests<span class="token punctuation">.</span>put<span class="token punctuation">(</span><span class="token string">&apos;http://httpbin.org/put&apos;</span><span class="token punctuation">,</span> data <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&apos;key&apos;</span><span class="token punctuation">:</span><span class="token string">&apos;value&apos;</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> r <span class="token operator">=</span> requests<span class="token punctuation">.</span>delete<span class="token punctuation">(</span><span class="token string">&apos;http://httpbin.org/delete&apos;</span><span class="token punctuation">)</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> r <span class="token operator">=</span> requests<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token string">&apos;http://httpbin.org/get&apos;</span><span class="token punctuation">)</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> r <span class="token operator">=</span> requests<span class="token punctuation">.</span>options<span class="token punctuation">(</span><span class="token string">&apos;http://httpbin.org/get&apos;</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x90FD;&#x5F88;&#x4E0D;&#x9519;&#x5427;&#xFF0C;&#x4F46;&#x8FD9;&#x4E5F;&#x4EC5;&#x662F; Requests &#x7684;&#x51B0;&#x5C71;&#x4E00;&#x89D2;&#x5462;&#x3002;</p>
+<h2 id="&#x4F20;&#x9012;-url-&#x53C2;&#x6570;"><a name="&#x4F20;&#x9012;-url-&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x4F20;&#x9012;-url-&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F20;&#x9012; URL &#x53C2;&#x6570;</h2>
+<p>&#x4F60;&#x4E5F;&#x8BB8;&#x7ECF;&#x5E38;&#x60F3;&#x4E3A; URL &#x7684;&#x67E5;&#x8BE2;&#x5B57;&#x7B26;&#x4E32;(query string)&#x4F20;&#x9012;&#x67D0;&#x79CD;&#x6570;&#x636E;&#x3002;&#x5982;&#x679C;&#x4F60;&#x662F;&#x624B;&#x5DE5;&#x6784;&#x5EFA; URL&#xFF0C;&#x90A3;&#x4E48;&#x6570;&#x636E;&#x4F1A;&#x4EE5;&#x952E;/&#x503C;&#x5BF9;&#x7684;&#x5F62;&#x5F0F;&#x7F6E;&#x4E8E; URL &#x4E2D;&#xFF0C;&#x8DDF;&#x5728;&#x4E00;&#x4E2A;&#x95EE;&#x53F7;&#x7684;&#x540E;&#x9762;&#x3002;&#x4F8B;&#x5982;&#xFF0C; <code>httpbin.org/get?key=val</code>&#x3002; Requests &#x5141;&#x8BB8;&#x4F60;&#x4F7F;&#x7528; <code>params</code> &#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;&#xFF0C;&#x4EE5;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x5B57;&#x5178;&#x6765;&#x63D0;&#x4F9B;&#x8FD9;&#x4E9B;&#x53C2;&#x6570;&#x3002;&#x4E3E;&#x4F8B;&#x6765;&#x8BF4;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x4F20;&#x9012; <code>key1=value1</code> &#x548C; <code>key2=value2</code> &#x5230; <code>httpbin.org/get</code> &#xFF0C;&#x90A3;&#x4E48;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> payload <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&apos;key1&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;value1&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;key2&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;value2&apos;</span><span class="token punctuation">}</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> r <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&quot;http://httpbin.org/get&quot;</span><span class="token punctuation">,</span> params<span class="token operator">=</span>payload<span class="token punctuation">)</span>
+</code></pre>
+<p>&#x901A;&#x8FC7;&#x6253;&#x5370;&#x8F93;&#x51FA;&#x8BE5; URL&#xFF0C;&#x4F60;&#x80FD;&#x770B;&#x5230; URL &#x5DF2;&#x88AB;&#x6B63;&#x786E;&#x7F16;&#x7801;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token keyword">print</span><span class="token punctuation">(</span>r<span class="token punctuation">.</span>url<span class="token punctuation">)</span>
+http<span class="token punctuation">:</span><span class="token operator">//</span>httpbin<span class="token punctuation">.</span>org<span class="token operator">/</span>get?key2<span class="token operator">=</span>value2<span class="token operator">&amp;</span>key1<span class="token operator">=</span>value1
+</code></pre>
+<p>&#x6CE8;&#x610F;&#x5B57;&#x5178;&#x91CC;&#x503C;&#x4E3A; <code>None</code> &#x7684;&#x952E;&#x90FD;&#x4E0D;&#x4F1A;&#x88AB;&#x6DFB;&#x52A0;&#x5230; URL &#x7684;&#x67E5;&#x8BE2;&#x5B57;&#x7B26;&#x4E32;&#x91CC;&#x3002;</p>
+<p>&#x4F60;&#x8FD8;&#x53EF;&#x4EE5;&#x5C06;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x4F5C;&#x4E3A;&#x503C;&#x4F20;&#x5165;&#xFF1A;</p>
+<pre class="language-"><code>&gt;&gt;&gt; payload = {&apos;key1&apos;: &apos;value1&apos;, &apos;key2&apos;: [&apos;value2&apos;, &apos;value3&apos;]}
+
+&gt;&gt;&gt; r = requests.get(&apos;http://httpbin.org/get&apos;, params=payload)
+&gt;&gt;&gt; print(r.url)
+http://httpbin.org/get?key1=value1&amp;key2=value2&amp;key2=value3
+</code></pre><h2 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;"><a name="&#x53C2;&#x6570;&#x8BF4;&#x660E;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;&#x8BF4;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;&#x8BF4;&#x660E;</h2>
+<p>http &#x8BF7;&#x6C42; <code>get</code> &#x4E0E; <code>post</code> &#x662F;&#x6700;&#x5E38;&#x7528;&#x7684;&#xFF0C;<code>url</code> &#x4E3A;&#x5FC5;&#x9009;&#x53C2;&#x6570;&#xFF0C;&#x5E38;&#x7528;&#x5E38;&#x7528;&#x53C2;&#x6570;&#x6709;params&#x3001;data&#x3001;json&#x3001;files&#x3001;timeout&#x3001;headers&#x3001;cookies&#xFF1B;&#x5176;&#x4ED6;&#x57FA;&#x672C;&#x7528;&#x4E0D;&#x5230;&#x7684;&#x6709;verify&#xFF0C;cert&#xFF0C;auth&#xFF0C;allow_redirects&#xFF0C;proxies&#xFF0C;hooks&#xFF0C;stream&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x5217;&#x8868;&#x5BF9;&#x5177;&#x4F53;&#x7684;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</p>
+<p>&#x91CD;&#x70B9;&#x5728; params&#x3001;data&#x3001;json&#x3001;files&#x3001;timeout&#xFF0C;&#x5176;&#x6B21;headers&#x3001;cookies&#xFF0C;&#x5176;&#x4ED6;&#x7565;&#x8FC7;&#x5C31;&#x53EF;&#x4EE5;&#x3002;</p>
+<p><a href="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200526095242.jpg" data-lightbox="489678c7-bd8c-4414-875e-e929f3024566" data-title="undefined" target="_blank"><img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200526095242.jpg" alt="undefined"></a></p>
+<h2 id="response&#x5BF9;&#x8C61;"><a name="response&#x5BF9;&#x8C61;" class="anchor-navigation-ex-anchor" href="#response&#x5BF9;&#x8C61;"><i class="fa fa-link" aria-hidden="true"></i></a>Response&#x5BF9;&#x8C61;</h2>
+<p>get&#x8BF7;&#x6C42;&#x662F;&#x6700;&#x7B80;&#x5355;&#x7684;&#x3001;&#x53D1;&#x9001;&#x7684;&#x6570;&#x636E;&#x91CF;&#x6BD4;&#x8F83;&#x5C0F;&#x3002;</p>
+<p>&#x4F7F;&#x7528; requests&#x65B9;&#x6CD5;&#x540E;&#xFF0C;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;response&#x5BF9;&#x8C61;&#xFF0C;&#x5176;&#x5B58;&#x50A8;&#x4E86;&#x670D;&#x52A1;&#x5668;&#x54CD;&#x5E94;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x5982;&#x4E0A;&#x5B9E;&#x4F8B;&#x4E2D;&#x5DF2;&#x7ECF;&#x63D0;&#x5230;&#x7684; r.text&#x3001;r.status_code&#x2026;&#x2026;
+&#x83B7;&#x53D6;&#x6587;&#x672C;&#x65B9;&#x5F0F;&#x7684;&#x54CD;&#x5E94;&#x4F53;&#x5B9E;&#x4F8B;&#xFF1A;&#x5F53;&#x4F60;&#x8BBF;&#x95EE; r.text &#x4E4B;&#x65F6;&#xFF0C;&#x4F1A;&#x4F7F;&#x7528;&#x5176;&#x54CD;&#x5E94;&#x7684;&#x6587;&#x672C;&#x7F16;&#x7801;&#x8FDB;&#x884C;&#x89E3;&#x7801;&#xFF0C;&#x5E76;&#x4E14;&#x4F60;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x5176;&#x7F16;&#x7801;&#x8BA9; r.text &#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x7F16;&#x7801;&#x8FDB;&#x884C;&#x89E3;&#x7801;&#x3002;</p>
+<pre class="language-"><code>r = requests.get(&apos;http://www.itwhy.org&apos;)
+print(r.text, &apos;\n{}\n&apos;.format(&apos;*&apos;*79), r.encoding)
+r.encoding = &apos;GBK&apos;
+print(r.text, &apos;\n{}\n&apos;.format(&apos;*&apos;*79), r.encoding)
+</code></pre><p>&#x5176;&#x4ED6;&#x54CD;&#x5E94;&#xFF1A;</p>
+<pre class="language-"><code>r.status_code # &#x54CD;&#x5E94;&#x72B6;&#x6001;&#x7801;
+ r.encoding  # &#x83B7;&#x53D6;&#x7F51;&#x9875;&#x7F16;&#x7801;
+r.raw #&#x8FD4;&#x56DE;&#x539F;&#x59CB;&#x54CD;&#x5E94;&#x4F53;&#xFF0C;&#x4E5F;&#x5C31;&#x662F; urllib &#x7684; response &#x5BF9;&#x8C61;&#xFF0C;&#x4F7F;&#x7528; r.raw.read() &#x8BFB;&#x53D6;
+r.content #&#x5B57;&#x8282;&#x65B9;&#x5F0F;&#x7684;&#x54CD;&#x5E94;&#x4F53;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x4E3A;&#x4F60;&#x89E3;&#x7801; gzip &#x548C; deflate &#x538B;&#x7F29;
+r.text #&#x5B57;&#x7B26;&#x4E32;&#x65B9;&#x5F0F;&#x7684;&#x54CD;&#x5E94;&#x4F53;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x6839;&#x636E;&#x54CD;&#x5E94;&#x5934;&#x90E8;&#x7684;&#x5B57;&#x7B26;&#x7F16;&#x7801;&#x8FDB;&#x884C;&#x89E3;&#x7801;
+r.headers #&#x4EE5;&#x5B57;&#x5178;&#x5BF9;&#x8C61;&#x5B58;&#x50A8;&#x670D;&#x52A1;&#x5668;&#x54CD;&#x5E94;&#x5934;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x4E2A;&#x5B57;&#x5178;&#x6BD4;&#x8F83;&#x7279;&#x6B8A;&#xFF0C;&#x5B57;&#x5178;&#x952E;&#x4E0D;&#x533A;&#x5206;&#x5927;&#x5C0F;&#x5199;&#xFF0C;&#x82E5;&#x952E;&#x4E0D;&#x5B58;&#x5728;&#x5219;&#x8FD4;&#x56DE;None
+#*&#x7279;&#x6B8A;&#x65B9;&#x6CD5;*#
+r.json() #Requests&#x4E2D;&#x5185;&#x7F6E;&#x7684;JSON&#x89E3;&#x7801;&#x5668;
+r.raise_for_status() #&#x5931;&#x8D25;&#x8BF7;&#x6C42;(&#x975E;200&#x54CD;&#x5E94;)&#x629B;&#x51FA;&#x5F02;&#x5E38;
+</code></pre><ul>
+<li>&#x793A;&#x4F8B;2.1: &#x5E26;&#x591A;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x8FD4;&#x56DE;&#x6587;&#x672C;&#x6570;&#x636E;</li>
+</ul>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> requests
+
+<span class="token comment"># &#x5E26;&#x53C2;&#x6570;&#x7684;GET&#x8BF7;&#x6C42;,timeout&#x8BF7;&#x6C42;&#x8D85;&#x65F6;&#x65F6;&#x95F4;</span>
+params <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&apos;key1&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;python&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;key2&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;java&apos;</span><span class="token punctuation">}</span>
+r <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token operator">=</span><span class="token string">&apos;http://httpbin.org/get&apos;</span><span class="token punctuation">,</span> params<span class="token operator">=</span>params<span class="token punctuation">,</span> timeout<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">)</span>
+
+<span class="token comment"># &#x6CE8;&#x610F;&#x89C2;&#x5BDF;url&#x5730;&#x5740;&#xFF0C;&#x5B83;&#x5DF2;&#x7ECF;&#x5C06;&#x53C2;&#x6570;&#x62FC;&#x63A5;&#x8D77;&#x6765;</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;URL&#x5730;&#x5740;&#xFF1A;&apos;</span><span class="token punctuation">,</span> r<span class="token punctuation">.</span>url<span class="token punctuation">)</span>
+<span class="token comment"># &#x54CD;&#x5E94;&#x72B6;&#x6001;&#x7801;&#xFF0C;&#x6210;&#x529F;&#x8FD4;&#x56DE;200&#xFF0C;&#x5931;&#x8D25;40x&#x6216;50x</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;&#x8BF7;&#x6C42;&#x72B6;&#x6001;&#x7801;&#xFF1A;&apos;</span><span class="token punctuation">,</span> r<span class="token punctuation">.</span>status_code<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;header&#x4FE1;&#x606F;:&apos;</span><span class="token punctuation">,</span> r<span class="token punctuation">.</span>headers<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;cookie&#x4FE1;&#x606F;&#xFF1A;&apos;</span><span class="token punctuation">,</span> r<span class="token punctuation">.</span>cookies<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;&#x54CD;&#x5E94;&#x7684;&#x6570;&#x636E;&#xFF1A;&apos;</span><span class="token punctuation">,</span> r<span class="token punctuation">.</span>text<span class="token punctuation">)</span>
+<span class="token comment"># &#x5982;&#x54CD;&#x5E94;&#x662F;json&#x6570;&#x636E; &#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; r.json()&#x81EA;&#x52A8;&#x8F6C;&#x6362;&#x4E3A;dict</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;&#x54CD;&#x5E94;json&#x6570;&#x636E;&apos;</span><span class="token punctuation">,</span> r<span class="token punctuation">.</span>json<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<ul>
+<li>&#x793A;&#x4F8B;2.2&#xFF1A;get &#x8FD4;&#x56DE;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;&#xFF0C;&#x5982;&#x56FE;&#x7247;&#x3002;</li>
+</ul>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> PIL <span class="token keyword">import</span> Image
+<span class="token keyword">from</span> io <span class="token keyword">import</span> BytesIO
+<span class="token keyword">import</span> requests
+
+<span class="token comment"># &#x8BF7;&#x6C42;&#x83B7;&#x53D6;&#x56FE;&#x7247;&#x5E76;&#x4FDD;&#x5B58;</span>
+r <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&apos;https://pic3.zhimg.com/247d9814fec770e2c85cc858525208b2_is.jpg&apos;</span><span class="token punctuation">)</span>
+i <span class="token operator">=</span> Image<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span>BytesIO<span class="token punctuation">(</span>r<span class="token punctuation">.</span>content<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment"># i.show()  # &#x67E5;&#x770B;&#x56FE;&#x7247;</span>
+<span class="token comment"># &#x5C06;&#x56FE;&#x7247;&#x4FDD;&#x5B58;</span>
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">&apos;img.jpg&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;wb&apos;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> fd<span class="token punctuation">:</span>
+   <span class="token keyword">for</span> chunk <span class="token keyword">in</span> r<span class="token punctuation">.</span>iter_content<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+       fd<span class="token punctuation">.</span>write<span class="token punctuation">(</span>chunk<span class="token punctuation">)</span>
+</code></pre>
+<h2 id="post&#x8BF7;&#x6C42;&#xFF0C;&#x4E0A;&#x4F20;&#x8868;&#x5355;&#xFF0C;&#x6587;&#x672C;&#xFF0C;&#x6587;&#x4EF6;&#x56FE;&#x7247;"><a name="post&#x8BF7;&#x6C42;&#xFF0C;&#x4E0A;&#x4F20;&#x8868;&#x5355;&#xFF0C;&#x6587;&#x672C;&#xFF0C;&#x6587;&#x4EF6;&#x56FE;&#x7247;" class="anchor-navigation-ex-anchor" href="#post&#x8BF7;&#x6C42;&#xFF0C;&#x4E0A;&#x4F20;&#x8868;&#x5355;&#xFF0C;&#x6587;&#x672C;&#xFF0C;&#x6587;&#x4EF6;&#x56FE;&#x7247;"><i class="fa fa-link" aria-hidden="true"></i></a>post&#x8BF7;&#x6C42;&#xFF0C;&#x4E0A;&#x4F20;&#x8868;&#x5355;&#xFF0C;&#x6587;&#x672C;&#xFF0C;&#x6587;&#x4EF6;\&#x56FE;&#x7247;</h2>
+<p>post &#x8BF7;&#x6C42;&#x6BD4; get &#x590D;&#x6742;&#xFF0C;&#x8BF7;&#x6C42;&#x7684;&#x6570;&#x636E;&#x6709;&#x591A;&#x79CD;&#x591A;&#x6837;&#xFF0C;&#x6709;&#x8868;&#x5355;(form-data)&#xFF0C;&#x6587;&#x672C;(json\xml&#x7B49;)&#xFF0C;&#x6587;&#x4EF6;&#x6D41;&#xFF08;&#x56FE;&#x7247;\&#x6587;&#x4EF6;&#xFF09;&#x7B49;&#x3002;</p>
+<p>&#x8981;&#x53D1;&#x9001;POST&#x8BF7;&#x6C42;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x628A;<code>get()</code>&#x65B9;&#x6CD5;&#x53D8;&#x6210;<code>post()</code>&#xFF0C;&#x7136;&#x540E;&#x4F20;&#x5165;<code>data</code>&#x53C2;&#x6570;&#x4F5C;&#x4E3A;POST&#x8BF7;&#x6C42;&#x7684;&#x6570;&#x636E;&#xFF1A;</p>
+<p>&#x8868;&#x5355;&#x5F62;&#x5F0F;&#x63D0;&#x4EA4;&#x7684;post&#x8BF7;&#x6C42;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5C06;&#x6570;&#x636E;&#x4F20;&#x9012;&#x7ED9;post()&#x65B9;&#x6CD5;&#x7684;data&#x53C2;&#x6570;&#x3002;&#x89C1;&#x793A;&#x4F8B;3.1.</p>
+<p>json&#x6587;&#x672C;&#x5F62;&#x5F0F;&#x63D0;&#x4EA4;&#x7684;post&#x8BF7;&#x6C42;&#xFF0C;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x662F;&#x5C06;json&#x6570;&#x636E;dumps&#x540E;&#x4F20;&#x9012;&#x7ED9;data&#x53C2;&#x6570;&#xFF0C;&#x53E6;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x5C31;&#x662F;&#x76F4;&#x63A5;&#x5C06;json&#x6570;&#x636E;&#x4F20;&#x9012;&#x7ED9;post()&#x65B9;&#x6CD5;&#x7684;json&#x53C2;&#x6570;&#x3002;&#x89C1;&#x793A;&#x4F8B;3.2.</p>
+<p>&#x5355;&#x4E2A;&#x6587;&#x4EF6;&#x63D0;&#x4EA4;&#x7684;post&#x8BF7;&#x6C42;&#xFF0C;&#x5C06;&#x6587;&#x4EF6;&#x6D41;&#x7ED9;post()&#x65B9;&#x6CD5;&#x7684;files&#x53C2;&#x6570;&#x3002;&#x89C1;&#x793A;&#x4F8B;3.3&#x3002;</p>
+<p>&#x591A;&#x4E2A;&#x6587;&#x4EF6;&#x63D0;&#x4EA4;&#x7684;post&#x8BF7;&#x6C42;&#xFF0C;&#x5C06;&#x6587;&#x4EF6;&#x8BBE;&#x5230;&#x4E00;&#x4E2A;&#x5143;&#x7EC4;&#x7684;&#x5217;&#x8868;&#x4E2D;&#xFF0C;&#x5176;&#x4E2D;&#x5143;&#x7EC4;&#x7ED3;&#x6784;&#x4E3A; (form_field_name, file_info)&#xFF1B;&#x7136;&#x540E;&#x5C06;&#x6570;&#x636E;&#x4F20;&#x9012;&#x7ED9;post()&#x65B9;&#x6CD5;&#x7684;files&#x3002;&#x89C1;&#x793A;&#x4F8B;3.4</p>
+<ul>
+<li>&#x793A;&#x4F8B;3.1&#xFF1A;post &#x8868;&#x5355;&#x8BF7;&#x6C42;</li>
+</ul>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> requests<span class="token punctuation">,</span> json
+
+<span class="token comment"># &#x5E26;&#x53C2;&#x6570;&#x8868;&#x5355;&#x7C7B;&#x578B;post&#x8BF7;&#x6C42;</span>
+data<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">&apos;custname&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;woodman&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;custtel&apos;</span><span class="token punctuation">:</span><span class="token string">&apos;13012345678&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;custemail&apos;</span><span class="token punctuation">:</span><span class="token string">&apos;woodman@11.com&apos;</span><span class="token punctuation">,</span>
+     <span class="token string">&apos;size&apos;</span><span class="token punctuation">:</span><span class="token string">&apos;small&apos;</span><span class="token punctuation">}</span>
+r <span class="token operator">=</span> requests<span class="token punctuation">.</span>post<span class="token punctuation">(</span><span class="token string">&apos;http://httpbin.org/post&apos;</span><span class="token punctuation">,</span> data<span class="token operator">=</span>data<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;&#x54CD;&#x5E94;&#x6570;&#x636E;&#xFF1A;&apos;</span><span class="token punctuation">,</span> r<span class="token punctuation">.</span>text<span class="token punctuation">)</span>
+</code></pre>
+<ul>
+<li>&#x793A;&#x4F8B;3.2&#xFF1A;post json&#x8BF7;&#x6C42;</li>
+</ul>
+<pre class="language-"><code class="lang-python"><span class="token comment"># json&#x6570;&#x636E;&#x8BF7;&#x6C42;</span>
+url <span class="token operator">=</span> <span class="token string">&apos;https://api.github.com/some/endpoint&apos;</span>
+payload <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&apos;some&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;data&apos;</span><span class="token punctuation">}</span>
+<span class="token comment"># &#x53EF;&#x4EE5;&#x4F7F;&#x7528;json.dumps(dict) &#x5BF9;&#x7F16;&#x7801;&#x8FDB;&#x884C;&#x7F16;&#x8BD1;</span>
+r <span class="token operator">=</span> requests<span class="token punctuation">.</span>post<span class="token punctuation">(</span>url<span class="token punctuation">,</span> data<span class="token operator">=</span>json<span class="token punctuation">.</span>dumps<span class="token punctuation">(</span>payload<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;&#x54CD;&#x5E94;&#x6570;&#x636E;&#xFF1A;&apos;</span><span class="token punctuation">,</span> r<span class="token punctuation">.</span>text<span class="token punctuation">)</span>
+
+<span class="token comment"># &#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;json&#x53C2;&#x6570;&#x4F20;&#x9012;json&#x6570;&#x636E;</span>
+r <span class="token operator">=</span> requests<span class="token punctuation">.</span>post<span class="token punctuation">(</span>url<span class="token punctuation">,</span> json<span class="token operator">=</span>payload<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;&#x54CD;&#x5E94;&#x6570;&#x636E;&#xFF1A;&apos;</span><span class="token punctuation">,</span> r<span class="token punctuation">.</span>text<span class="token punctuation">)</span>
+</code></pre>
+<ul>
+<li>&#x793A;&#x4F8B;3.3&#xFF1A;post&#x63D0;&#x4EA4;&#x5355;&#x4E2A;&#x6587;&#x4EF6;</li>
+</ul>
+<pre class="language-"><code class="lang-python"><span class="token comment"># &#x4E0A;&#x4F20;&#x5355;&#x4E2A;&#x6587;&#x4EF6;</span>
+url <span class="token operator">=</span> <span class="token string">&apos;http://httpbin.org/post&apos;</span>
+<span class="token comment"># &#x6CE8;&#x610F;&#x6587;&#x4EF6;&#x6253;&#x5F00;&#x7684;&#x6A21;&#x5F0F;&#xFF0C;&#x4F7F;&#x7528;&#x4E8C;&#x8FDB;&#x5236;&#x6A21;&#x5F0F;&#x4E0D;&#x5BB9;&#x6613;&#x53D1;&#x751F;&#x9519;&#x8BEF;</span>
+files <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&apos;file&apos;</span><span class="token punctuation">:</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">&apos;report.txt&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;rb&apos;</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+<span class="token comment"># &#x4E5F;&#x53EF;&#x4EE5;&#x663E;&#x5F0F;&#x5730;&#x8BBE;&#x7F6E;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x6587;&#x4EF6;&#x7C7B;&#x578B;&#x548C;&#x8BF7;&#x6C42;&#x5934;</span>
+<span class="token comment"># files = {&apos;file&apos;: (&apos;report.xls&apos;, open(&apos;report.xls&apos;, &apos;rb&apos;), &apos;application/vnd.ms-excel&apos;, {&apos;Expires&apos;: &apos;0&apos;})}</span>
+r <span class="token operator">=</span> requests<span class="token punctuation">.</span>post<span class="token punctuation">(</span>url<span class="token punctuation">,</span> files<span class="token operator">=</span>files<span class="token punctuation">)</span>
+r<span class="token punctuation">.</span>encoding <span class="token operator">=</span> <span class="token string">&apos;utf-8&apos;</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>r<span class="token punctuation">.</span>text<span class="token punctuation">)</span>
+</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x6587;&#x4EF6;&#x7684;&#x4E0A;&#x4F20;&#x4F7F;&#x7528;&#x4E8C;&#x8FDB;&#x5236;&#x6253;&#x5F00;&#x4E0D;&#x5BB9;&#x6613;&#x62A5;&#x9519;&#x3002;</p>
+<ul>
+<li>&#x793A;&#x4F8B;3.4&#xFF1A;&#x4E0A;&#x4F20;&#x591A;&#x4E2A;&#x6587;&#x4EF6;</li>
+</ul>
+<pre class="language-"><code class="lang-python">url <span class="token operator">=</span> <span class="token string">&apos;http://httpbin.org/post&apos;</span>
+multiple_files <span class="token operator">=</span> <span class="token punctuation">[</span>
+   <span class="token punctuation">(</span><span class="token string">&apos;images&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">&apos;foo.png&apos;</span><span class="token punctuation">,</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">&apos;foo.png&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;rb&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&apos;image/png&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+   <span class="token punctuation">(</span><span class="token string">&apos;images&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">&apos;bar.png&apos;</span><span class="token punctuation">,</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">&apos;bar.png&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;rb&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&apos;image/png&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+r <span class="token operator">=</span> requests<span class="token punctuation">.</span>post<span class="token punctuation">(</span>url<span class="token punctuation">,</span> files<span class="token operator">=</span>multiple_files<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>r<span class="token punctuation">.</span>text<span class="token punctuation">)</span>
+</code></pre>
+<h2 id="&#x5B9A;&#x5236;&#x8BF7;&#x6C42;&#x5934;"><a name="&#x5B9A;&#x5236;&#x8BF7;&#x6C42;&#x5934;" class="anchor-navigation-ex-anchor" href="#&#x5B9A;&#x5236;&#x8BF7;&#x6C42;&#x5934;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B9A;&#x5236;&#x8BF7;&#x6C42;&#x5934;</h2>
+<p>&#x83B7;&#x53D6; <code>get</code> &#x4E0E; <code>post</code> &#x8BF7;&#x6C42;&#x54CD;&#x5E94;&#x7684; <code>header</code> &#x4E0E; <code>cookie</code> &#x5206;&#x522B;&#x4F7F;&#x7528; <code>r.headers</code> &#x4E0E;<code>r.cookies</code> &#x3002;&#x5982;&#x679C;&#x63D0;&#x4EA4;&#x8BF7;&#x6C42;&#x6570;&#x636E;&#x662F;&#x5BF9; header &#x4E0E; cookie &#x6709;&#x4FEE;&#x6539;&#xFF0C;&#x9700;&#x8981;&#x5728;get()&#x4E0E;post()&#x65B9;&#x6CD5;&#x4E2D;&#x52A0;&#x5165; headers &#x6216; cookies &#x53C2;&#x6570;&#xFF0C;&#x5B83;&#x4EEC;&#x503C;&#x7684;<strong>&#x7C7B;&#x578B;&#x90FD;&#x662F;&#x5B57;&#x5178;</strong></p>
+<ul>
+<li>&#x793A;&#x4F8B;4.1&#xFF1A;&#x5B9A;&#x5236;&#x8BF7;&#x6C42;&#x5934;header</li>
+</ul>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> requests
+
+url <span class="token operator">=</span> <span class="token string">&apos;https://api.github.com/some/endpoint&apos;</span>
+headers <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&apos;user-agent&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;my-app/0.0.1&apos;</span><span class="token punctuation">}</span>
+r <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">,</span> headers<span class="token operator">=</span>headers<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>r<span class="token punctuation">.</span>headers<span class="token punctuation">)</span>  <span class="token comment"># &#x83B7;&#x53D6;&#x54CD;&#x5E94;&#x6570;&#x636E;&#x7684;header&#x4FE1;&#x606F;</span>
+</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF1A;requests&#x81EA;&#x5E26;headers&#x7BA1;&#x7406;&#xFF0C;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x4E0D;&#x9700;&#x8981;&#x8BBE;&#x7F6E;header&#x4FE1;&#x606F;&#x3002;Requests &#x4E0D;&#x4F1A;&#x57FA;&#x4E8E;&#x5B9A;&#x5236; header &#x7684;&#x5177;&#x4F53;&#x60C5;&#x51B5;&#x6539;&#x53D8;&#x81EA;&#x5DF1;&#x7684;&#x884C;&#x4E3A;&#x3002;&#x53EA;&#x4E0D;&#x8FC7;&#x5728;&#x6700;&#x540E;&#x7684;&#x8BF7;&#x6C42;&#x4E2D;&#xFF0C;&#x6240;&#x6709;&#x7684; header &#x4FE1;&#x606F;&#x90FD;&#x4F1A;&#x88AB;&#x4F20;&#x9012;&#x8FDB;&#x53BB;&#x3002;</p>
+<ul>
+<li>&#x793A;&#x4F8B;4.2&#xFF1A;&#x5B9A;&#x5236;cookie&#x4FE1;&#x606F;</li>
+</ul>
+<pre class="language-"><code class="lang-python"><span class="token comment"># &#x76F4;&#x63A5;&#x4EE5;&#x5B57;&#x5178;&#x578B;&#x65F6;&#x4F20;&#x9012;cookie</span>
+url <span class="token operator">=</span> <span class="token string">&apos;http://httpbin.org/cookies&apos;</span>
+cookies <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;cookies_are&quot;</span><span class="token punctuation">:</span><span class="token string">&apos;working&apos;</span><span class="token punctuation">}</span>
+r <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">,</span> cookies<span class="token operator">=</span>cookies<span class="token punctuation">)</span>
+<span class="token comment"># &#x83B7;&#x53D6;&#x54CD;&#x5E94;&#x7684;cookie&#x4FE1;&#x606F;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x662F;RequestsCookieJar&#x5BF9;&#x8C61;</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>r<span class="token punctuation">.</span>cookies<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>r<span class="token punctuation">.</span>text<span class="token punctuation">)</span>
+</code></pre>
+<h2 id="session&#x4E0E;cookie&#x5B58;&#x50A8;"><a name="session&#x4E0E;cookie&#x5B58;&#x50A8;" class="anchor-navigation-ex-anchor" href="#session&#x4E0E;cookie&#x5B58;&#x50A8;"><i class="fa fa-link" aria-hidden="true"></i></a>session&#x4E0E;cookie&#x5B58;&#x50A8;</h2>
+<p> &#x4F1A;&#x8BDD;&#x5BF9;&#x8C61;requests.Session&#x80FD;&#x591F;&#x8DE8;&#x8BF7;&#x6C42;&#x5730;&#x4FDD;&#x6301;&#x67D0;&#x4E9B;&#x53C2;&#x6570;&#xFF0C;&#x6BD4;&#x5982;cookies&#xFF0C;&#x5373;&#x5728;&#x540C;&#x4E00;&#x4E2A;Session&#x5B9E;&#x4F8B;&#x53D1;&#x51FA;&#x7684;&#x6240;&#x6709;&#x8BF7;&#x6C42;&#x90FD;&#x4FDD;&#x6301;&#x540C;&#x4E00;&#x4E2A;cookies,&#x800C;requests&#x6A21;&#x5757;&#x6BCF;&#x6B21;&#x4F1A;&#x81EA;&#x52A8;&#x5904;&#x7406;cookies&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x5F88;&#x65B9;&#x4FBF;&#x5730;&#x5904;&#x7406;&#x767B;&#x5F55;&#x65F6;&#x7684;cookies&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x5411;&#x540C;&#x4E00;&#x4E3B;&#x673A;&#x53D1;&#x9001;&#x591A;&#x4E2A;&#x8BF7;&#x6C42;&#xFF0C;&#x6BCF;&#x4E2A;&#x8BF7;&#x6C42;&#x5BF9;&#x8C61;&#x8BA9;&#x4F60;&#x80FD;&#x591F;&#x8DE8;&#x8BF7;&#x6C42;&#x4FDD;&#x6301;session&#x548C;cookie&#x4FE1;&#x606F;&#xFF0C;&#x8FD9;&#x65F6;&#x6211;&#x4EEC;&#x8981;&#x4F7F;&#x7528;&#x5230;requests&#x7684;Session()&#x6765;&#x4FDD;&#x6301;&#x56DE;&#x8BDD;&#x8BF7;&#x6C42;&#x7684;cookie&#x548C;session&#x4E0E;&#x670D;&#x52A1;&#x5668;&#x7684;&#x76F8;&#x4E00;&#x81F4;&#x3002;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> requests
+
+url <span class="token operator">=</span> <span class="token string">&quot;http://www.renren.com/PLogin.do&quot;</span>
+data <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;email&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;970138074@qq.com&quot;</span><span class="token punctuation">,</span><span class="token string">&apos;password&apos;</span><span class="token punctuation">:</span><span class="token string">&quot;pythonspider&quot;</span><span class="token punctuation">}</span>
+headers <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">&apos;User-Agent&apos;</span><span class="token punctuation">:</span> <span class="token string">&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36&quot;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment"># &#x767B;&#x5F55;</span>
+session <span class="token operator">=</span> requests<span class="token punctuation">.</span>session<span class="token punctuation">(</span><span class="token punctuation">)</span>
+session<span class="token punctuation">.</span>post<span class="token punctuation">(</span>url<span class="token punctuation">,</span>data<span class="token operator">=</span>data<span class="token punctuation">,</span>headers<span class="token operator">=</span>headers<span class="token punctuation">)</span>
+
+<span class="token comment"># &#x8BBF;&#x95EE;&#x5927;&#x9E4F;&#x4E2A;&#x4EBA;&#x4E2D;&#x5FC3;</span>
+resp <span class="token operator">=</span> session<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&apos;http://www.renren.com/880151247/profile&apos;</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>resp<span class="token punctuation">.</span>text<span class="token punctuation">)</span>
+</code></pre>
+<h2 id="requests&#x8BF7;&#x6C42;&#x8FD4;&#x56DE;&#x5BF9;&#x8C61;response&#x7684;&#x5E38;&#x7528;&#x65B9;&#x6CD5;"><a name="requests&#x8BF7;&#x6C42;&#x8FD4;&#x56DE;&#x5BF9;&#x8C61;response&#x7684;&#x5E38;&#x7528;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#requests&#x8BF7;&#x6C42;&#x8FD4;&#x56DE;&#x5BF9;&#x8C61;response&#x7684;&#x5E38;&#x7528;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>requests&#x8BF7;&#x6C42;&#x8FD4;&#x56DE;&#x5BF9;&#x8C61;Response&#x7684;&#x5E38;&#x7528;&#x65B9;&#x6CD5;</h2>
+<p><code>requests.get(url)</code> &#x4E0E; <code>requests.post(url)</code> &#x7684;&#x8FD4;&#x56DE;&#x5BF9;&#x8C61;&#x4E3A;Response &#x7C7B;&#x5BF9;&#x8C61;&#x3002;</p>
+<p>Response&#x54CD;&#x5E94;&#x7C7B;&#x5E38;&#x7528;&#x5C5E;&#x6027;&#x4E0E;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python">Response<span class="token punctuation">.</span>url           &#x8BF7;&#x6C42;url&#xFF0C;<span class="token punctuation">[</span>&#x89C1;&#x793A;&#x4F8B;<span class="token number">2.1</span><span class="token punctuation">]</span>
+
+Response<span class="token punctuation">.</span>status_code   &#x54CD;&#x5E94;&#x72B6;&#x6001;&#x7801;&#xFF0C;<span class="token punctuation">[</span>&#x89C1;&#x793A;&#x4F8B;<span class="token number">2.1</span><span class="token punctuation">]</span>
+
+Response<span class="token punctuation">.</span>text          &#x83B7;&#x53D6;&#x54CD;&#x5E94;&#x5185;&#x5BB9;&#xFF0C;<span class="token punctuation">[</span>&#x89C1;&#x793A;&#x4F8B;<span class="token number">2.1</span><span class="token punctuation">]</span>
+
+Response<span class="token punctuation">.</span>content        &#x4EE5;&#x5B57;&#x8282;&#x5F62;&#x5F0F;&#x83B7;&#x53D6;&#x54CD;&#x5E94;&#x63D0;&#xFF0C;&#x591A;&#x7528;&#x4E8E;&#x975E;&#x6587;&#x672C;&#x8BF7;&#x6C42;&#xFF0C;<span class="token punctuation">[</span>&#x89C1;&#x793A;&#x4F8B;<span class="token number">2.2</span><span class="token punctuation">]</span>
+
+Response<span class="token punctuation">.</span>json<span class="token punctuation">(</span><span class="token punctuation">)</span>           &#x6D3B;&#x52A8;&#x54CD;&#x5E94;&#x7684;JSON&#x5185;&#x5BB9;&#xFF0C;<span class="token punctuation">[</span>&#x89C1;&#x793A;&#x4F8B;<span class="token number">2.1</span><span class="token punctuation">]</span>
+
+Response<span class="token punctuation">.</span>ok            &#x8BF7;&#x6C42;&#x662F;&#x5426;&#x6210;&#x529F;&#xFF0C;status_code<span class="token operator">&lt;</span><span class="token number">400</span> &#x8FD4;&#x56DE;<span class="token boolean">True</span>
+
+Response<span class="token punctuation">.</span>headers       &#x54CD;&#x5E94;header&#x4FE1;&#x606F;&#xFF0C;<span class="token punctuation">[</span>&#x89C1;&#x793A;&#x4F8B;<span class="token number">2.1</span><span class="token punctuation">]</span>
+
+Response<span class="token punctuation">.</span>cookies       &#x54CD;&#x5E94;&#x7684;cookie&#xFF0C;<span class="token punctuation">[</span>&#x89C1;&#x793A;&#x4F8B;<span class="token number">2.1</span><span class="token punctuation">]</span>
+
+Response<span class="token punctuation">.</span>elapsed       &#x8BF7;&#x6C42;&#x54CD;&#x5E94;&#x7684;&#x65F6;&#x95F4;&#x3002;
+
+Response<span class="token punctuation">.</span>links         &#x8FD4;&#x56DE;&#x54CD;&#x5E94;&#x5934;&#x90E8;&#x7684;links&#x8FDE;&#x63A5;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;Response<span class="token punctuation">.</span>headers<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&apos;link&apos;</span><span class="token punctuation">)</span>
+
+Response<span class="token punctuation">.</span>raw           &#x83B7;&#x53D6;&#x539F;&#x59CB;&#x5957;&#x63A5;&#x5B57;&#x54CD;&#x5E94;&#xFF0C;&#x9700;&#x8981;&#x5C06;&#x521D;&#x59CB;&#x8BF7;&#x6C42;&#x53C2;&#x6570;stream<span class="token operator">=</span><span class="token boolean">True</span>
+
+Response<span class="token punctuation">.</span>encoding      &#x67E5;&#x770B;&#x54CD;&#x5E94;&#x5934;&#x90E8;&#x5B57;&#x7B26;&#x7F16;&#x7801;
+
+Response<span class="token punctuation">.</span>iter_content<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x8FED;&#x4EE3;&#x83B7;&#x53D6;&#x54CD;&#x5E94;&#x6570;&#x636E;&#xFF0C;<span class="token punctuation">[</span>&#x89C1;&#x793A;&#x4F8B;<span class="token number">2.2</span><span class="token punctuation">]</span>
+
+Response<span class="token punctuation">.</span>history    &#x91CD;&#x5B9A;&#x5411;&#x8BF7;&#x6C42;&#x5386;&#x53F2;&#x8BB0;&#x5F55;
+
+Response<span class="token punctuation">.</span>reason        &#x54CD;&#x5E94;&#x72B6;&#x6001;&#x7684;&#x6587;&#x672C;&#x539F;&#x56E0;&#xFF0C;&#x5982;&#xFF1A;<span class="token string">&quot;Not Found&quot;</span> <span class="token keyword">or</span> <span class="token string">&quot;OK&quot;</span>
+
+Response<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>    &#x5173;&#x95ED;&#x5E76;&#x91CA;&#x653E;&#x94FE;&#x63A5;&#xFF0C;&#x91CA;&#x653E;&#x540E;&#x4E0D;&#x80FD;&#x518D;&#x6B21;&#x8BBF;&#x95EE;&#x2019;raw&#x2019;&#x5BF9;&#x8C61;&#x3002;&#x4E00;&#x822C;&#x4E0D;&#x4F1A;&#x8C03;&#x7528;&#x3002;
+</code></pre>
+<h2 id="&#x53C2;&#x8003;"><a name="&#x53C2;&#x8003;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x8003;</h2>
+<ol>
+<li><a href="https://www.cnblogs.com/zhangxinqi/p/9201594.html" target="_blank">python3&#x4E4B;requests</a></li>
+</ol>
+<footer class="page-footer"><span class="copyright">  </span><span class="footer-modification">Update time&#xFF1A;
+2020-08-13 
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="HTTP基本原理.html" class="navigation navigation-prev " aria-label="Previous page: HTTP基本原理">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="requests库：代理proxies.html" class="navigation navigation-next " aria-label="Next page: requests库：代理proxies">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"requests库","level":"2.1.2","depth":2,"next":{"title":"requests库：代理proxies","level":"2.1.3","depth":2,"path":"Chapter1/requests库：代理proxies.md","ref":"Chapter1/requests库：代理proxies.md","articles":[]},"previous":{"title":"HTTP基本原理","level":"2.1.1","depth":2,"path":"Chapter1/HTTP基本原理.md","ref":"Chapter1/HTTP基本原理.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","disqus@^0.1.0","prism@^2.1.0","prism-themes@^0.0.2","theme-comscore","anchors@^0.7.1","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","expandable-chapters","local-video@^1.0.1","anchor-navigation-ex@0.1.8","custom-favicon","todo@^0.1.3","hide-element","copy-code-button","tbfed-pagefooter","advanced-emoji","lightbox","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":" ","modify_label":"Update time：","modify_format":"YYYY-MM-DD "},"prism":{"css":["prism-themes/themes/prism-vs.css"]},"disqus":{"useIdentifier":false,"shortName":"HG1227"},"styles":{"website":"styles/website.css"},"emphasize":{},"ace":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"favicon":"favicon.ico","lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"prism-themes":{},"custom-favicon":{},"local-video":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"template":"ace","unindent":true,"edit":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"HHG","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"readme.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"python 学习记录","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":""}},"gitbook":"*","description":"。"},"file":{"path":"Chapter1/requests库.md","mtime":"2020-08-13T15:05:13.647Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-20T03:00:50.152Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-local-video/video.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

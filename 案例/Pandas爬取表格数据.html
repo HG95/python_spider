@@ -1,0 +1,1196 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Pandas爬取表格数据 · python 学习记录</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="HHG">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-vs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-local-video/video-js.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="有道翻译案例.html" />
+    
+    
+    <link rel="prev" href="B站弹幕爬取.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Chapter1/">
+            
+                <a href="../Chapter1/">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../Chapter1/HTTP基本原理.html">
+            
+                <a href="../Chapter1/HTTP基本原理.html">
+            
+                    
+                    HTTP基本原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../Chapter1/requests库.html">
+            
+                <a href="../Chapter1/requests库.html">
+            
+                    
+                    requests库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../Chapter1/requests库：代理proxies.html">
+            
+                <a href="../Chapter1/requests库：代理proxies.html">
+            
+                    
+                    requests库：代理proxies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../Chapter1/requestsSession应用.html">
+            
+                <a href="../Chapter1/requestsSession应用.html">
+            
+                    
+                    requests.Session应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../Chapter1/XPath语法和lxml模块.html">
+            
+                <a href="../Chapter1/XPath语法和lxml模块.html">
+            
+                    
+                    XPath语法和lxml模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../Chapter1/正则表达式匹配.html">
+            
+                <a href="../Chapter1/正则表达式匹配.html">
+            
+                    
+                    正则表达式匹配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="../Chapter1/chardet识别文件的编码格式.html">
+            
+                <a href="../Chapter1/chardet识别文件的编码格式.html">
+            
+                    
+                    chardet识别文件的编码格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../Chapter1/fake-useragent.html">
+            
+                <a href="../Chapter1/fake-useragent.html">
+            
+                    
+                    fake-useragent
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../Selenium/">
+            
+                <a href="../Selenium/">
+            
+                    
+                    Selenium
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../Selenium/基本使用.html">
+            
+                <a href="../Selenium/基本使用.html">
+            
+                    
+                    基本使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../Selenium/查找元素.html">
+            
+                <a href="../Selenium/查找元素.html">
+            
+                    
+                    查找元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../Selenium/操作被定位的元素.html">
+            
+                <a href="../Selenium/操作被定位的元素.html">
+            
+                    
+                    操作被定位的元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="../Selenium/selenium控制浏览器滚动条.html">
+            
+                <a href="../Selenium/selenium控制浏览器滚动条.html">
+            
+                    
+                    selenium控制浏览器滚动条
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5" data-path="../Selenium/等待页面加载完成(Waits.html">
+            
+                <a href="../Selenium/等待页面加载完成(Waits.html">
+            
+                    
+                    等待页面加载完成(Waits)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.6" data-path="../Selenium/切换窗口.html">
+            
+                <a href="../Selenium/切换窗口.html">
+            
+                    
+                    切换窗口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.7" data-path="../Selenium/Chrome无头模式与操作窗口.html">
+            
+                <a href="../Selenium/Chrome无头模式与操作窗口.html">
+            
+                    
+                    Chrome无头模式与操作窗口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.8" data-path="../Selenium/selenium时间日期控件处理.html">
+            
+                <a href="../Selenium/selenium时间日期控件处理.html">
+            
+                    
+                    selenium时间日期控件处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.9" data-path="../Selenium/selenium表格提交.html">
+            
+                <a href="../Selenium/selenium表格提交.html">
+            
+                    
+                    selenium表格提交
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.10" data-path="../Selenium/selenium处理select标签下拉框的选项.html">
+            
+                <a href="../Selenium/selenium处理select标签下拉框的选项.html">
+            
+                    
+                    selenium处理select标签下拉框的选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.11" data-path="../Selenium/单选框和复选框radiobox、checkbox.html">
+            
+                <a href="../Selenium/单选框和复选框radiobox、checkbox.html">
+            
+                    
+                    单选框和复选框(radiobox、checkbox)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.12" data-path="../Selenium/selenium给元素的属性赋值.html">
+            
+                <a href="../Selenium/selenium给元素的属性赋值.html">
+            
+                    
+                    selenium给元素的属性赋值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.13" data-path="../Selenium/ActionChains行为连.html">
+            
+                <a href="../Selenium/ActionChains行为连.html">
+            
+                    
+                    ActionChains行为连
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../Scrapy/">
+            
+                <a href="../Scrapy/">
+            
+                    
+                    Scrapy
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../Scrapy/Scrapy介绍.html">
+            
+                <a href="../Scrapy/Scrapy介绍.html">
+            
+                    
+                    Scrapy介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../Scrapy/Items.html">
+            
+                <a href="../Scrapy/Items.html">
+            
+                    
+                    Items
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="../Scrapy/Spiders.html">
+            
+                <a href="../Scrapy/Spiders.html">
+            
+                    
+                    Spiders
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4" data-path="../Scrapy/Item Pipeline.html">
+            
+                <a href="../Scrapy/Item Pipeline.html">
+            
+                    
+                    Item Pipeline
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.5" data-path="../Scrapy/下载项目图片.html">
+            
+                <a href="../Scrapy/下载项目图片.html">
+            
+                    
+                    下载项目图片
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.6" data-path="../Scrapy/Scrapy的Request和Response.html">
+            
+                <a href="../Scrapy/Scrapy的Request和Response.html">
+            
+                    
+                    Scrapy的Request和Response
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.7" data-path="../Scrapy/Scrapy模拟人人网登录.html">
+            
+                <a href="../Scrapy/Scrapy模拟人人网登录.html">
+            
+                    
+                    Scrapy模拟人人网登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.8" data-path="../Scrapy/Scrapy模拟登录豆瓣网.html">
+            
+                <a href="../Scrapy/Scrapy模拟登录豆瓣网.html">
+            
+                    
+                    Scrapy模拟登录豆瓣网
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.9" data-path="../Scrapy/Settings.html">
+            
+                <a href="../Scrapy/Settings.html">
+            
+                    
+                    Settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.10" data-path="../Scrapy/使用Scrapy框架爬取糗事百科段子.html">
+            
+                <a href="../Scrapy/使用Scrapy框架爬取糗事百科段子.html">
+            
+                    
+                    使用Scrapy框架爬取糗事百科段子
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.11" data-path="../Scrapy/糗事百科之抓取多个页面.html">
+            
+                <a href="../Scrapy/糗事百科之抓取多个页面.html">
+            
+                    
+                    糗事百科之抓取多个页面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.12" data-path="../Scrapy/CrawlSpider爬虫.html">
+            
+                <a href="../Scrapy/CrawlSpider爬虫.html">
+            
+                    
+                    CrawlSpider爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    案例
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="爬取地理坐标.html">
+            
+                <a href="爬取地理坐标.html">
+            
+                    
+                    爬取地理坐标
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="批量查询地址经纬度信息.html">
+            
+                <a href="批量查询地址经纬度信息.html">
+            
+                    
+                    批量查询地址经纬度信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="拉钩网数据爬取.html">
+            
+                <a href="拉钩网数据爬取.html">
+            
+                    
+                    拉钩网数据爬取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.4" data-path="selenium静态数据爬取.html">
+            
+                <a href="selenium静态数据爬取.html">
+            
+                    
+                    selenium静态数据爬取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.5" data-path="爬取淘宝商品评论.html">
+            
+                <a href="爬取淘宝商品评论.html">
+            
+                    
+                    爬取淘宝商品评论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.6" data-path="爬取京东商品评论.html">
+            
+                <a href="爬取京东商品评论.html">
+            
+                    
+                    爬取京东商品评论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.7" data-path="爬取网易云音乐.html">
+            
+                <a href="爬取网易云音乐.html">
+            
+                    
+                    爬取网易云音乐
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.8" data-path="网易云音乐API集合_测试抓取评论.html">
+            
+                <a href="网易云音乐API集合_测试抓取评论.html">
+            
+                    
+                    网易云音乐API集合_测试抓取评论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.9" data-path="B站弹幕爬取.html">
+            
+                <a href="B站弹幕爬取.html">
+            
+                    
+                    B站弹幕爬取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.4.10" data-path="Pandas爬取表格数据.html">
+            
+                <a href="Pandas爬取表格数据.html">
+            
+                    
+                    Pandas爬取表格数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.11" data-path="有道翻译案例.html">
+            
+                <a href="有道翻译案例.html">
+            
+                    
+                    有道翻译案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.12" data-path="移动端微博评论抓取.html">
+            
+                <a href="移动端微博评论抓取.html">
+            
+                    
+                    移动端微博评论抓取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.13" data-path="豆果网数据爬取.html">
+            
+                <a href="豆果网数据爬取.html">
+            
+                    
+                    豆果网数据爬取
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Pandas爬取表格数据</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#pandas&#x722C;&#x53D6;&#x8868;&#x683C;&#x6570;&#x636E;">Pandas&#x722C;&#x53D6;&#x8868;&#x683C;&#x6570;&#x636E;</a></li><ul><li><a href="#table&#x578B;&#x8868;&#x683C;">table&#x578B;&#x8868;&#x683C;</a></li><li><a href="#&#x5FEB;&#x901F;&#x6293;&#x53D6;">&#x5FEB;&#x901F;&#x6293;&#x53D6;</a></li><li><a href="#&#x8BE6;&#x7EC6;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;">&#x8BE6;&#x7EC6;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;</a></li><li><a href="#readhtml&#x51FD;&#x6570;">read_html&#x51FD;&#x6570;</a></li></ul></ul></div><a href="#pandas&#x722C;&#x53D6;&#x8868;&#x683C;&#x6570;&#x636E;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="pandas&#x722C;&#x53D6;&#x8868;&#x683C;&#x6570;&#x636E;"><a name="pandas&#x722C;&#x53D6;&#x8868;&#x683C;&#x6570;&#x636E;" class="anchor-navigation-ex-anchor" href="#pandas&#x722C;&#x53D6;&#x8868;&#x683C;&#x6570;&#x636E;"><i class="fa fa-link" aria-hidden="true"></i></a>Pandas&#x722C;&#x53D6;&#x8868;&#x683C;&#x6570;&#x636E;</h1>
+<h2 id="table&#x578B;&#x8868;&#x683C;"><a name="table&#x578B;&#x8868;&#x683C;" class="anchor-navigation-ex-anchor" href="#table&#x578B;&#x8868;&#x683C;"><i class="fa fa-link" aria-hidden="true"></i></a>table&#x578B;&#x8868;&#x683C;</h2>
+<p>&#x6211;&#x4EEC;&#x5728;&#x7F51;&#x9875;&#x4E0A;&#x4F1A;&#x7ECF;&#x5E38;&#x770B;&#x5230;&#x8FD9;&#x6837;&#x4E00;&#x4E9B;&#x8868;&#x683C;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;</p>
+<p><a href="img/image-20200813201240155.png" data-lightbox="f90a1d1e-97b0-49b5-b28f-8c22e6377c65" data-title="image-20200813201240155"><img src="img/image-20200813201240155.png" alt="image-20200813201240155"></a></p>
+<p><a href="img/image-20200813201304187.png" data-lightbox="1be78b90-a2f9-4711-b453-739d08d16150" data-title="image-20200813201304187"><img src="img/image-20200813201304187.png" alt="image-20200813201304187"></a></p>
+<p>&#x4ECE;&#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x5230;table&#x7C7B;&#x578B;&#x7684;&#x8868;&#x683C;&#x7F51;&#x9875;&#x7ED3;&#x6784;&#x5927;&#x81F4;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>table</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>...<span class="token punctuation">&quot;</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>...<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>thead</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">&gt;</span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>thead</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tbody</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+        ...
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>        
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tbody</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>table</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>&#x5148;&#x6765;&#x7B80;&#x5355;&#x89E3;&#x91CA;&#x4E00;&#x4E0B;&#x4E0A;&#x6587;&#x51FA;&#x73B0;&#x7684;&#x51E0;&#x79CD;&#x6807;&#x7B7E;&#x542B;&#x4E49;&#xFF1A;</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>table</span><span class="token punctuation">&gt;</span></span>    : &#x5B9A;&#x4E49;&#x8868;&#x683C;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>thead</span><span class="token punctuation">&gt;</span></span>    : &#x5B9A;&#x4E49;&#x8868;&#x683C;&#x7684;&#x9875;&#x7709;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tbody</span><span class="token punctuation">&gt;</span></span>    : &#x5B9A;&#x4E49;&#x8868;&#x683C;&#x7684;&#x4E3B;&#x4F53;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>    : &#x5B9A;&#x4E49;&#x8868;&#x683C;&#x7684;&#x884C;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">&gt;</span></span>    : &#x5B9A;&#x4E49;&#x8868;&#x683C;&#x7684;&#x8868;&#x5934;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>    : &#x5B9A;&#x4E49;&#x8868;&#x683C;&#x5355;&#x5143;
+</code></pre><p>&#x8FD9;&#x6837;&#x7684;&#x8868;&#x683C;&#x6570;&#x636E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5229;&#x7528;pandas&#x6A21;&#x5757;&#x91CC;&#x7684;read_html&#x51FD;&#x6570;&#x65B9;&#x4FBF;&#x5FEB;&#x6377;&#x5730;&#x6293;&#x53D6;&#x4E0B;&#x6765;&#x3002;&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x5C31;&#x6765;&#x64CD;&#x4F5C;&#x4E00;&#x4E0B;&#x3002;</p>
+<h2 id="&#x5FEB;&#x901F;&#x6293;&#x53D6;"><a name="&#x5FEB;&#x901F;&#x6293;&#x53D6;" class="anchor-navigation-ex-anchor" href="#&#x5FEB;&#x901F;&#x6293;&#x53D6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5FEB;&#x901F;&#x6293;&#x53D6;</h2>
+<p>&#x4E0B;&#x9762;&#x4EE5;&#x4E2D;&#x56FD;&#x4E0A;&#x5E02;&#x516C;&#x53F8;&#x4FE1;&#x606F;&#x8FD9;&#x4E2A;&#x7F51;&#x9875;&#x4E2D;&#x7684;&#x8868;&#x683C;&#x4E3A;&#x4F8B;&#xFF0C;&#x611F;&#x53D7;&#x4E00;&#x4E0B;read_html&#x51FD;&#x6570;&#x7684;&#x5F3A;&#x5927;&#x4E4B;&#x5904;&#x3002;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+
+writer <span class="token operator">=</span> pd<span class="token punctuation">.</span>ExcelWriter<span class="token punctuation">(</span><span class="token string">&quot;&#x80A1;&#x7968;.xlsx&quot;</span><span class="token punctuation">,</span> engine<span class="token operator">=</span><span class="token string">&apos;openpyxl&apos;</span><span class="token punctuation">,</span> mode<span class="token operator">=</span><span class="token string">&apos;a&apos;</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">178</span><span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># &#x722C;&#x53D6;&#x5168;&#x90E8;177&#x9875;&#x6570;&#x636E;</span>
+    url <span class="token operator">=</span> <span class="token string">&apos;http://s.askci.com/stock/a/?reportTime=2018-06-30&amp;pageNum=%s&apos;</span> <span class="token operator">%</span> <span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    tb <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_html<span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> <span class="token comment">#&#x7ECF;&#x89C2;&#x5BDF;&#x53D1;&#x73B0;&#x6240;&#x9700;&#x8868;&#x683C;&#x662F;&#x7F51;&#x9875;&#x4E2D;&#x7B2C;4&#x4E2A;&#x8868;&#x683C;&#xFF0C;&#x6545;&#x4E3A;[3]</span>
+    tb<span class="token punctuation">.</span>to_excel<span class="token punctuation">(</span>writer<span class="token punctuation">,</span> sheet_name<span class="token operator">=</span><span class="token builtin">str</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">,</span>  index<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;&#x7B2C;&apos;</span><span class="token operator">+</span><span class="token builtin">str</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">&apos;&#x9875;&#x6293;&#x53D6;&#x5B8C;&#x6210;&apos;</span><span class="token punctuation">)</span>
+
+
+writer<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token punctuation">)</span>
+writer<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x53EA;&#x9700;&#x4E0D;&#x5230;&#x5341;&#x884C;&#x4EE3;&#x7801;&#xFF0C;1&#x5206;&#x949F;&#x5DE6;&#x53F3;&#x5C31;&#x53EF;&#x4EE5;&#x5C06;&#x5168;&#x90E8;178&#x9875;&#x5171;3535&#x5BB6;A&#x80A1;&#x4E0A;&#x5E02;&#x516C;&#x53F8;&#x7684;&#x4FE1;&#x606F;&#x5E72;&#x51C0;&#x6574;&#x9F50;&#x5730;&#x6293;&#x53D6;&#x4E0B;&#x6765;&#x3002;&#x6BD4;&#x91C7;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x3001;xpath&#x8FD9;&#x7C7B;&#x5E38;&#x89C4;&#x65B9;&#x6CD5;&#x8981;&#x7701;&#x5FC3;&#x7701;&#x529B;&#x5730;&#x591A;&#x3002;&#x5982;&#x679C;&#x91C7;&#x53D6;&#x4EBA;&#x5DE5;&#x4E00;&#x9875;&#x9875;&#x5730;&#x590D;&#x5236;&#x7C98;&#x8D34;&#x5230;excel&#x4E2D;&#xFF0C;&#x5C31;&#x5F97;&#x64CD;&#x4F5C;&#x5230;&#x7334;&#x5E74;&#x9A6C;&#x6708;&#x53BB;&#x4E86;&#x3002;</p>
+<h2 id="&#x8BE6;&#x7EC6;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;"><a name="&#x8BE6;&#x7EC6;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;" class="anchor-navigation-ex-anchor" href="#&#x8BE6;&#x7EC6;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BE6;&#x7EC6;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;</h2>
+<h2 id="readhtml&#x51FD;&#x6570;"><a name="readhtml&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#readhtml&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>read_html&#x51FD;&#x6570;</h2>
+<p>&#x5148;&#x6765;&#x4E86;&#x89E3;&#x4E00;&#x4E0B;<strong>read_html</strong>&#x51FD;&#x6570;&#x7684;api:</p>
+<pre class="language-"><code>def read_html(
+    io,
+    match=&quot;.+&quot;,
+    flavor=None,
+    header=None,
+    index_col=None,
+    skiprows=None,
+    attrs=None,
+    parse_dates=False,
+    thousands=&quot;,&quot;,
+    encoding=None,
+    decimal=&quot;.&quot;,
+    converters=None,
+    na_values=None,
+    keep_default_na=True,
+    displayed_only=True,
+):
+    r&quot;&quot;&quot;
+    Read HTML tables into a ``list`` of ``DataFrame`` objects.
+
+    Parameters
+    ----------
+    io : str, path object or file-like object
+        A URL, a file-like object, or a raw string containing HTML. Note that
+        lxml only accepts the http, ftp and file url protocols. If you have a
+        URL that starts with ``&apos;https&apos;`` you might try removing the ``&apos;s&apos;``.
+
+    match : str or compiled regular expression, optional
+        The set of tables containing text matching this regex or string will be
+        returned. Unless the HTML is extremely simple you will probably need to
+        pass a non-empty string here. Defaults to &apos;.+&apos; (match any non-empty
+        string). The default value will return all tables contained on a page.
+        This value is converted to a regular expression so that there is
+        consistent behavior between Beautiful Soup and lxml.
+
+    flavor : str or None
+        The parsing engine to use. &apos;bs4&apos; and &apos;html5lib&apos; are synonymous with
+        each other, they are both there for backwards compatibility. The
+        default of ``None`` tries to use ``lxml`` to parse and if that fails it
+        falls back on ``bs4`` + ``html5lib``.
+
+    header : int or list-like or None, optional
+        The row (or list of rows for a :class:`~pandas.MultiIndex`) to use to
+        make the columns headers.
+
+    index_col : int or list-like or None, optional
+        The column (or list of columns) to use to create the index.
+
+    skiprows : int or list-like or slice or None, optional
+        Number of rows to skip after parsing the column integer. 0-based. If a
+        sequence of integers or a slice is given, will skip the rows indexed by
+        that sequence.  Note that a single element sequence means &apos;skip the nth
+        row&apos; whereas an integer means &apos;skip n rows&apos;.
+
+    attrs : dict or None, optional
+        This is a dictionary of attributes that you can pass to use to identify
+        the table in the HTML. These are not checked for validity before being
+        passed to lxml or Beautiful Soup. However, these attributes must be
+        valid HTML table attributes to work correctly. For example, ::
+
+            attrs = {&apos;id&apos;: &apos;table&apos;}
+
+        is a valid attribute dictionary because the &apos;id&apos; HTML tag attribute is
+        a valid HTML attribute for *any* HTML tag as per `this document
+        &lt;http://www.w3.org/TR/html-markup/global-attributes.html&gt;`__. ::
+
+            attrs = {&apos;asdf&apos;: &apos;table&apos;}
+
+        is *not* a valid attribute dictionary because &apos;asdf&apos; is not a valid
+        HTML attribute even if it is a valid XML attribute.  Valid HTML 4.01
+        table attributes can be found `here
+        &lt;http://www.w3.org/TR/REC-html40/struct/tables.html#h-11.2&gt;`__. A
+        working draft of the HTML 5 spec can be found `here
+        &lt;http://www.w3.org/TR/html-markup/table.html&gt;`__. It contains the
+        latest information on table attributes for the modern web.
+
+    parse_dates : bool, optional
+        See :func:`~read_csv` for more details.
+
+    thousands : str, optional
+        Separator to use to parse thousands. Defaults to ``&apos;,&apos;``.
+
+    encoding : str or None, optional
+        The encoding used to decode the web page. Defaults to ``None``.``None``
+        preserves the previous encoding behavior, which depends on the
+        underlying parser library (e.g., the parser library will try to use
+        the encoding provided by the document).
+
+    decimal : str, default &apos;.&apos;
+        Character to recognize as decimal point (e.g. use &apos;,&apos; for European
+        data).
+
+    converters : dict, default None
+        Dict of functions for converting values in certain columns. Keys can
+        either be integers or column labels, values are functions that take one
+        input argument, the cell (not column) content, and return the
+        transformed content.
+
+    na_values : iterable, default None
+        Custom NA values.
+
+    keep_default_na : bool, default True
+        If na_values are specified and keep_default_na is False the default NaN
+        values are overridden, otherwise they&apos;re appended to.
+
+    displayed_only : bool, default True
+        Whether elements with &quot;display: none&quot; should be parsed.
+</code></pre><ul>
+<li>io&#xFF1A;&#x63A5;&#x6536;&#x7F51;&#x5740;&#xFF0C;&#x6587;&#x4EF6;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x7F51;&#x5740;&#x4E0D;&#x63A5;&#x53D7;https&#xFF0C;&#x5C1D;&#x8BD5;&#x53BB;&#x6389;s&#x540E;&#x722C;&#x53D6;</li>
+<li>match&#xFF1A;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x8FD4;&#x56DE;&#x4E0E;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5339;&#x914D;&#x7684;&#x8868;&#x683C;&#x3002;&#x9ED8;&#x8BA4;&quot;.+&quot;</li>
+<li>flavor&#xFF1A;&#x89E3;&#x6790;&#x5668;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A;(&#x201C;lxml&#x201D;,&#x201C;bs4&#x201D;)</li>
+<li>header&#xFF1A;&#x6307;&#x5B9A;&#x5217;&#x6807;&#x9898;&#x6240;&#x5728;&#x7684;&#x884C;</li>
+<li>index_col&#xFF1A;&#x6307;&#x5B9A;&#x884C;&#x6807;&#x9898;&#x5BF9;&#x5E94;&#x7684;&#x5217;</li>
+<li>skiprows&#xFF1A;&#x8DF3;&#x8FC7;&#x7B2C;n&#x884C;</li>
+<li>attrs&#xFF1A;&#x4F20;&#x9012;&#x4E00;&#x4E2A;&#x5B57;&#x5178;&#xFF0C;&#x6807;&#x793A;&#x8868;&#x683C;&#x7684;&#x5C5E;&#x6027;&#x503C;</li>
+<li>parse_dates&#xFF1A;&#x89E3;&#x6790;&#x65E5;&#x671F;</li>
+<li>thousands&#xFF1A;&#x5343;&#x4F4D;&#x5206;&#x9694;&#x7B26;</li>
+<li>encoding&#xFF1A;&#x7F16;&#x7801;&#x65B9;&#x5F0F;</li>
+<li>decimal&#xFF1A;&#x5C0F;&#x6570;&#x70B9;&#x6307;&#x793A;&#xFF0C;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&quot;.&quot;</li>
+<li>converters&#xFF1A;&#x8F6C;&#x6362;&#x67D0;&#x4E9B;&#x5217;&#x7684;&#x51FD;&#x6570;&#x7684;&#x5B57;&#x5178;</li>
+<li>na_values&#xFF1A;&#x6807;&#x793A;&#x90A3;&#x4E9B;&#x4E3A;NA&#x7684;&#x503C;</li>
+<li>keep_default_na&#xFF1A;&#x4FDD;&#x6301;&#x9ED8;&#x8BA4;&#x7684;NA&#x503C;&#xFF0C;&#x4E0E;na_values&#x4E00;&#x8D77;&#x4F7F;&#x7528;</li>
+<li>displayed_only&#xFF1A;&#x662F;&#x5426;&#x5E94;&#x89E3;&#x6790;&#x5177;&#x6709;&quot;display:none&quot;&#x7684;&#x5143;&#x7D20;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A;True</li>
+</ul>
+<p><strong>&#x7F3A;&#x70B9;&#xFF1A;</strong>&#x5982;&#x679C;&#x7F51;&#x7AD9;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x7528;&#x6237;&#x4EE3;&#x7406;(User_Agent)&#xFF0C;&#x90A3;&#x4E48;read_html&#x5C31;&#x65E0;&#x6CD5;&#x722C;&#x53D6;&#x6210;&#x529F;</p>
+<p>&#x53C2;&#x8003;</p>
+<ul>
+<li><a href="https://zhuanlan.zhihu.com/p/51968879" target="_blank">python&#x53EF;&#x89C6;&#x5316;1--DataFrame.read_html&#x51FD;&#x6570;&#x4F7F;&#x7528;</a></li>
+<li><a href="https://blog.csdn.net/V_lq6h/article/details/105727998" target="_blank">pandas&#x4E4B;read_html&#x722C;&#x866B;</a> </li>
+</ul>
+<footer class="page-footer"><span class="copyright">  </span><span class="footer-modification">Update time&#xFF1A;
+2020-08-15 
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="B站弹幕爬取.html" class="navigation navigation-prev " aria-label="Previous page: B站弹幕爬取">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="有道翻译案例.html" class="navigation navigation-next " aria-label="Next page: 有道翻译案例">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Pandas爬取表格数据","level":"2.4.10","depth":2,"next":{"title":"有道翻译案例","level":"2.4.11","depth":2,"path":"案例/有道翻译案例.md","ref":"案例/有道翻译案例.md","articles":[]},"previous":{"title":"B站弹幕爬取","level":"2.4.9","depth":2,"path":"案例/B站弹幕爬取.md","ref":"案例/B站弹幕爬取.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","disqus@^0.1.0","prism@^2.1.0","prism-themes@^0.0.2","theme-comscore","anchors@^0.7.1","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","expandable-chapters","local-video@^1.0.1","anchor-navigation-ex@0.1.8","custom-favicon","todo@^0.1.3","hide-element","copy-code-button","tbfed-pagefooter","advanced-emoji","lightbox","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":" ","modify_label":"Update time：","modify_format":"YYYY-MM-DD "},"prism":{"css":["prism-themes/themes/prism-vs.css"]},"disqus":{"useIdentifier":false,"shortName":"HG1227"},"styles":{"website":"styles/website.css"},"emphasize":{},"ace":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"favicon":"favicon.ico","lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"prism-themes":{},"custom-favicon":{},"local-video":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"template":"ace","unindent":true,"edit":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"HHG","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"readme.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"python 学习记录","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":""}},"gitbook":"*","description":"。"},"file":{"path":"案例/Pandas爬取表格数据.md","mtime":"2020-08-15T13:14:44.644Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-20T03:00:50.152Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-local-video/video.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

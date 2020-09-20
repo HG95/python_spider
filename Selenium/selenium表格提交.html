@@ -1,0 +1,1100 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>selenium表格提交 · python 学习记录</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="HHG">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-vs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-local-video/video-js.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="selenium处理select标签下拉框的选项.html" />
+    
+    
+    <link rel="prev" href="selenium时间日期控件处理.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Chapter1/">
+            
+                <a href="../Chapter1/">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../Chapter1/HTTP基本原理.html">
+            
+                <a href="../Chapter1/HTTP基本原理.html">
+            
+                    
+                    HTTP基本原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../Chapter1/requests库.html">
+            
+                <a href="../Chapter1/requests库.html">
+            
+                    
+                    requests库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../Chapter1/requests库：代理proxies.html">
+            
+                <a href="../Chapter1/requests库：代理proxies.html">
+            
+                    
+                    requests库：代理proxies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../Chapter1/requestsSession应用.html">
+            
+                <a href="../Chapter1/requestsSession应用.html">
+            
+                    
+                    requests.Session应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../Chapter1/XPath语法和lxml模块.html">
+            
+                <a href="../Chapter1/XPath语法和lxml模块.html">
+            
+                    
+                    XPath语法和lxml模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../Chapter1/正则表达式匹配.html">
+            
+                <a href="../Chapter1/正则表达式匹配.html">
+            
+                    
+                    正则表达式匹配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="../Chapter1/chardet识别文件的编码格式.html">
+            
+                <a href="../Chapter1/chardet识别文件的编码格式.html">
+            
+                    
+                    chardet识别文件的编码格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../Chapter1/fake-useragent.html">
+            
+                <a href="../Chapter1/fake-useragent.html">
+            
+                    
+                    fake-useragent
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Selenium
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="基本使用.html">
+            
+                <a href="基本使用.html">
+            
+                    
+                    基本使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="查找元素.html">
+            
+                <a href="查找元素.html">
+            
+                    
+                    查找元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="操作被定位的元素.html">
+            
+                <a href="操作被定位的元素.html">
+            
+                    
+                    操作被定位的元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="selenium控制浏览器滚动条.html">
+            
+                <a href="selenium控制浏览器滚动条.html">
+            
+                    
+                    selenium控制浏览器滚动条
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5" data-path="等待页面加载完成(Waits.html">
+            
+                <a href="等待页面加载完成(Waits.html">
+            
+                    
+                    等待页面加载完成(Waits)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.6" data-path="切换窗口.html">
+            
+                <a href="切换窗口.html">
+            
+                    
+                    切换窗口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.7" data-path="Chrome无头模式与操作窗口.html">
+            
+                <a href="Chrome无头模式与操作窗口.html">
+            
+                    
+                    Chrome无头模式与操作窗口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.8" data-path="selenium时间日期控件处理.html">
+            
+                <a href="selenium时间日期控件处理.html">
+            
+                    
+                    selenium时间日期控件处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2.9" data-path="selenium表格提交.html">
+            
+                <a href="selenium表格提交.html">
+            
+                    
+                    selenium表格提交
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.10" data-path="selenium处理select标签下拉框的选项.html">
+            
+                <a href="selenium处理select标签下拉框的选项.html">
+            
+                    
+                    selenium处理select标签下拉框的选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.11" data-path="单选框和复选框radiobox、checkbox.html">
+            
+                <a href="单选框和复选框radiobox、checkbox.html">
+            
+                    
+                    单选框和复选框(radiobox、checkbox)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.12" data-path="selenium给元素的属性赋值.html">
+            
+                <a href="selenium给元素的属性赋值.html">
+            
+                    
+                    selenium给元素的属性赋值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.13" data-path="ActionChains行为连.html">
+            
+                <a href="ActionChains行为连.html">
+            
+                    
+                    ActionChains行为连
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../Scrapy/">
+            
+                <a href="../Scrapy/">
+            
+                    
+                    Scrapy
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../Scrapy/Scrapy介绍.html">
+            
+                <a href="../Scrapy/Scrapy介绍.html">
+            
+                    
+                    Scrapy介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../Scrapy/Items.html">
+            
+                <a href="../Scrapy/Items.html">
+            
+                    
+                    Items
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="../Scrapy/Spiders.html">
+            
+                <a href="../Scrapy/Spiders.html">
+            
+                    
+                    Spiders
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4" data-path="../Scrapy/Item Pipeline.html">
+            
+                <a href="../Scrapy/Item Pipeline.html">
+            
+                    
+                    Item Pipeline
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.5" data-path="../Scrapy/下载项目图片.html">
+            
+                <a href="../Scrapy/下载项目图片.html">
+            
+                    
+                    下载项目图片
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.6" data-path="../Scrapy/Scrapy的Request和Response.html">
+            
+                <a href="../Scrapy/Scrapy的Request和Response.html">
+            
+                    
+                    Scrapy的Request和Response
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.7" data-path="../Scrapy/Scrapy模拟人人网登录.html">
+            
+                <a href="../Scrapy/Scrapy模拟人人网登录.html">
+            
+                    
+                    Scrapy模拟人人网登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.8" data-path="../Scrapy/Scrapy模拟登录豆瓣网.html">
+            
+                <a href="../Scrapy/Scrapy模拟登录豆瓣网.html">
+            
+                    
+                    Scrapy模拟登录豆瓣网
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.9" data-path="../Scrapy/Settings.html">
+            
+                <a href="../Scrapy/Settings.html">
+            
+                    
+                    Settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.10" data-path="../Scrapy/使用Scrapy框架爬取糗事百科段子.html">
+            
+                <a href="../Scrapy/使用Scrapy框架爬取糗事百科段子.html">
+            
+                    
+                    使用Scrapy框架爬取糗事百科段子
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.11" data-path="../Scrapy/糗事百科之抓取多个页面.html">
+            
+                <a href="../Scrapy/糗事百科之抓取多个页面.html">
+            
+                    
+                    糗事百科之抓取多个页面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.12" data-path="../Scrapy/CrawlSpider爬虫.html">
+            
+                <a href="../Scrapy/CrawlSpider爬虫.html">
+            
+                    
+                    CrawlSpider爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../案例/">
+            
+                <a href="../案例/">
+            
+                    
+                    案例
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../案例/爬取地理坐标.html">
+            
+                <a href="../案例/爬取地理坐标.html">
+            
+                    
+                    爬取地理坐标
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../案例/批量查询地址经纬度信息.html">
+            
+                <a href="../案例/批量查询地址经纬度信息.html">
+            
+                    
+                    批量查询地址经纬度信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="../案例/拉钩网数据爬取.html">
+            
+                <a href="../案例/拉钩网数据爬取.html">
+            
+                    
+                    拉钩网数据爬取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.4" data-path="../案例/selenium静态数据爬取.html">
+            
+                <a href="../案例/selenium静态数据爬取.html">
+            
+                    
+                    selenium静态数据爬取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.5" data-path="../案例/爬取淘宝商品评论.html">
+            
+                <a href="../案例/爬取淘宝商品评论.html">
+            
+                    
+                    爬取淘宝商品评论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.6" data-path="../案例/爬取京东商品评论.html">
+            
+                <a href="../案例/爬取京东商品评论.html">
+            
+                    
+                    爬取京东商品评论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.7" data-path="../案例/爬取网易云音乐.html">
+            
+                <a href="../案例/爬取网易云音乐.html">
+            
+                    
+                    爬取网易云音乐
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.8" data-path="../案例/网易云音乐API集合_测试抓取评论.html">
+            
+                <a href="../案例/网易云音乐API集合_测试抓取评论.html">
+            
+                    
+                    网易云音乐API集合_测试抓取评论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.9" data-path="../案例/B站弹幕爬取.html">
+            
+                <a href="../案例/B站弹幕爬取.html">
+            
+                    
+                    B站弹幕爬取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.10" data-path="../案例/Pandas爬取表格数据.html">
+            
+                <a href="../案例/Pandas爬取表格数据.html">
+            
+                    
+                    Pandas爬取表格数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.11" data-path="../案例/有道翻译案例.html">
+            
+                <a href="../案例/有道翻译案例.html">
+            
+                    
+                    有道翻译案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.12" data-path="../案例/移动端微博评论抓取.html">
+            
+                <a href="../案例/移动端微博评论抓取.html">
+            
+                    
+                    移动端微博评论抓取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.13" data-path="../案例/豆果网数据爬取.html">
+            
+                <a href="../案例/豆果网数据爬取.html">
+            
+                    
+                    豆果网数据爬取
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >selenium表格提交</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#selenium&#x8868;&#x683C;&#x63D0;&#x4EA4;">selenium&#x8868;&#x683C;&#x63D0;&#x4EA4;</a></li></ul></div><a href="#selenium&#x8868;&#x683C;&#x63D0;&#x4EA4;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="selenium&#x8868;&#x683C;&#x63D0;&#x4EA4;"><a name="selenium&#x8868;&#x683C;&#x63D0;&#x4EA4;" class="anchor-navigation-ex-anchor" href="#selenium&#x8868;&#x683C;&#x63D0;&#x4EA4;"><i class="fa fa-link" aria-hidden="true"></i></a>selenium&#x8868;&#x683C;&#x63D0;&#x4EA4;</h1>
+<p> 1.&#x7B2C;&#x4E00;&#x6B65;&#x90FD;&#x662F; import</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> selenium <span class="token keyword">import</span> webdriver
+<span class="token keyword">import</span> time
+driver <span class="token operator">=</span> webdriver<span class="token punctuation">.</span>Chrome<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p>2.&#x767B;&#x5F55;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x9700;&#x8981;&#x767B;&#x5F55;&#x5219;&#x53EF;&#x4EE5;&#x8DF3;&#x8FC7;&#x8FD9;&#x4E00;&#x6B65;&#xFF1A;&#x5148;&#x901A;&#x8FC7;&#x53F3;&#x952E;&#x67E5;&#x770B;&#x6E90;&#x7801;&#xFF08;&#x5173;&#x952E;&#x6BB5;&#xFF09;</p>
+<pre class="language-"><code class="lang-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>control-label<span class="token punctuation">&quot;</span></span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>loginform-employee_no<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>&#x7BA1;&#x7406;&#x5E10;&#x53F7;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>loginform-employee_no<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-control<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>LoginForm[employee_no]<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>help-block help-block-error<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-group field-loginform-password required<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>control-label<span class="token punctuation">&quot;</span></span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>loginform-password<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>&#x5BC6;&#x7801;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>password<span class="token punctuation">&quot;</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>loginform-password<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-control<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>LoginForm[password]<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>selenium&#x7684;&#x5DE5;&#x4F5C;&#x539F;&#x7406;&#x5C31;&#x662F;&#x9996;&#x5148;&#x5B9A;&#x4F4D;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x3002;Lucky&#xFF0C;&#x8FD9;&#x6BB5;&#x6E90;&#x7801;&#x6709;id&#x503C;&#xFF0C;&#x6211;&#x4EEC;&#x77E5;&#x9053;&#x5728;html&#x91CC;id&#x90FD;&#x662F;&#x552F;&#x4E00;&#x7684;&#x3002;&#x56E0;&#x6B64;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x627E;&#x5230;&#x7684;&#x4E24;&#x4E2A;ID&#xFF1A;<code>id=&quot;loginform-employee_no&quot; id=&quot;loginform-password&quot;</code>&#x53EF;&#x4EE5;&#x7528; <code>elem_user = driver.find_element_by_id</code>&#x8FD9;&#x4E00;&#x65B9;&#x6CD5;&#x6765;&#x5B9A;&#x4F4D;&#x3002;</p>
+<p>&#x7136;&#x540E;&#x662F;&#x64CD;&#x4F5C;&#x90E8;&#x5206;&#xFF1A;&#x7528;keys&#x7C7B;&#x6765;&#x6A21;&#x62DF;&#x952E;&#x76D8;&#x8F93;&#x5165;send&#xFF08;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x56DE;&#x8F66;&#x6216;&#x8005;&#x7A7A;&#x683C;&#x7B49;&#x7B49;&#x64CD;&#x4F5C;&#xFF09;&#xFF0C;&#x5148;import Keys&#x7C7B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> selenium<span class="token punctuation">.</span>webdriver<span class="token punctuation">.</span>common<span class="token punctuation">.</span>keys <span class="token keyword">import</span> Keys
+</code></pre>
+<p>&#x7EFC;&#x5408;&#x4E00;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python">elem_user <span class="token operator">=</span> driver<span class="token punctuation">.</span>find_element_by_id<span class="token punctuation">(</span><span class="token string">&quot;loginform-employee_no&quot;</span><span class="token punctuation">)</span>  
+elem_user<span class="token punctuation">.</span>send_keys<span class="token punctuation">(</span><span class="token string">&quot;&#x7528;&#x6237;&#x540D;&quot;</span><span class="token punctuation">)</span>  
+elem_pwd <span class="token operator">=</span> driver<span class="token punctuation">.</span>find_element_by_id<span class="token punctuation">(</span><span class="token string">&quot;loginform-password&quot;</span><span class="token punctuation">)</span>  
+elem_pwd<span class="token punctuation">.</span>send_keys<span class="token punctuation">(</span><span class="token string">&quot;&#x5BC6;&#x7801;&quot;</span><span class="token punctuation">)</span>  
+elem_pwd<span class="token punctuation">.</span>send_keys<span class="token punctuation">(</span>Keys<span class="token punctuation">.</span>RETURN<span class="token punctuation">)</span>  <span class="token comment">#return&#x548C;enter&#x90FD;&#x662F;&#x56DE;&#x8F66;&#x952E;&#xFF0C;&#x53EA;&#x662F;&#x8868;&#x8FBE;&#x4E0D;&#x540C;&#x3002;</span>
+
+time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>  <span class="token comment">#sleep&#x8FD9;&#x4E00;&#x6B65;&#x8DDF;&#x7F51;&#x7EDC;&#x73AF;&#x5883;&#x6709;&#x5173;&#xFF0C;&#x6709;&#x65F6;&#x5019;&#x5982;&#x679C;&#x8F93;&#x5165;&#x592A;&#x5FEB;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x5F15;&#x8D77;&#x62A5;&#x9519;&#x3002;&#x5355;&#x4F4D;&#x4E3A;&#x79D2;&#x3002;&#x540E;&#x9762;&#x4E0D;&#x518D;&#x91CD;&#x590D;&#x5199;&#x3002;</span>
+</code></pre>
+<p>3.&#x767B;&#x5F55;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x5F00;&#x59CB;&#x6211;&#x4EEC;&#x7684;&#x586B;&#x8868;&#x4E86;&#xFF0C;&#x76F4;&#x63A5;&#x5F00;&#x8F66;&#xFF08;drive&#xFF09;&#x5230;&#x586B;&#x8868;&#x9875;&#x9762;&#xFF08;&#x4EC5;&#x9488;&#x5BF9;URL&#x4E0D;&#x53D8;&#x7684;&#x586B;&#x8868;&#x5730;&#x5740;&#xFF0C;&#x5982;&#x679C;url&#x662F;&#x53D8;&#x52A8;&#x7684;&#x9700;&#x8981;&#x53E6;&#x5916;&#x5904;&#x7406;&#x8FD9;&#x6B65;driver.get&#xFF09;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python">driver<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&quot;http://&#x8868;&#x5355;&#x7F51;&#x5740;&quot;</span><span class="token punctuation">)</span>
+</code></pre>
+<p><a href="img/20170529154749023.png" data-lightbox="b5267882-4ab6-48d4-aba6-f0e34aacca40" data-title="20170529154749023"><img src="img/20170529154749023.png" alt="20170529154749023"></a></p>
+<p>&#x6211;&#x4EEC;&#x6765;&#x770B;&#x4E0B;&#x8FD9;&#x4E2A;&#x9700;&#x8981;&#x586B;&#x7684;&#x5185;&#x5BB9;&#xFF1A;</p>
+<p><strong>&#x7B49;&#x7EA7;&#xFF1A;</strong> &#x8FD9;&#x4E2A;&#x5185;&#x5BB9;&#x662F;&#x4E2A;&#x4E0B;&#x62C9;&#x83DC;&#x5355;&#x7684;&#x7C7B;&#x578B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token operator">&lt;</span>select <span class="token builtin">id</span><span class="token operator">=</span><span class="token string">&quot;employee-worker_level&quot;</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;form-control&quot;</span> name<span class="token operator">=</span><span class="token string">&quot;Employee[worker_level]&quot;</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>option value<span class="token operator">=</span><span class="token string">&quot;&#x517C;&#x804C;&quot;</span><span class="token operator">&gt;</span>&#x517C;&#x804C;<span class="token operator">&lt;</span><span class="token operator">/</span>option<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>option value<span class="token operator">=</span><span class="token string">&quot;&#x89C1;&#x4E60;&quot;</span><span class="token operator">&gt;</span>&#x89C1;&#x4E60;<span class="token operator">&lt;</span><span class="token operator">/</span>option<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>option value<span class="token operator">=</span><span class="token string">&quot;&#x521D;&#x7EA7;&quot;</span><span class="token operator">&gt;</span>&#x521D;&#x7EA7;<span class="token operator">&lt;</span><span class="token operator">/</span>option<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>option value<span class="token operator">=</span><span class="token string">&quot;&#x4E2D;&#x7EA7;&quot;</span><span class="token operator">&gt;</span>&#x4E2D;&#x7EA7;<span class="token operator">&lt;</span><span class="token operator">/</span>option<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>option value<span class="token operator">=</span><span class="token string">&quot;&#x9AD8;&#x7EA7;&quot;</span><span class="token operator">&gt;</span>&#x9AD8;&#x7EA7;<span class="token operator">&lt;</span><span class="token operator">/</span>option<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>select<span class="token operator">&gt;</span>
+</code></pre>
+<p>&#x597D;&#x6D88;&#x606F;&#x662F;&#x8FD9;&#x4E2A;&#x4E0B;&#x62C9;&#x9009;&#x62E9;&#x6846;&#x6709;id&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4E48;&#x5C31;&#x53EF;&#x4EE5;&#x50CF;&#x521A;&#x624D;&#x90A3;&#x6837;&#x7684;&#x5B9A;&#x4F4D;&#xFF0C;&#x4F46;&#x662F;&#x574F;&#x6D88;&#x606F;&#x662F;&#xFF0C;&#x8FD9;&#x4E2A;&#x4E0B;&#x62C9;&#x9009;&#x62E9;&#x6846;&#x7684;&#x9009;&#x9879;&#x6CA1;&#x6709;id&#xFF0C;&#x8FD9;&#x65F6;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x53E6;&#x4E00;&#x4E2A;&#x5B9A;&#x4F4D;&#x65B9;&#x6CD5;&#xFF0C;&#x7528;<code>tag name</code>, <code>find_elements_by_tag_name</code> , &#x8FD9;&#x91CC;&#x662F; &#x201D;option&#x201C;&#xFF0C;&#x5E76;&#x4E14;&#x662F;&#x4EE5;&#x7C7B;&#x4F3C; list &#x7684;&#x65B9;&#x5F0F;&#x5B58;&#x5728;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5F15;&#x7528;&#x6807;&#x7B7E;&#x662F;0-4 &#x4EE3;&#x8868;&#x7740;&#x4E94;&#x4E2A;&#x9009;&#x9879;&#x3002;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x5982;&#x679C;&#x8981;&#x9009;&#x9009;&#x9879;4&#x7684;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python">driver<span class="token punctuation">.</span>find_element_by_id<span class="token punctuation">(</span><span class="token string">&quot;employee-worker_level&quot;</span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span>find_elements_by_tag_name<span class="token punctuation">(</span><span class="token string">&quot;option&quot;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x7684;click&#x4EE3;&#x8868;&#x7684;&#x662F;&#x5DE6;&#x952E;&#x5355;&#x51FB;&#x3002;</p>
+<p><strong>&#x5DE5;&#x4F5C;&#x89D2;&#x8272;&#xFF1A;</strong>&#x8FD9;&#x4E2A;&#x662F;&#x4E2A;checkbox&#x7C7B;&#x7684;&#x63D0;&#x4EA4;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre class="language-"><code class="lang-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>help-block<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-group field-employee-worker_role<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>control-label<span class="token punctuation">&quot;</span></span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>employee-worker_role<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>&#x5DE5;&#x4F5C;&#x89D2;&#x8272;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>hidden<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>Employee[worker_role]<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span><span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>employee-worker_role<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>checkbox<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>Employee[worker_role][]<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>1<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span> &#x5BA3;&#x4F20;&#x4EBA;&#x5458;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>checkbox<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>Employee[worker_role][]<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>2<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span> &#x6536;&#x8D39;&#x4EBA;&#x5458;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>checkbox<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>Employee[worker_role][]<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>3<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span> &#x7EF4;&#x62A4;&#x4EBA;&#x5458;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>checkbox<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>Employee[worker_role][]<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>4<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span> &#x5B89;&#x88C5;&#x4EBA;&#x5458;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>checkbox<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>Employee[worker_role][]<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>5<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span> &#x79FB;&#x673A;&#x4EBA;&#x5458;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>checkbox<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>Employee[worker_role][]<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>9<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span> &#x7EFC;&#x5408;&#x4EBA;&#x5458;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>checkbox<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>Employee[worker_role][]<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>10<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span> &#x6295;&#x8BC9;&#x4E13;&#x5C97;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>checkbox<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>Employee[worker_role][]<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>11<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span> &#x65B0;&#x5F00;&#x9500;&#x552E;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>hint-block<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>&#x9009;&#x62E9;&#x4EBA;&#x5458;&#x7684;&#x5DE5;&#x4F5C;&#x89D2;&#x8272;&#xFF0C;&#x5982;&#x679C;&#x975E;&#x5B9E;&#x9645;&#x5DE5;&#x4F5C;&#x4EBA;&#x5458;&#xFF0C;&#x8BF7;&#x7559;&#x7A7A;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>help-block<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x4E5F;&#x662F;&#x7C7B;&#x4F3C;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x770B;&#x5230;&#x6709;label&#x8FD9;&#x4E2A;tag name&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7528;label name&#xFF0C;&#x4F46;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x590D;&#x9009;&#x7684;&#x8BDD;&#xFF0C;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x7528;&#x4E2A;&#x5FAA;&#x73AF;&#x5C31;&#x884C;&#x4E86;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python">i<span class="token operator">=</span><span class="token number">0</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span>i<span class="token operator">&lt;</span><span class="token number">8</span><span class="token punctuation">)</span> <span class="token punctuation">:</span>
+    driver<span class="token punctuation">.</span>find_element_by_id<span class="token punctuation">(</span><span class="token string">&quot;employee-worker_role&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span>find_elements_by_tag_name<span class="token punctuation">(</span><span class="token string">&quot;label&quot;</span><span class="token punctuation">)</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    i<span class="token operator">=</span>i<span class="token operator">+</span><span class="token number">1</span>
+</code></pre>
+<p>&#x5176;&#x4ED6;&#x7684;&#x9700;&#x8981;&#x586B;&#x7684;&#x5185;&#x5BB9;&#x5C31;&#x548C;&#x767B;&#x5F55;&#x91CC;&#x9700;&#x8981;&#x7684;&#x662F;&#x7C7B;&#x4F3C;&#x7684;&#x3002;</p>
+<p>&#x6700;&#x540E;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x7528;keys&#x7C7B;&#x56DE;&#x8F66;&#x4E00;&#x4E0B;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x63D0;&#x4EA4;&#x8868;&#x683C;&#x4E86;&#x3002;</p>
+<p><strong>bonus&#xFF1A;</strong></p>
+<p>&#x597D;&#x5947;&#x63D0;&#x4EA4;&#x8868;&#x683C;&#x7684;&#x65F6;&#x5019;&#x80FD;&#x4E0D;&#x80FD;&#x7528;click&#x52A8;&#x4F5C;&#x6765;&#x5B8C;&#x6210;&#xFF0C;&#x8D70;&#x5411;&#x4E86;&#x4F5C;&#x6B7B;&#x4E4B;&#x8DEF;&#xFF1A;</p>
+<p>&#x6211;&#x4EEC;&#x5148;&#x6765;&#x770B;&#x4E0B;&#x63D0;&#x4EA4;&#x7684;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre class="language-"><code class="lang-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-group<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>submit<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>btn btn-success<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>&#x6DFB;&#x52A0;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>&#x7B49;&#x7B49;&#xFF0C;id&#x5462;&#xFF1F;name&#x5462;&#xFF1F;&#x8BA9;&#x6211;&#x4EEC;&#x770B;&#x4E0B;&#x5176;&#x4ED6;&#x7684;&#x5B9A;&#x4F4D;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<p>&#x901A;&#x8FC7;id&#x5B9A;&#x4F4D;&#x5143;&#x7D20;&#xFF1A;find_element_by_id(&quot;id_vaule&quot;)
+&#x901A;&#x8FC7;name&#x5B9A;&#x4F4D;&#x5143;&#x7D20;&#xFF1A;find_element_by_name(&quot;name_vaule&quot;)
+&#x901A;&#x8FC7;tag_name&#x5B9A;&#x4F4D;&#x5143;&#x7D20;&#xFF1A;find_element_by_tag_name(&quot;tag_name_vaule&quot;)
+&#x901A;&#x8FC7;class_name&#x5B9A;&#x4F4D;&#x5143;&#x7D20;&#xFF1A;find_element_by_class_name(&quot;class_name&quot;)
+&#x901A;&#x8FC7;css&#x5B9A;&#x4F4D;&#x5143;&#x7D20;&#xFF1A;find_element_by_css_selector();
+&#x901A;&#x8FC7;xpath&#x5B9A;&#x4F4D;&#x5143;&#x7D20;&#xFF1A;find_element_by_xpath(&quot;xpath&quot;)
+&#x901A;&#x8FC7;link&#x5B9A;&#x4F4D;&#xFF1A;find_element_by_link_text(&quot;text_vaule&quot;)&#x6216;&#x8005;find_element_by_partial_link_text()
+&#x597D;&#x7684;&#xFF0C;&#x8C8C;&#x4F3C;&#x76EE;&#x524D;&#x53EA;&#x80FD;&#x7528;Xpath&#x7684;&#x65B9;&#x6CD5;&#x6765;&#x5B9A;&#x4F4D;&#x4E86;</p>
+<p>&#x8FD9;&#x91CC;&#x6709;&#x4E00;&#x4E2A;&#x6559;&#x7A0B;&#xFF1A;<a href="http://www.w3school.com.cn/xpath/index.asp" target="_blank">http://www.w3school.com.cn/xpath/index.asp</a></p>
+<footer class="page-footer"><span class="copyright">  </span><span class="footer-modification">Update time&#xFF1A;
+2020-08-15 
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="selenium时间日期控件处理.html" class="navigation navigation-prev " aria-label="Previous page: selenium时间日期控件处理">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="selenium处理select标签下拉框的选项.html" class="navigation navigation-next " aria-label="Next page: selenium处理select标签下拉框的选项">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"selenium表格提交","level":"2.2.9","depth":2,"next":{"title":"selenium处理select标签下拉框的选项","level":"2.2.10","depth":2,"path":"Selenium/selenium处理select标签下拉框的选项.md","ref":"Selenium/selenium处理select标签下拉框的选项.md","articles":[]},"previous":{"title":"selenium时间日期控件处理","level":"2.2.8","depth":2,"path":"Selenium/selenium时间日期控件处理.md","ref":"Selenium/selenium时间日期控件处理.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","disqus@^0.1.0","prism@^2.1.0","prism-themes@^0.0.2","theme-comscore","anchors@^0.7.1","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","expandable-chapters","local-video@^1.0.1","anchor-navigation-ex@0.1.8","custom-favicon","todo@^0.1.3","hide-element","copy-code-button","tbfed-pagefooter","advanced-emoji","lightbox","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":" ","modify_label":"Update time：","modify_format":"YYYY-MM-DD "},"prism":{"css":["prism-themes/themes/prism-vs.css"]},"disqus":{"useIdentifier":false,"shortName":"HG1227"},"styles":{"website":"styles/website.css"},"emphasize":{},"ace":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"favicon":"favicon.ico","lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"prism-themes":{},"custom-favicon":{},"local-video":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"template":"ace","unindent":true,"edit":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"HHG","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"readme.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"python 学习记录","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":""}},"gitbook":"*","description":"。"},"file":{"path":"Selenium/selenium表格提交.md","mtime":"2020-08-15T12:32:21.477Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-20T03:00:50.152Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-local-video/video.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
